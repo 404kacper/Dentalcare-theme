@@ -1,3 +1,11 @@
+.navbar-transform-bg {
+  background-color: #E5ECE9;
+}
+
+.navbar-transform-text {
+  color: #50514F;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,9 +20,10 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
   line-height: 1.6;
+  height: 100vh;
   background-color: #fff;
   color: #333;
-  background-color: #24252A;
+  background-color: white;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -46,15 +55,74 @@ ul {
 li,
 a,
 button {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
   color: #edf0f1;
   text-decoration: none;
 }
 
 header {
+  position: fixed;
+  top: 0;
+  height: 90px;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  padding: 30px 10%;
+  padding: 5px 20%;
+  background-color: #50514F;
+  transition: all 0.3s ease 0s;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+  max-height: 100%;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: #0088a9;
+}
+
+button {
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-grad {
+  background-image: linear-gradient(to right, #1a2980 0%, #26d0ce 51%, #1a2980 100%);
+}
+
+.btn-grad {
+  margin: 10px;
+  padding: 9px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 50px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-image {
+  margin-top: 90px;
+  background-color: wheat;
+  height: 110vh;
 }

@@ -1,4 +1,12 @@
-  // Media Query Mixins
+// Navbar utility classes
+.navbar-transform-bg {
+  background-color: $navbar-second-bg;
+}
+.navbar-transform-text {
+  color: $navbar-second-font;
+}
+
+ // Media Query Mixins
   @mixin mediaSm {
     @media screen and (max-width: 500px) {
       @content;

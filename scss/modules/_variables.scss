@@ -1,7 +1,17 @@
 // Colors
-$section-bg: #e7e2e0;
-$navbar-color: #edf0f1;
-$body-color: #24252A;
+$body-color: white;
+
+// Navbar related
+$navbar-bg: #50514F;
+$navbar-second-bg: #E5ECE9;
+
+$navbar-font: #edf0f1;
+$navbar-second-font: #50514F;
+
+$navbar-btn: rgba(0,136,169, 1);
+$navbar-btn-hover: rgba(0,136,169, 0.8);
+
+$nav-links-hover: #0088a9;
 
 // Initial font size
 $f-base: 16px;
