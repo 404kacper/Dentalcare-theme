@@ -6,27 +6,39 @@
   color: $navbar-second-font;
 }
 
- // Media Query Mixins
-  @mixin mediaSm {
-    @media screen and (max-width: 500px) {
-      @content;
-    }
+// Zoom animation on hero page
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+    filter: blur($blur-scale) brightness($hero-brightness);
   }
+  100% {
+    transform: scale($zoom-scale);
+    filter: blur(0)  brightness($hero-brightness);
+  }
+}
 
-  @mixin mediaMd {
-    @media screen and (max-width: 768px) {
-      @content;
-    }
+// Media Query Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
   }
+}
 
-  @mixin mediaLg {
-    @media screen and (min-width: 769px) and (max-width:1170px) {
-      @content;
-    }
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
   }
+}
 
-  @mixin mediaXl {
-    @media screen and (min-width: 1171px) {
-      @content;
-    }
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
   }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

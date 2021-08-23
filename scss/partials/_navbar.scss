@@ -7,6 +7,7 @@ button {
 }
 
 header {
+  overflow: hidden;
   position: fixed;
   top: 0;
   height: 90px;
@@ -17,6 +18,7 @@ header {
   padding: 5px 20%;
   background-color: $navbar-bg;
   transition: all 0.3s ease 0s;
+  z-index: 9999;
 }
 
 .logo {
@@ -42,11 +44,6 @@ button {
   border-radius: 50px;
   transition: all 0.3s ease 0s;
 }
-
-// button:hover {
-//   background-color: $navbar-btn-hover;
-// }
-
 
 // Source: https://gradientbuttons.colorion.co/
 .btn-grad {

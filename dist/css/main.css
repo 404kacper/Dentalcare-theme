@@ -1,9 +1,68 @@
 .navbar-transform-bg {
-  background-color: #E5ECE9;
+  background-color: #50514F;
 }
 
 .navbar-transform-text {
-  color: #50514F;
+  color: #edf0f1;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+    filter: blur(20px) brightness(35%);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: blur(0) brightness(35%);
+  }
+}
+
+.lead {
+  font-family: Ubuntu;
+  font-size: 74px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 80px;
+  text-align: center;
+  text-decoration-color: white;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-indent: 0px;
+  text-size-adjust: 100%;
+  white-space: normal;
+  word-spacing: 0px;
+  color: #edf0f1;
+}
+
+.hero-subtext {
+  font-family: Ubuntu;
+  font-size: 26px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 80px;
+  text-align: center;
+  text-decoration-color: white;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-indent: 0px;
+  text-size-adjust: 100%;
+  white-space: normal;
+  word-spacing: 0px;
+  color: #edf0f1;
 }
 
 * {
@@ -56,11 +115,12 @@ li,
 a,
 button {
   font-family: 'Roboto', sans-serif;
-  color: #edf0f1;
+  color: #50514F;
   text-decoration: none;
 }
 
 header {
+  overflow: hidden;
   position: fixed;
   top: 0;
   height: 90px;
@@ -69,8 +129,9 @@ header {
   justify-content: flex-end;
   align-items: center;
   padding: 5px 20%;
-  background-color: #50514F;
+  background-color: #ffffff;
   transition: all 0.3s ease 0s;
+  z-index: 9999;
 }
 
 .logo {
@@ -89,7 +150,7 @@ header {
 }
 
 .nav_links li a:hover {
-  color: #0088a9;
+  color: #00abd6;
 }
 
 button {
@@ -122,7 +183,44 @@ button {
 }
 
 .hero-image {
-  margin-top: 90px;
   background-color: wheat;
-  height: 110vh;
+  height: calc(100vh - 90px);
+  margin-top: 90px;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image .parallax {
+  position: absolute;
+  background-image: url("/dist/assets/hero/3.jpg");
+  height: calc(100vh - 90px);
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: 10s ease-out 0s 1 zoomIn;
+  transform: scale(1.1);
+  filter: blur(0px) brightness(35%);
+}
+
+.hero-image .hero-text {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image .hero-text .hero-btn {
+  margin-top: 100px;
+}
+
+.infoSection {
+  height: 30vh;
 }

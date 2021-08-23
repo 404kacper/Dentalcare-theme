@@ -2,16 +2,25 @@
 $body-color: white;
 
 // Navbar related
-$navbar-bg: #50514F;
-$navbar-second-bg: #E5ECE9;
+$navbar-bg: #ffffff;
+$navbar-second-bg: #50514F;
 
-$navbar-font: #edf0f1;
-$navbar-second-font: #50514F;
+$navbar-font: #50514F;
+$navbar-second-font: #edf0f1;
 
 $navbar-btn: rgba(0,136,169, 1);
 $navbar-btn-hover: rgba(0,136,169, 0.8);
 
-$nav-links-hover: #0088a9;
+$nav-links-hover: #00abd6;
 
 // Initial font size
 $f-base: 16px;
+
+// Hero section
+
+$zoom-duration: 10s;
+$zoom-scale: 1.1;
+$blur-scale: 20px;
+$hero-brightness: 35%;
+
+$hero-font-color: #edf0f1;
