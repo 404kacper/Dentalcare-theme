@@ -1,0 +1,17 @@
+.infoSection {
+  height: 100vh;
+  font-size: 2rem;
+  background-color: $info-bg;
+  overflow: hidden;
+  // position: relative;
+  // z-index: 1;
+
+  .wrapper {
+    // height: 100%;
+    padding: 0 10vw 0 10vw;
+
+    .gallery-container {
+        display: grid;
+    }
+  }
+}

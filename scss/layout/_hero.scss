@@ -1,0 +1,60 @@
+.hero-image {
+  height: calc(100vh - 90px);
+  width: 100%;
+  margin-top: 90px;
+  overflow: hidden;
+  // Make hero-image positioned ancestor so that the svg can fit
+  position: relative;
+
+  #curveUpColor {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+    fill: $hero-curve-fill;
+    stroke: $hero-curve-stroke;
+    stroke-width: $hero-curve-stroke-width;
+    align-self: flex-end;
+  }
+
+  .hero-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #proverb {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: slidein $hero-slidein-duration 1;
+    }
+
+    #proverb-sub {
+      display: inline-block;
+      white-space: nowrap;
+      // Possibly a flaw in case css animation fails
+      opacity: 0;
+      animation: reveal $hero-reveal-duration $hero-slidein-duration 1 forwards;
+    }
+
+    #proverb-sub2 {
+      display: inline-block;
+      white-space: nowrap;
+      // Possibly a flaw in case css animation fails
+      opacity: 0;
+      animation: reveal $hero-reveal-duration $hero-second-reveal-delay 1
+        forwards;
+    }
+
+    #hero-btn {
+      margin-top: 50px;
+      // Possibly a flaw in case css animation fails
+      opacity: 0;
+      animation: reveal $button-reveal-duration $hero-button-reveal-delay 1
+        forwards;
+    }
+  }
+}
