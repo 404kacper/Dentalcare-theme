@@ -1,7 +1,7 @@
 const navbar = document.querySelector('header');
 // Declaration like this otherwise gives error
 var nav_links = [];
-nav_links = document.querySelector('.nav_links').querySelectorAll('li');
+nav_links = document.querySelector('.nav-links').querySelectorAll('li');
 const scrollingElement = document.querySelector(
   '.parallax-perspective-container'
 );
@@ -33,6 +33,5 @@ function removeTransparentBg() {
 
 scrollingElement.addEventListener('scroll', () => {
   scrollpos = scrollingElement.scrollTop;
-  console.log(scrollpos);
   scrollpos >= 100 ? addTransparentBg() : removeTransparentBg();
 });

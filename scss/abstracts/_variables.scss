@@ -8,19 +8,23 @@ $navbar-second-bg: #393a3993;
 $navbar-font: #393a39;
 $navbar-second-font: #edf0f1;
 
-$navbar-btn: rgba(0,136,169, 1);
-$navbar-btn-hover: rgba(0,136,169, 0.8);
+$navbar-btn: rgba(0, 136, 169, 1);
+$navbar-btn-hover: rgba(0, 136, 169, 0.8);
 
 $nav-links-hover: #00abd6;
 
 // Initial font size
 $f-base: 16px;
 
+// General
+$primary-color: #0867ff;
+$secondary-color: #2ec7ff;
+$primary-gradient: #1a2980;
+$secondary-gradient: #26d0ce;
+
 // Hero related
 $parallax-distanceZ: -1px;
-$parallax-initial-distanceZ: 1px; 
-
-$zoom-duration: 1s;
+$zoom-duration: 20s;
 $zoom-scale: 1.1;
 $blur-scale: 10px;
 $hero-brightness: 20%;
@@ -32,9 +36,17 @@ $hero-button-reveal-delay: 3s;
 
 $hero-font-color: #edf0f1;
 $hero-curve-fill: #edf0f1;
-$hero-curve-stroke: #3498db;
+$hero-curve-stroke: $primary-color;
 $hero-curve-stroke-width: 2px;
 
 // Info related
 $info-bg: #edf0f1;
 $separator-fill: #000000;
+$title-color: #000000;
+$description-color: #636363;
+$icon-hover-duration: 0.25s;
+
+// Amenities section
+$next-bg: #636363;
+$amenities-lead: #edf0f1;
+$amenities-title: #000000

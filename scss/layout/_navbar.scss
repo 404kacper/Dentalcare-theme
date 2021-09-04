@@ -3,7 +3,7 @@ header {
   position: fixed;
   top: 0;
   height: 90px;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -11,6 +11,7 @@ header {
   background-color: $navbar-bg;
   transition: all 0.3s ease 0s;
   z-index: 9999;
+
 
   li,
   a,
@@ -27,49 +28,20 @@ header {
   max-height: 100%;
 }
 
-.nav_links li {
+.nav-links li {
   display: inline-block;
   padding: 0px 20px;
 }
 
-.nav_links li a {
+.nav-links li a {
   transition: all 0.3s ease 0s;
 }
 
-.nav_links li a:hover {
+.nav-links li a:hover {
   color: $nav-links-hover;
 }
 
 button {
   border-radius: 50px;
   transition: all 0.3s ease 0s;
-}
-
-// Source: https://gradientbuttons.colorion.co/
-.btn-grad {
-  background-image: linear-gradient(
-    to right,
-    #1a2980 0%,
-    #26d0ce 51%,
-    #1a2980 100%
-  );
-}
-.btn-grad {
-  font-family: 'Roboto', sans-serif;
-  margin: 10px;
-  padding: 9px 25px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: $navbar-second-font;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 50px;
-  display: block;
-}
-
-.btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
 }

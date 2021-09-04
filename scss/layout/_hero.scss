@@ -8,13 +8,11 @@
 
   #curveUpColor {
     position: absolute;
-    z-index: 3;
-    left: 0;
+    z-index: 1;
     bottom: 0;
     fill: $hero-curve-fill;
     stroke: $hero-curve-stroke;
     stroke-width: $hero-curve-stroke-width;
-    align-self: flex-end;
   }
 
   .hero-text {

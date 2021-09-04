@@ -1,17 +1,49 @@
 .infoSection {
-  height: 100vh;
-  font-size: 2rem;
+  height: 40vh;
   background-color: $info-bg;
   overflow: hidden;
-  // position: relative;
-  // z-index: 1;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .wrapper {
-    // height: 100%;
     padding: 0 10vw 0 10vw;
 
     .gallery-container {
-        display: grid;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: 1fr;
+
+      .text-container {
+        margin: 0 2vw 0 2vw;
+        min-width: 10vw;
+        transition: transform $icon-hover-duration linear 0s,
+          text-shadow $icon-hover-duration linear 0s;
+        .info-title {
+          padding: 0 0 1vw 0;
+        }
+      }
+
+      .icon:hover + .text-container {
+        transform: translateY(-20px);
+        text-shadow: 10px 10px 10px $primary-color;
+      }
+
+      .icon {
+        height: 10vw;
+        max-width: 10vw;
+        border: 2px solid $primary-color;
+        padding: 2px;
+        border-radius: 50%;
+        transition: border-radius $icon-hover-duration linear 0s;
+
+        &:hover {
+          cursor: pointer;
+          border-radius: 50% 20% / 10% 40%;
+        }
+      }
     }
   }
 }
