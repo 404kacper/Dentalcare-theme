@@ -81,7 +81,7 @@ ul {
 }
 
 .lead {
-  font-family: "Ubuntu";
+  font-family: 'Ubuntu';
   font-size: 74px;
   font-stretch: 100%;
   font-style: normal;
@@ -105,7 +105,7 @@ ul {
 }
 
 .hero-subtext {
-  font-family: "Ubuntu";
+  font-family: 'Ubuntu';
   font-size: 26px;
   font-stretch: 100%;
   font-style: normal;
@@ -164,7 +164,7 @@ ul {
 }
 
 .info-text {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Titillium Web', Helvetica, sans-serif;
   font-stretch: 100%;
   font-style: normal;
   font-variant-caps: normal;
@@ -199,7 +199,7 @@ ul {
 }
 
 .amenities-lead {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Monoton', sans-serif;
   font-stretch: 100%;
   font-style: normal;
   font-variant-caps: normal;
@@ -208,28 +208,30 @@ ul {
   font-variant-numeric: normal;
   font-weight: 400;
   letter-spacing: normal;
-  line-height: 20px;
+  line-height: normal;
   text-align: center;
   text-indent: 0px;
   text-size-adjust: 100%;
   white-space: normal;
   word-spacing: 0px;
-  color: #edf0f1;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #00000090;
 }
 
 .amenities-lead {
-  font-size: 16px;
+  font-size: 24px;
 }
 
 @media screen and (min-width: 1000px) {
   .amenities-lead {
-    font-size: calc(16px + 8 * ((100vw - 1000px) / 920));
+    font-size: calc(24px + 120 * ((100vw - 1000px) / 920));
   }
 }
 
 @media screen and (min-width: 1920px) {
   .amenities-lead {
-    font-size: 24px;
+    font-size: 144px;
   }
 }
 
@@ -462,6 +464,11 @@ button {
   margin: 0 2vw 0 2vw;
   min-width: 10vw;
   transition: transform 0.25s linear 0s, text-shadow 0.25s linear 0s;
+  opacity: 0;
+}
+
+.infoSection .wrapper .gallery-container .text-container-animate {
+  animation: reveal 1s 0s 1 forwards;
 }
 
 .infoSection .wrapper .gallery-container .text-container .info-title {
@@ -480,6 +487,11 @@ button {
   padding: 2px;
   border-radius: 50%;
   transition: border-radius 0.25s linear 0s;
+  opacity: 0;
+}
+
+.infoSection .wrapper .gallery-container .icon-animate {
+  animation: reveal 1s 0s 1 forwards;
 }
 
 .infoSection .wrapper .gallery-container .icon:hover {
@@ -488,11 +500,23 @@ button {
 }
 
 .amenitiesSection {
-  height: 200vh;
+  height: 370vh;
   position: relative;
   background-color: #2ec7ff;
-  background-image: linear-gradient(160deg, #2ec7ff 0%, #0867ff 100%);
+  background-image: linear-gradient(270deg, #2ec7ff 0%, #0867ff 100%);
   z-index: 0;
+}
+
+.amenitiesSection .whyUs {
+  opacity: 0;
+  height: 100vh;
+  padding: 100px 0 10vh 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-67deg, #0867ff 50%, #edf0f1 0);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .amenitiesSection #curveDownColor {
@@ -509,30 +533,29 @@ button {
   height: 100vh;
   width: 100vw;
   z-index: -2;
-  padding: calc(100px + 20vh) 0 0 0;
 }
 
-.amenitiesSection .wrapper .image-card {
+.amenitiesSection .image-card {
   position: relative;
   height: 30vw;
   width: 60vw;
   background-color: #fff;
   border-radius: 25px;
   box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-  margin: 0 auto 10vh auto;
+  margin: 0 auto 40vh auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.amenitiesSection .wrapper .image-card .image-container {
+.amenitiesSection .image-card .image-container {
   position: relative;
   height: 20vw;
   width: 20vw;
   border-radius: 25px;
 }
 
-.amenitiesSection .wrapper .image-card .image-container .experience {
+.amenitiesSection .image-card .image-container .experience {
   display: block;
   position: relative;
   height: 20vw;
@@ -542,16 +565,16 @@ button {
   box-shadow: 4px 13px 30px 1px rgba(10, 12, 139, 0.3);
 }
 
-.amenitiesSection .wrapper .image-card .image-container .experience-left {
+.amenitiesSection .image-card .image-container .experience-left {
   transform: translateX(-5vw);
 }
 
-.amenitiesSection .wrapper .image-card .image-container .experience-right {
+.amenitiesSection .image-card .image-container .experience-right {
   transform: translateX(5vw);
 }
 
-.amenitiesSection .wrapper .image-card .image-container-left:after {
-  content: "";
+.amenitiesSection .image-card .image-container-left:after {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -563,8 +586,8 @@ button {
   border-radius: 25px;
 }
 
-.amenitiesSection .wrapper .image-card .image-container-right:after {
-  content: "";
+.amenitiesSection .image-card .image-container-right:after {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -576,35 +599,35 @@ button {
   border-radius: 25px;
 }
 
-.amenitiesSection .wrapper .image-card .image-card-content {
+.amenitiesSection .image-card .image-card-content {
   font-family: 'Fira Sans', sans-serif;
   height: 20vw;
   width: 40vw;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 1fr);
-  grid-template-areas: "title" "text" "text" "btn";
+  grid-template-areas: 'title' 'text' 'text' 'btn';
   font-weight: 400;
   padding: 0 10vw 0 0;
 }
 
-.amenitiesSection .wrapper .image-card .image-card-content-right {
+.amenitiesSection .image-card .image-card-content-right {
   padding: 0 0 0 10vw;
 }
 
-.amenitiesSection .wrapper .image-card .image-card-content .image-card-title {
+.amenitiesSection .image-card .image-card-content .image-card-title {
   padding-top: 1vh;
   grid-area: title;
 }
 
-.amenitiesSection .wrapper .image-card .image-card-content .image-card-description {
+.amenitiesSection .image-card .image-card-content .image-card-description {
   grid-area: text;
   overflow-y: auto;
   text-align: justify;
   max-width: 30vw;
 }
 
-.amenitiesSection .wrapper .image-card .image-card-content .btn-grad {
+.amenitiesSection .image-card .image-card-content .btn-grad {
   align-self: end;
   grid-area: btn;
   white-space: nowrap;
@@ -631,6 +654,10 @@ button {
   box-shadow: 0 0 20px #eee;
   border-radius: 50px;
   display: block;
+}
+
+.btn-grad-rectangle {
+  border-radius: 10px;
 }
 
 .btn-grad:hover {
@@ -689,4 +716,23 @@ button {
   animation: 20s ease-out 0s 1 zoomIn forwards;
   filter: blur(0px) brightness(20%);
   transform: translateZ(1px) scale(2);
+}
+
+.slide-in-blurred-left {
+  animation: slide-in-blurred-left 0.6s 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes slide-in-blurred-left {
+  0% {
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform-origin: 100% 50%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
 }

@@ -44,9 +44,14 @@ $info-bg: #edf0f1;
 $separator-fill: #000000;
 $title-color: #000000;
 $description-color: #636363;
+
 $icon-hover-duration: 0.25s;
+$icon-reveal-duration: 1s;
+$icon-reveal-delay: 0s;
 
 // Amenities section
 $next-bg: #636363;
 $amenities-lead: #edf0f1;
-$amenities-title: #000000
+$amenities-lead-primary: $primary-color;
+$amenities-lead-secondary: $navbar-bg;
+$amenities-title: #000000;

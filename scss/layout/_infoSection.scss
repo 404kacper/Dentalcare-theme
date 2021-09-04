@@ -20,7 +20,12 @@
         margin: 0 2vw 0 2vw;
         min-width: 10vw;
         transition: transform $icon-hover-duration linear 0s,
-          text-shadow $icon-hover-duration linear 0s;
+        text-shadow $icon-hover-duration linear 0s;
+        opacity: 0;
+
+        &-animate {
+          animation: reveal $icon-reveal-duration $icon-reveal-delay 1 forwards;
+        }
         .info-title {
           padding: 0 0 1vw 0;
         }
@@ -38,6 +43,11 @@
         padding: 2px;
         border-radius: 50%;
         transition: border-radius $icon-hover-duration linear 0s;
+        opacity: 0;
+
+        &-animate {
+          animation: reveal $icon-reveal-duration $icon-reveal-delay 1 forwards;
+        }
 
         &:hover {
           cursor: pointer;
