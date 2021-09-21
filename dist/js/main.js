@@ -4,9 +4,7 @@ const galleryContainer = document.querySelector('.gallery-container');
 // Declaration like this otherwise gives error
 var nav_links = [];
 nav_links = document.querySelector('.nav-links').querySelectorAll('li');
-const scrollingElement = document.querySelector(
-  '.parallax-perspective-container'
-);
+const scrollingElement = document.querySelector('.parallax_wrapper');
 var whyUsText = document.querySelector('#whyUsText');
 var scrollpos = scrollingElement.scrollTop;
 
@@ -61,7 +59,7 @@ function animateIcons(delay) {
 
 function animateWhyUs() {
   console.log(whyUsText);
-  whyUsText.classList.add('slide-in-blurred-left')
+  whyUsText.classList.add('slide-in-blurred-left');
 }
 
 var iconsFired = false;
@@ -69,7 +67,7 @@ var whyusFired = false;
 // Scrollbar listener
 scrollingElement.addEventListener('scroll', () => {
   scrollpos = scrollingElement.scrollTop;
-  // console.log(scrollpos);
+  console.log(scrollpos);
   // Navbar
   scrollpos >= 100 ? addTransparentBg() : removeTransparentBg();
   // Icons in info section

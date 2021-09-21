@@ -7,7 +7,6 @@
   // background: #0052d4; /* fallback for old browsers */
   // background: -webkit-linear-gradient(to right, #0052d4, #4364f7, #6fb1fc); /* Chrome 10-25, Safari 5.1-6 */
   // background: linear-gradient(0, #0052d4, #4364f7, #6fb1fc);
-  z-index: 0;
 
   .whyUs {
       opacity: 0;
@@ -19,23 +18,6 @@
       background: linear-gradient(-67deg, $amenities-lead-primary 50%, $amenities-lead-secondary 0);
       background-clip: text;
       -webkit-background-clip: text;
-  }
-
-  #curveDownColor {
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    top: -0.2vh;
-    fill: $hero-curve-fill;
-    stroke: $hero-curve-stroke;
-    stroke-width: $hero-curve-stroke-width;
-  }
-
-  .wrapper {
-    height: 100vh;
-    width: 100vw;
-    z-index: -2;
-    // Watchout for this might be causing scroll freezes
   }
 
   .image-card {

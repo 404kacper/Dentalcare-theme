@@ -1,3 +1,6 @@
-@function parallax-scale-factor($z-distance) {
-  @return (parallax-perspective  -  $z-distance) / parallax-perspective;
+@function parallax-scale-factor($zDistance) {
+  $result: 0;
+  $result: $parallaxPerspective - $zDistance;
+  $result: $result / $parallaxPerspective;
+  @return $result;
 }

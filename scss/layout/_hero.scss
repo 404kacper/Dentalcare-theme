@@ -6,15 +6,6 @@
   // Make hero-image positioned ancestor so that the svg can fit
   position: relative;
 
-  #curveUpColor {
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    fill: $hero-curve-fill;
-    stroke: $hero-curve-stroke;
-    stroke-width: $hero-curve-stroke-width;
-  }
-
   .hero-text {
     width: 100%;
     height: 100%;
@@ -24,6 +15,7 @@
     align-items: center;
 
     #proverb {
+      padding: 0 0 1vh 0;
       display: inline-block;
       white-space: nowrap;
       overflow: hidden;

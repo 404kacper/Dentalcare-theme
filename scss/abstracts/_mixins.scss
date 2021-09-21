@@ -10,11 +10,12 @@
 @keyframes zoomIn {
   0% {
     filter: brightness($hero-brightness);
-    transform: translateZ($parallax-distanceZ) scale(2);
+    // transform: translateZ($parallax-distanceZ) scale(2);
   }
   100% {
     filter: brightness($hero-brightness);
-    transform: translateZ($parallax-distanceZ) scale(3);
+    transform: scale($zoom-scale);
+    // transform: translateZ($parallax-distanceZ) scale(3);
   }
 }
 

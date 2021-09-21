@@ -1,20 +1,4 @@
-// .parallax-wrapper {
-//     height: 100vh;
-//     width: 100vw;
-//     position: absolute;
-//     transform-style: preserve-3d;
-//     perspective: 300px;
-// }
-.parallax-perspective-container {
-    position: absolute;
-    perspective: 1px;
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-
-.parallax-wrapper::before {
+.showcase::before {
   content: '';
   width: 100vw;
   height: 100vh;
@@ -23,8 +7,50 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  z-index: -2;
-  animation: $zoom-duration ease-out 0s 1 zoomIn forwards;
+  z-index: -1;
+  // animation: $zoom-duration ease-out 0s 1 zoomIn forwards;
   filter: blur(0px) brightness($hero-brightness);
-  transform: translateZ(1px) scale(2);
+}
+
+.parallax_wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: $parallaxPerspective;
+  // Ios safari fix for touch scrolling
+  -webkit-overflow-scrolling: touch;
+}
+
+.parallax_layer {
+  position: absolute;
+  inset: 0;
+}
+
+.base_layer {
+  transform: translateZ(-600px) scale(parallax-scale-factor(-600px) + 0.1);
+}
+
+.mid_layer {
+  transform: translateZ(0);
+}
+
+.top_layer {
+  transform: translateZ(210px) scale(parallax-scale-factor(210px));
+}
+
+.parallax_group {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+#group-hero {
+  z-index: -3;
+}
+
+#group-info {
+  z-index: -1;
+}
+
+#group-amenities {
+  z-index: -3;
 }
