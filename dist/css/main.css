@@ -100,7 +100,7 @@ ul {
   text-size-adjust: 100%;
   white-space: normal;
   word-spacing: 0px;
-  color: #edf0f1;
+  color: #0d0d0e;
 }
 
 .hero-subtext {
@@ -124,7 +124,7 @@ ul {
   text-size-adjust: 100%;
   white-space: normal;
   word-spacing: 0px;
-  color: #edf0f1;
+  color: #0d0d0e;
 }
 
 .info-title {
@@ -386,10 +386,110 @@ button {
 }
 
 .hero-image {
-  height: calc(100vh - 90px);
-  width: 100%;
-  margin-top: 90px;
-  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.hero-image .deepest_layer::before {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/dist/assets/hero/tlo_grad.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-image .deep_layer::before {
+  content: '';
+  position: absolute;
+  bottom: 0vh;
+  left: 44vw;
+  width: 55vw;
+  height: 80vh;
+  background-image: url(/dist/assets/hero/tlo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hero-image .back_layer .circle-left {
+  width: 22.5px;
+  height: 22.5px;
+  top: 30vh;
+  left: 30vw;
+  position: absolute;
+  background-image: url(/dist/assets/hero/kolo_lewe.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hero-image .back_layer .circle-right {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 30vh;
+  right: 9vw;
+  background-image: url(/dist/assets/hero/kolo_prawe.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hero-image .back_layer .circle-middle {
+  width: 47px;
+  height: 47px;
+  position: absolute;
+  top: 18vh;
+  right: 37vw;
+  background-image: url(/dist/assets/hero/kolo_srodkowe.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hero-image .back_layer .rectangle-right {
+  width: 144px;
+  height: 144px;
+  position: absolute;
+  top: 0vh;
+  right: 0vw;
+  background-image: url(/dist/assets/hero/prostokat_prawy.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hero-image .back_layer .triangle-bottom {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 15vh;
+  left: 20vw;
+  background-image: url(/dist/assets/hero/trojkat_dolny.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hero-image .back_layer .triangle-middle {
+  width: 23.5px;
+  height: 23.5px;
+  position: absolute;
+  top: 25vh;
+  left: 35vw;
+  background-image: url(/dist/assets/hero/trojkat_srodkowy.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hero-image .mid_layer::before {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 30vw;
+  background-image: url(/dist/assets/hero/teeth.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .hero-image .hero-text {
@@ -688,19 +788,6 @@ button {
   margin-left: 4vh;
 }
 
-.showcase::before {
-  content: '';
-  width: 100vw;
-  height: 100vh;
-  background-image: url(/dist/assets/hero/3.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: -1;
-  filter: blur(0px) brightness(20%);
-}
-
 .parallax_wrapper {
   height: 100vh;
   overflow-x: hidden;
@@ -714,8 +801,16 @@ button {
   inset: 0;
 }
 
-.base_layer {
-  transform: translateZ(-600px) scale(3.1);
+.deepest_layer {
+  transform: translateZ(-300px) scale(2);
+}
+
+.deep_layer {
+  transform: translateZ(-200px) scale(1.66667);
+}
+
+.back_layer {
+  transform: translateZ(-100px) scale(1.43333);
 }
 
 .mid_layer {

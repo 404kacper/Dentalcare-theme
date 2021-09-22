@@ -4,3 +4,9 @@
   $result: $result / $parallaxPerspective;
   @return $result;
 }
+
+@function scale-hero($dim, $scaleFactor) {
+  $result: 0;
+  $result: $dim/$scaleFactor;
+  @return $result
+}

@@ -1,11 +1,113 @@
 .hero-image {
-  height: calc(100vh - 90px);
-  width: 100%;
-  margin-top: 90px;
+  height: 100vh;
+  width: 100vw;
   // This cannot be put on groups since it breaks parallax effect
   // overflow: hidden;
-  // Make hero-image positioned ancestor so that the svg can fit
-  position: relative;
+
+  .deepest_layer::before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/dist/assets/hero/tlo_grad.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .deep_layer::before {
+    content: '';
+    position: absolute;
+    bottom: 0vh;
+    left: 44vw;
+    width: 55vw;
+    height: 80vh;
+    background-image: url(/dist/assets/hero/tlo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+
+  .back_layer {
+    .circle-left {
+      width: scale-hero(45px,2);
+      height: scale-hero(45px,2);
+      top: 30vh;
+      left: 30vw;
+      position: absolute;
+      background-image: url(/dist/assets/hero/kolo_lewe.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .circle-right {
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      top: 30vh;
+      right: 9vw;
+      background-image: url(/dist/assets/hero/kolo_prawe.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .circle-middle {
+      width: 47px;
+      height: 47px;
+      position: absolute;
+      top: 18vh;
+      right: 37vw;
+      background-image: url(/dist/assets/hero/kolo_srodkowe.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .rectangle-right {
+      width: 144px;
+      height: 144px;
+      position: absolute;
+      top: 0vh;
+      right: 0vw;
+      background-image: url(/dist/assets/hero/prostokat_prawy.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .triangle-bottom {
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      bottom: 15vh;
+      left: 20vw;
+      background-image: url(/dist/assets/hero/trojkat_dolny.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .triangle-middle {
+      width: scale-hero(47px,2);
+      height: scale-hero(47px,2);
+      position: absolute;
+      top: 25vh;
+      left: 35vw;
+      background-image: url(/dist/assets/hero/trojkat_srodkowy.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .mid_layer::before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 30vw;
+    background-image: url(/dist/assets/hero/teeth.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
   .hero-text {
     width: 100%;
