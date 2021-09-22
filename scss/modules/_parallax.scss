@@ -28,10 +28,12 @@
 
 .base_layer {
   transform: translateZ(-600px) scale(parallax-scale-factor(-600px) + 0.1);
+  // background-color: darkcyan;
 }
 
 .mid_layer {
   transform: translateZ(0);
+  // background-color: crimson;
 }
 
 .top_layer {
@@ -41,6 +43,8 @@
 .parallax_group {
   position: relative;
   transform-style: preserve-3d;
+  // for debugging
+  // transform: translate3d(700px, 0, -800px) rotateY(30deg);
 }
 
 #group-hero {
@@ -48,9 +52,9 @@
 }
 
 #group-info {
-  z-index: -1;
+  z-index: 2;
 }
 
 #group-amenities {
-  z-index: -3;
+  z-index: 0;
 }

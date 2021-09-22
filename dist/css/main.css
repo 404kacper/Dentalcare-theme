@@ -389,7 +389,6 @@ button {
   height: calc(100vh - 90px);
   width: 100%;
   margin-top: 90px;
-  overflow: hidden;
   position: relative;
 }
 
@@ -495,7 +494,7 @@ button {
 
 #curveUpColor {
   position: absolute;
-  z-index: -2;
+  z-index: 1;
   transform: translateY(-100px);
   fill: #edf0f1;
   stroke: #0867ff;
@@ -504,7 +503,7 @@ button {
 
 #curveDownColor {
   position: absolute;
-  z-index: -2;
+  z-index: 1;
   transform: translateY(-1px);
   fill: #edf0f1;
   stroke: #0867ff;
@@ -737,11 +736,11 @@ button {
 }
 
 #group-info {
-  z-index: -1;
+  z-index: 2;
 }
 
 #group-amenities {
-  z-index: -3;
+  z-index: 0;
 }
 
 .slide-in-blurred-left {

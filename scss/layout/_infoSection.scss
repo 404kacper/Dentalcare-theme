@@ -64,7 +64,7 @@
 
 #curveUpColor {
   position: absolute;
-  z-index: -2;
+  z-index: 1;
   transform: translateY(-100px);
   fill: $hero-curve-fill;
   stroke: $hero-curve-stroke;
@@ -73,7 +73,7 @@
 
 #curveDownColor {
   position: absolute;
-  z-index: -2;
+  z-index: 1;
   transform: translateY(-1px);
   fill: $hero-curve-fill;
   stroke: $hero-curve-stroke;
