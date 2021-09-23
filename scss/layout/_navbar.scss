@@ -1,47 +1,81 @@
-header {
-  overflow: hidden;
-  position: fixed;
-  inset: 0;
-  height: 90px;
+#nav {
+  height: 10vh;
   width: 100vw;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 5px 20%;
+  padding: 0 20%;
   background-color: $navbar-bg;
   transition: all 0.3s ease 0s;
-  z-index: 9999;
-
 
   li,
   a,
   button {
     font-family: 'Roboto', sans-serif;
-    color: $navbar-font;
+    color: $navbar-second-font;
     text-decoration: none;
+  }
+
+  .logo {
+    cursor: pointer;
+    margin-right: auto;
+    max-height: 70%;
+  }
+
+  .nav-links li {
+    display: inline-block;
+    // margin-top: 10px;
+    padding: 0px 20px;
+  }
+
+  .nav-links li a {
+    transition: all 0.3s ease 0s;
+  }
+
+  .nav-links li a:hover {
+    color: $nav-links-hover;
+  }
+
+  button {
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
   }
 }
 
-.logo {
-  cursor: pointer;
-  margin-right: auto;
-  max-height: 100%;
-}
+.nav-info {
+  padding: 1.5vh 20%;
 
-.nav-links li {
-  display: inline-block;
-  padding: 0px 20px;
-}
+  .info-container {
+    display: flex;
+    padding: 0.2vh 0.2vw 1vh 0.2vw;
+    background: linear-gradient(
+        to right,
+        transparent 45%,
+        white 60%,
+        white 95%,
+        transparent 100%
+      )
+      left bottom transparent no-repeat;
+    background-size: 100% 1px;
+    justify-content: flex-end;
+    align-items: center;
+  }
 
-.nav-links li a {
-  transition: all 0.3s ease 0s;
-}
+  .time {
+    max-width: 20vw;
+  }
 
-.nav-links li a:hover {
-  color: $nav-links-hover;
-}
+  .time-icon {
+    max-width: 0.8vw;
+    margin: 0 0.4vw 0 0;
+  }
 
-button {
-  border-radius: 50px;
-  transition: all 0.3s ease 0s;
+  .location-icon {
+    max-width: 0.9vw;
+    margin: 0 0.3vw 0 1vw;
+  }
+
+  .location {
+    max-width: 20vw;
+  }
 }

@@ -79,6 +79,37 @@ ul {
   list-style: none;
 }
 
+.navbar-text-info {
+  font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  font-stretch: 100%;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  text-size-adjust: 100%;
+  color: white;
+}
+
+.navbar-text-info {
+  font-size: 6px;
+}
+
+@media screen and (min-width: 1000px) {
+  .navbar-text-info {
+    font-size: calc(6px + 8 * ((100vw - 1000px) / 920));
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .navbar-text-info {
+    font-size: 14px;
+  }
+}
+
+.navbar-text-info-thin {
+  opacity: 0.6;
+}
+
 .lead {
   font-family: 'Ubuntu';
   font-size: 74px;
@@ -107,18 +138,11 @@ ul {
   font-family: 'Ubuntu';
   font-size: 26px;
   font-stretch: 100%;
-  font-style: normal;
-  font-variant-caps: normal;
-  font-variant-east-asian: normal;
-  font-variant-ligatures: normal;
-  font-variant-numeric: normal;
   font-weight: 400;
-  letter-spacing: normal;
   line-height: 80px;
   text-align: center;
   text-decoration-color: white;
   text-decoration-line: none;
-  text-decoration-style: solid;
   text-decoration-thickness: auto;
   text-indent: 0px;
   text-size-adjust: 100%;
@@ -130,18 +154,11 @@ ul {
 .info-title {
   font-family: 'Titillium Web', sans-serif;
   font-stretch: 100%;
-  font-style: normal;
-  font-variant-caps: normal;
-  font-variant-east-asian: normal;
-  font-variant-ligatures: normal;
-  font-variant-numeric: normal;
   font-weight: 400;
-  letter-spacing: normal;
   line-height: 20px;
   text-align: left;
   text-indent: 0px;
   text-size-adjust: 100%;
-  white-space: normal;
   word-spacing: 0px;
   color: #000000;
 }
@@ -165,18 +182,11 @@ ul {
 .info-text {
   font-family: 'Titillium Web', Helvetica, sans-serif;
   font-stretch: 100%;
-  font-style: normal;
-  font-variant-caps: normal;
-  font-variant-east-asian: normal;
-  font-variant-ligatures: normal;
-  font-variant-numeric: normal;
   font-weight: 400;
-  letter-spacing: normal;
   line-height: 20px;
   text-align: left;
   text-indent: 0px;
   text-size-adjust: 100%;
-  white-space: normal;
   word-spacing: 0px;
   color: #636363;
 }
@@ -200,18 +210,10 @@ ul {
 .amenities-lead {
   font-family: 'Monoton', sans-serif;
   font-stretch: 100%;
-  font-style: normal;
-  font-variant-caps: normal;
-  font-variant-east-asian: normal;
-  font-variant-ligatures: normal;
-  font-variant-numeric: normal;
   font-weight: 400;
-  letter-spacing: normal;
-  line-height: normal;
   text-align: center;
   text-indent: 0px;
   text-size-adjust: 100%;
-  white-space: normal;
   word-spacing: 0px;
   color: transparent;
   -webkit-text-stroke-width: 1px;
@@ -237,18 +239,11 @@ ul {
 .amenities-title {
   font-family: 'Fira Sans', sans-serif;
   font-stretch: 100%;
-  font-style: normal;
-  font-variant-caps: normal;
-  font-variant-east-asian: normal;
-  font-variant-ligatures: normal;
-  font-variant-numeric: normal;
   font-weight: bold;
-  letter-spacing: normal;
   line-height: 20px;
   text-align: left;
   text-indent: 0px;
   text-size-adjust: 100%;
-  white-space: normal;
   word-spacing: 0px;
   color: #000000;
 }
@@ -272,18 +267,11 @@ ul {
 .amenities-description {
   font-family: 'Fira Sans', sans-serif;
   font-stretch: 100%;
-  font-style: normal;
-  font-variant-caps: normal;
-  font-variant-east-asian: normal;
-  font-variant-ligatures: normal;
-  font-variant-numeric: normal;
   font-weight: 400;
-  letter-spacing: normal;
   line-height: 20px;
   text-align: left;
   text-indent: 0px;
   text-size-adjust: 100%;
-  white-space: normal;
   word-spacing: 0px;
   color: #000000;
 }
@@ -307,18 +295,11 @@ ul {
 .amenities-btn {
   font-family: 'Fira Sans', sans-serif;
   font-stretch: 100%;
-  font-style: normal;
-  font-variant-caps: normal;
-  font-variant-east-asian: normal;
-  font-variant-ligatures: normal;
-  font-variant-numeric: normal;
   font-weight: bold;
-  letter-spacing: normal;
   line-height: 20px;
   text-align: left;
   text-indent: 0px;
   text-size-adjust: 100%;
-  white-space: normal;
   word-spacing: 0px;
 }
 
@@ -338,55 +319,82 @@ ul {
   }
 }
 
-header {
-  overflow: hidden;
-  position: fixed;
-  inset: 0;
-  height: 90px;
+#nav {
+  height: 10vh;
   width: 100vw;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 5px 20%;
-  background-color: #edf0f1;
+  padding: 0 20%;
+  background-color: transparent;
   transition: all 0.3s ease 0s;
-  z-index: 9999;
 }
 
-header li,
-header a,
-header button {
+#nav li,
+#nav a,
+#nav button {
   font-family: 'Roboto', sans-serif;
-  color: #393a39;
+  color: #edf0f1;
   text-decoration: none;
 }
 
-.logo {
+#nav .logo {
   cursor: pointer;
   margin-right: auto;
-  max-height: 100%;
+  max-height: 70%;
 }
 
-.nav-links li {
+#nav .nav-links li {
   display: inline-block;
   padding: 0px 20px;
 }
 
-.nav-links li a {
+#nav .nav-links li a {
   transition: all 0.3s ease 0s;
 }
 
-.nav-links li a:hover {
+#nav .nav-links li a:hover {
   color: #00abd6;
 }
 
-button {
+#nav button {
   border-radius: 50px;
   transition: all 0.3s ease 0s;
 }
 
+.nav-info {
+  padding: 1.5vh 20%;
+}
+
+.nav-info .info-container {
+  display: flex;
+  padding: 0.2vh 0.2vw 1vh 0.2vw;
+  background: linear-gradient(to right, transparent 45%, white 60%, white 95%, transparent 100%) left bottom transparent no-repeat;
+  background-size: 100% 1px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-info .time {
+  max-width: 20vw;
+}
+
+.nav-info .time-icon {
+  max-width: 0.8vw;
+  margin: 0 0.4vw 0 0;
+}
+
+.nav-info .location-icon {
+  max-width: 0.9vw;
+  margin: 0 0.3vw 0 1vw;
+}
+
+.nav-info .location {
+  max-width: 20vw;
+}
+
 .hero-image {
-  height: 100vh;
+  height: 110vh;
   width: 100vw;
 }
 
@@ -394,21 +402,37 @@ button {
   content: '';
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   background-image: url(/dist/assets/hero/tlo_grad.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.hero-image .deep_layer::before {
-  content: '';
+.hero-image .deep_layer {
+  width: 100vw;
+  height: 110vh;
+}
+
+.hero-image .deep_layer .bg {
   position: absolute;
   bottom: 0vh;
   left: 44vw;
   width: 55vw;
-  height: 80vh;
+  height: 70vh;
   background-image: url(/dist/assets/hero/tlo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hero-image .back_layer .bg-extra {
+  position: absolute;
+  bottom: 36vh;
+  left: 50vw;
+  width: 15vw;
+  height: 40vh;
+  background-image: url(/dist/assets/hero/tlo_extra.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -480,14 +504,14 @@ button {
   background-repeat: no-repeat;
 }
 
-.hero-image .mid_layer::before {
+.hero-image .subject::before {
   content: '';
   position: absolute;
   width: 100vw;
-  height: 100vh;
-  left: 30vw;
-  background-image: url(/dist/assets/hero/teeth.png);
-  background-position: center;
+  height: 110vh;
+  left: 25vw;
+  background-image: url(/dist/assets/hero/teeth_custom.png);
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -624,7 +648,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(-67deg, #0867ff 50%, #edf0f1 0);
+  background: linear-gradient(-67deg, #0867ff 50%, transparent 0);
   background-clip: text;
   -webkit-background-clip: text;
 }

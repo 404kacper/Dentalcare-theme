@@ -69,7 +69,7 @@ scrollingElement.addEventListener('scroll', () => {
   scrollpos = scrollingElement.scrollTop;
   console.log(scrollpos);
   // Navbar
-  scrollpos >= 100 ? addTransparentBg() : removeTransparentBg();
+  // scrollpos >= 100 ? addTransparentBg() : removeTransparentBg();
   // Icons in info section
   if (scrollpos >= 200 && iconsFired === false) {
     animateIcons(iconRevealDelay);

@@ -1,5 +1,5 @@
 .hero-image {
-  height: 100vh;
+  height: 110vh;
   width: 100vw;
   // This cannot be put on groups since it breaks parallax effect
   // overflow: hidden;
@@ -8,28 +8,44 @@
     content: '';
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     background-image: url(/dist/assets/hero/tlo_grad.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  .deep_layer::before {
-    content: '';
-    position: absolute;
-    bottom: 0vh;
-    left: 44vw;
-    width: 55vw;
-    height: 80vh;
-    background-image: url(/dist/assets/hero/tlo.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  .deep_layer {
+    width: 100vw;
+    height: 110vh;
+
+    .bg {
+      position: absolute;
+      bottom: 0vh;
+      left: 44vw;
+      width: 55vw;
+      height: 70vh;
+      background-image: url(/dist/assets/hero/tlo.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
 
 
   .back_layer {
+    .bg-extra {
+      position: absolute;
+      bottom: 36vh;
+      left: 50vw;
+      width: 15vw;
+      height: 40vh;
+      background-image: url(/dist/assets/hero/tlo_extra.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    
     .circle-left {
       width: scale-hero(45px,2);
       height: scale-hero(45px,2);
@@ -97,16 +113,17 @@
     }
   }
 
-  .mid_layer::before {
+  .subject::before {
     content: '';
     position: absolute;
     width: 100vw;
-    height: 100vh;
-    left: 30vw;
-    background-image: url(/dist/assets/hero/teeth.png);
-    background-position: center;
+    height: 110vh;
+    left: 25vw;
+    background-image: url(/dist/assets/hero/teeth_custom.png);
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: contain;
+    // background-size: 100% 100%;
   }
 
   .hero-text {
