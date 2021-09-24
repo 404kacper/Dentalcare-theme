@@ -1,19 +1,44 @@
 // Custom font framework
+
+// Navbar related fonts
 .navbar {
   $min_width: 1000px;
   $max_width: 1920px;
-  &-text {
+
+  &-btn-text {
+    a {
+      $min-font: 12px;
+      $max-font: 16px;
+      font-family: 'Playfair Display';
+      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+      white-space: nowrap;
+      font-variant-numeric: lining-nums;
+      font-weight: 400;
+      text-align: center;
+      color: white;  
+    }
+  }
+
+  &-text { 
+    a, li {
+      $min-font: 12px;
+      $max-font: 16px;
+      font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+      white-space: nowrap;
+      font-weight: 400;
+      text-align: left;
+      color: white;  
+    }
+
     &-info {
       $min-font: 6px;
       $max-font: 14px;
       font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
       @include fluid-type($min-width, $max-width, $min-font, $max-font);
       white-space: nowrap;
-      font-stretch: 100%;
       font-weight: 400;
-      line-height: 20px;
       text-align: left;
-      text-size-adjust: 100%;
       color: white;
 
       &-thin {
@@ -22,47 +47,63 @@
     }
   }
 }
-.lead {
-  font-family: 'Ubuntu';
-  font-size: 74px;
-  font-stretch: 100%;
-  font-style: normal;
-  font-variant-caps: normal;
-  font-variant-east-asian: normal;
-  font-variant-ligatures: normal;
-  font-variant-numeric: normal;
-  font-weight: 500;
-  letter-spacing: normal;
-  line-height: 80px;
-  text-align: center;
-  text-decoration-color: white;
-  text-decoration-line: none;
-  text-decoration-style: solid;
-  text-decoration-thickness: auto;
-  text-indent: 0px;
-  text-size-adjust: 100%;
-  white-space: normal;
-  word-spacing: 0px;
-  color: $hero-font-color;
+
+// Hero img related fonts
+.hero {
+  $min_width: 1000px;
+  $max_width: 1920px;
+
+  &-lead {
+    $min-font: 32px;
+    $max-font: 90px;
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    line-height: $max-font;
+    white-space: nowrap;
+    font-weight: 700;
+    text-align: left;
+    color: white;
+
+    &-small {
+      $min-font: 32px;
+      $max-font: 54px;
+      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+      line-height: $max-font;
+      white-space: nowrap;
+      font-weight: 400;
+      text-align: left;
+      color: $primary-gradient;
+    }
+  }
+
+  &-subtext {
+    $min-font: 9px;
+    $max-font: 18px;
+
+    font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    line-height: $max-font;
+    line-height: $max-font+9px;
+    font-weight: 300;
+    text-align: left;
+    color: white;
+
+  }
+
+  &-btn-text {
+    $min-font: 12px;
+    $max-font: 18px;
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    // line-height: $max-font;
+    white-space: nowrap;
+    text-transform: none;
+    font-weight: 500;
+  }
 }
 
-.hero-subtext {
-  font-family: 'Ubuntu';
-  font-size: 26px;
-  font-stretch: 100%;
-  font-weight: 400;
-  line-height: 80px;
-  text-align: center;
-  text-decoration-color: white;
-  text-decoration-line: none;
-  text-decoration-thickness: auto;
-  text-indent: 0px;
-  text-size-adjust: 100%;
-  white-space: normal;
-  word-spacing: 0px;
-  color: $hero-font-color;
-}
-
+// Info section related fonts
 .info {
   $min_width: 1000px;
   $max_width: 1920px;
@@ -72,13 +113,8 @@
   &-title {
     font-family: 'Titillium Web', sans-serif;
     @include fluid-type($min-width, $max-width, $min-font, $max-font);
-    font-stretch: 100%;
     font-weight: 400;
-    line-height: 20px;
     text-align: left;
-    text-indent: 0px;
-    text-size-adjust: 100%;
-    word-spacing: 0px;
     color: $title-color;
   }
 
@@ -87,31 +123,23 @@
     $max_font: 18px;
     font-family: 'Titillium Web', Helvetica, sans-serif;
     @include fluid-type($min-width, $max-width, $min-font, $max-font);
-    font-stretch: 100%;
     font-weight: 400;
-    line-height: 20px;
     text-align: left;
-    text-indent: 0px;
-    text-size-adjust: 100%;
-    word-spacing: 0px;
     color: $description-color;
   }
 }
 
+// Amenities section related fonts
 .amenities {
   $min_width: 1000px;
   $max_width: 1920px;
   $min_font: 24px;
   $max_font: 144px;
+
   &-lead {
     font-family: 'Monoton', sans-serif;
-    @include fluid-type($min-width, $max-width, $min-font, $max-font);
-    font-stretch: 100%;
     font-weight: 400;
     text-align: center;
-    text-indent: 0px;
-    text-size-adjust: 100%;
-    word-spacing: 0px;
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #00000090;
@@ -122,13 +150,8 @@
     $max_font: 36px;
     font-family: 'Fira Sans', sans-serif;
     @include fluid-type($min-width, $max-width, $min-font, $max-font);
-    font-stretch: 100%;
     font-weight: bold;
-    line-height: 20px;
     text-align: left;
-    text-indent: 0px;
-    text-size-adjust: 100%;
-    word-spacing: 0px;
     color: $amenities-title;
   }
 
@@ -137,13 +160,9 @@
     $max_font: 17px;
     font-family: 'Fira Sans', sans-serif;
     @include fluid-type($min-width, $max-width, $min-font, $max-font);
-    font-stretch: 100%;
     font-weight: 400;
     line-height: 20px;
     text-align: left;
-    text-indent: 0px;
-    text-size-adjust: 100%;
-    word-spacing: 0px;
     color: $amenities-title;
   }
 
@@ -152,13 +171,8 @@
     $max_font: 18px;
     font-family: 'Fira Sans', sans-serif;
     @include fluid-type($min-width, $max-width, $min-font, $max-font);
-    font-stretch: 100%;
     font-weight: bold;
-    line-height: 20px;
     text-align: left;
-    text-indent: 0px;
-    text-size-adjust: 100%;
-    word-spacing: 0px;
     // color: $amenities-title;
   }
 }
