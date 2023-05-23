@@ -1,0 +1,12 @@
+@function parallax-scale-factor($zDistance) {
+  $result: 0;
+  $result: $parallaxPerspective - $zDistance;
+  $result: $result / $parallaxPerspective;
+  @return $result;
+}
+
+@function scale-hero($dim, $scaleFactor) {
+  $result: 0;
+  $result: $dim/$scaleFactor;
+  @return $result
+}

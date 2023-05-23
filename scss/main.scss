@@ -1,11 +1,45 @@
-// Modules and variables
-@import 'modules/all';
+// // Modules and variables
+// @import 'modules/all';
 
-// Partials 
-@import 'partials/reset';
+// // Partials 
+// @import 'partials/reset';
 
-// Partials - layout 
-@import 'partials/navbar';
+// // Partials - layout 
+// @import 'partials/navbar';
+// @import 'partials/hero';
+// @import 'partials/infoSection';
 
-// Partials - responsive layouts
-@import 'partials/mobile';
+// // Partials - responsive layouts
+// @import 'partials/mobile';
+
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+// Vendors
+// @import 'vendors/bootstrap';
+// @import 'vendors/jquery-ui';
+
+// Base
+@import 'base/reset';
+@import 'base/typography';
+
+// Layout
+@import 'layout/navbar';
+@import 'layout/hero';
+@import 'layout/infoSection';
+@import 'layout/amenitiesSection';
+// @import 'layout/footer';
+// @import 'layout/sidebar';
+// @import 'layout/forms';
+
+// Components
+@import 'modules/buttons';
+@import 'modules/separators';
+@import 'modules/parallax';
+@import 'modules/animationClasses';
+
+// Themes
+// @import 'themes/theme';
+// @import 'themes/admin';

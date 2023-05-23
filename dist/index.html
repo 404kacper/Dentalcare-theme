@@ -8,23 +8,214 @@
   <link rel="stylesheet" href="css/main.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Maven pro and Playfair display -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
   <title>Dentalcare Joanna Sionkowska</title>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <header>
-    <img class="logo" src="" alt="Logo">
-    <nav>
-      <ul class="nav_links">
-        <li><a href="#">O nas</a></li>
-        <li><a href="#">Cennik</a></li>
-        <li><a href="#">Kadra</a></li>
-      </ul>
-    </nav>
-    <a href="" class="cta"><button>Kontakt</button></a>
-  </header>
+  <!-- Parallax wrapper for whole page -->
+  <div class="parallax_wrapper">
+
+    <!-- Hero -->
+    <section class="parallax_group hero-image" id="group-hero">
+
+      <div class="parallax_layer deepest_layer">
+      </div>
+
+      <div class="parallax_layer deep_layer">
+        <div class="bg"></div>
+      </div>
+
+      <div class="parallax_layer back_layer">
+        <div class="bg-extra"></div>
+        <div class="circle-left"></div>
+        <div class="circle-right"></div>
+        <div class="circle-middle"></div>
+        <div class="rectangle-right"></div>
+        <div class="triangle-bottom"></div>
+        <div class="triangle-middle"></div>
+      </div>
+
+      <div class="parallax_layer mid_layer subject">
+      </div>
+
+      <section class="parallax_layer mid_layer">
+        <!-- Navbar -->
+        <header>
+          <div class="nav-info navbar-text-info">
+            <div class="info-container">
+              <img src="/dist/assets/navbar/clock.svg" class="time-icon" alt="">
+              <div class="time">
+                Poniedziałek do Piątku <span class="navbar-text-info-thin">8:00 - 15:00</span>
+              </div>
+              <img src="/dist/assets/navbar/pin.svg" class="location-icon"></>
+              <div class="location">
+                Adres <span class="navbar-text-info-thin">Metalowa 57, 22-100 Chełm</span>
+              </div>
+            </div>
+          </div>
+          <div id="nav">
+            <img class="logo" src="assets/navbar/logo_tekst.svg" alt="Logo">
+            <nav>
+              <ul class="nav-links navbar-text">
+                <li><a href="#">O nas</a></li>
+                <li><a href="#">Usługi</a></li>
+                <li><a href="#">Kadra</a></li>
+                <li><a href="#">Nowości</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </nav>
+            <button class="btn-grad navbar-btn-text" id="navbar-btn"><img class="phone" src="/dist/assets/navbar/phone.svg"><a href="" >731-105-109</a></button>
+          </div>
+        </header>
+        <div class="hero">
+          <p class="hero-lead-small" id="proverb">A Reason </p>
+          <div class="hero-lead" id="proverb-sub">To Smile</div>
+          <p class="hero-subtext" id="proverb-sub2">Dbaj o swoje uśmiech i umów się na wizytę do najlepszego dentysty.
+          </p>
+          <div id="hero-btn">
+            <button class="btn-grad btn-hero"><a href="#" class="hero-btn-text">Zobacz Usługi</a></button>
+            <button class="btn-flat btn-hero"><a href="#" class="hero-btn-text">Opinie
+                Klientów</a></button>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- <svg id="curveUpColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100"
+      viewBox="0 0 100 99" preserveAspectRatio="none">
+      <path d="M-2 100 C 20 0 50 0 103 103 Z" />
+    </svg> -->
+
+    <!-- Info -->
+    <section class="parallax_group infoSection" id="group-info">
+
+      <div class="parallax_layer mid_layer">
+
+        <div class="wrapper">
+
+          <div class="gallery-container">
+            <!-- <img src="/dist/assets/infoSection/icon-emergency.svg" class="icon icon-emergency">
+            <div class="text-container">
+              <p class="info-title">Pogotowie<br>dentystyczne</p>
+              <p class="info-text">Każdego dnia i o każdej porze nasz dentysta wam pomoże.</p>
+            </div>
+            <img src="/dist/assets/infoSection/icon-prophylactic.svg" alt="" class="icon icon-prophylactic">
+            <div class="text-container">
+              <p class="info-title">Stomatologia<br>profilaktyczna</p>
+              <p class="info-text">Wykonywane zabiegi to min: skaling, wybielanie, lakowanie i wiele więcej.</p>
+            </div>
+            <img src="/dist/assets/infoSection/icon-prosthesis2.svg" alt="" class="icon icon-prosthesis">
+            <div class="text-container">
+              <p class="info-title">Protezy<br>dentystyczne</p>
+              <p class="info-text">Kompleksowe usługi dotyczące protez ruchomych i stałych.</p>
+            </div>
+            <img src="/dist/assets/infoSection/icon-root.svg" alt="" class="icon icon-root">
+            <div class="text-container">
+              <p class="info-title">Leczenie<br>kanałowe</p>
+              <p class="info-text">Zabieg przeprowadzany wysokiej jakości endometrem skutecznie ratuje zęby.</p>
+            </div> -->
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- <svg id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100"
+      viewBox="0 0 100 99" preserveAspectRatio="none">
+      <path d="M-2 0 C 50 100 80 103 103 0 Z" />
+    </svg> -->
+
+    <!-- Amenities -->
+    <section class="parallax_group amenitiesSection" id="group-amenities">
+
+      <div class="parallax_layer mid_layer">
+
+        <div class="whyUs" id="whyUsText">
+          <p class="amenities-lead">
+            Reamining to do<br> from wireframe/theme <br> replace below section
+          </p>
+        </div>
+
+        <div class="image-card">
+          <div class="image-container image-container-left">
+            <img src="/dist/assets/amenities/experience.jpg" class="experience experience-left">
+          </div>
+
+          <div class="image-card-content">
+            <div class="image-card-title amenities-title">Wieloletnie doświadczenie</div>
+            <div class="image-card-description amenities-description">Lorem ipsum dolor sit amet consectetur,
+              adipisicing
+              elit. Sunt sapiente iste rerum suscipit omnis amet consequuntur natus enim delectus esse id laboriosam,
+              maiores ea ipsa iusto veritatis illo soluta provident et quasi! Tempora repellendus ducimus commodi
+              cumque
+              repudiandae perspiciatis quae recusandae soluta odit non animi nisi libero facilis nulla veritatis
+              explicabo
+              error vel voluptas officia, quidem consequatur voluptate! Animi ipsam ullam aliquid illum at fugiat
+              sapiente
+              nisi rem quae, nam repellat, odio facere? Quas mollitia suscipit optio velit a saepe!</div>
+            <button href="#" class="btn-grad btn-grad-rectangle amenities-btn">Dowiedz się więcej</button>
+          </div>
+        </div>
+
+        <div class="image-card">
+          <div class="image-card-content image-card-content-right">
+            <div class="image-card-title amenities-title">Stomatologia dziecięca</div>
+            <div class="image-card-description amenities-description">Lorem ipsum dolor sit amet consectetur,
+              adipisicing
+              elit. Sunt sapiente iste rerum suscipit omnis amet consequuntur natus enim delectus esse id laboriosam,
+              maiores ea ipsa iusto veritatis illo soluta provident et quasi! Tempora repellendus ducimus commodi cumque
+              repudiandae perspiciatis quae recusandae soluta odit non animi nisi libero facilis nulla veritatis
+              explicabo
+              error vel voluptas officia, quidem consequatur voluptate! Animi ipsam ullam aliquid illum at fugiat
+              sapiente
+              nisi rem quae, nam repellat, odio facere? Quas mollitia suscipit optio velit a saepe!</div>
+            <button href="#" class="btn-grad btn-grad-rectangle amenities-btn">Dowiedz się więcej</button>
+          </div>
+          <div class="image-container image-container-right">
+            <img src="/dist/assets/amenities/kids.jpg" class="experience experience-right">
+          </div>
+        </div>
+
+        <div class="image-card">
+          <div class="image-container image-container-left">
+            <img src="/dist/assets/hero/2.jpg" class="experience experience-left">
+          </div>
+          <div class="image-card-content">
+            <div class="image-card-title amenities-title">Nowoczesny sprzęt</div>
+            <div class="image-card-description amenities-description">Lorem ipsum dolor sit amet consectetur,
+              adipisicing
+              elit. Sunt sapiente iste rerum suscipit omnis amet consequuntur natus enim delectus esse id laboriosam,
+              maiores ea ipsa iusto veritatis illo soluta provident et quasi! Tempora repellendus ducimus commodi cumque
+              repudiandae perspiciatis quae recusandae soluta odit non animi nisi libero facilis nulla veritatis
+              explicabo
+              error vel voluptas officia, quidem consequatur voluptate! Animi ipsam ullam aliquid illum at fugiat
+              sapiente
+              nisi rem quae, nam repellat, odio facere? Quas mollitia suscipit optio velit a saepe!</div>
+            <button href="#" class="btn-grad btn-grad-rectangle amenities-btn">Dowiedz się więcej</button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
 
 </body>
 <script type="text/javascript" src="js/main.js" defer></script>

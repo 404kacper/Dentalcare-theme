@@ -1,0 +1,81 @@
+.infoSection {
+  height: 40vh;
+  background-color: $info-bg;
+  // overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .mid_layer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .wrapper {
+      padding: 0 10vw 0 10vw;
+  
+      .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 1fr;
+  
+        .text-container {
+          margin: 0 2vw 0 2vw;
+          min-width: 10vw;
+          transition: transform $icon-hover-duration linear 0s,
+          text-shadow $icon-hover-duration linear 0s;
+          opacity: 0;
+  
+          &-animate {
+            animation: reveal $icon-reveal-duration $icon-reveal-delay 1 forwards;
+          }
+          .info-title {
+            padding: 0 0 1vw 0;
+          }
+        }
+  
+        .icon:hover + .text-container {
+          transform: translateY(-20px);
+          text-shadow: 10px 10px 10px $primary-color;
+        }
+  
+        .icon {
+          height: 10vw;
+          max-width: 10vw;
+          border: 2px solid $primary-color;
+          padding: 2px;
+          border-radius: 50%;
+          transition: border-radius $icon-hover-duration linear 0s;
+          opacity: 0;
+  
+          &-animate {
+            animation: reveal $icon-reveal-duration $icon-reveal-delay 1 forwards;
+          }
+  
+          &:hover {
+            cursor: pointer;
+            border-radius: 50% 20% / 10% 40%;
+          }
+        }
+      }
+    }
+  }
+}
+
+#curveUpColor {
+  position: absolute;
+  z-index: 1;
+  transform: translateY(-100px);
+  fill: $hero-curve-fill;
+  stroke: $hero-curve-stroke;
+  stroke-width: $hero-curve-stroke-width;
+}
+
+#curveDownColor {
+  position: absolute;
+  z-index: 1;
+  transform: translateY(-1px);
+  fill: $hero-curve-fill;
+  stroke: $hero-curve-stroke;
+  stroke-width: $hero-curve-stroke-width;
+}

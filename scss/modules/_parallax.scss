@@ -1,0 +1,55 @@
+.parallax_wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: $parallaxPerspective;
+  // Ios safari fix for touch scrolling
+  -webkit-overflow-scrolling: touch;
+}
+
+.parallax_layer {
+  position: absolute;
+  inset: 0;
+}
+
+.deepest_layer {
+  transform: translateZ(-300px) scale(parallax-scale-factor(-300px));
+  // background-color: darkblue;
+}
+
+.deep_layer {
+  transform: translateZ(-200px) scale(parallax-scale-factor(-200px));
+  // background-color: green;
+}
+
+.back_layer {
+  transform: translateZ(-100px) scale(parallax-scale-factor(-100px) + 0.1);
+  // background-color: darkcyan;
+}
+
+.mid_layer {
+  transform: translateZ(0);
+}
+
+.front_layer {
+  transform: translateZ(210px) scale(parallax-scale-factor(210px));
+}
+
+.parallax_group {
+  position: relative;
+  transform-style: preserve-3d;
+  // for debugging
+  // transform: translate3d(700px, 0, -800px) rotateY(30deg);
+}
+
+#group-hero {
+  z-index: -3;
+}
+
+#group-info {
+  z-index: 2;
+}
+
+#group-amenities {
+  z-index: 0;
+}

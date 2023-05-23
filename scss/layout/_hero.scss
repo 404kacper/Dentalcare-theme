@@ -1,0 +1,187 @@
+.hero-image {
+  height: 110vh;
+  width: 100vw;
+  // This cannot be put on groups since it breaks parallax effect
+  // overflow: hidden;
+
+  .deepest_layer::before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 110vh;
+    background: #1950bd;
+    background: linear-gradient(to top, #1950bd 0%, #0965fb 70%);
+    // background-image: url(/dist/assets/hero/tlo_grad.png);
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+  }
+
+  .deep_layer {
+    height: 110vh;
+    width: 100vw;
+
+    .bg {
+      position: absolute;
+      bottom: 0vh;
+      left: 44vw;
+      width: 55vw;
+      height: 70vh;
+      background-image: url(/dist/assets/hero/tlo.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .back_layer {
+    width: 100vw;
+    height: 110vh;
+
+    .bg-extra {
+      position: absolute;
+      bottom: 36vh;
+      left: 50vw;
+      width: 15vw;
+      height: 40vh;
+      background-image: url(/dist/assets/hero/tlo_extra.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .circle-left {
+      width: scale-hero(45px, 2);
+      height: scale-hero(45px, 2);
+      top: 30vh;
+      left: 30vw;
+      position: absolute;
+      background-image: url(/dist/assets/hero/kolo_lewe.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .circle-right {
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      top: 30vh;
+      right: 9vw;
+      background-image: url(/dist/assets/hero/kolo_prawe.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .circle-middle {
+      width: 47px;
+      height: 47px;
+      position: absolute;
+      top: 18vh;
+      right: 37vw;
+      background-image: url(/dist/assets/hero/kolo_srodkowe.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .rectangle-right {
+      width: 144px;
+      height: 144px;
+      position: absolute;
+      top: 0vh;
+      right: 0vw;
+      background-image: url(/dist/assets/hero/prostokat_prawy.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .triangle-bottom {
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      bottom: 15vh;
+      left: 20vw;
+      background-image: url(/dist/assets/hero/trojkat_dolny.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .triangle-middle {
+      width: scale-hero(47px, 2);
+      height: scale-hero(47px, 2);
+      position: absolute;
+      top: 25vh;
+      left: 35vw;
+      background-image: url(/dist/assets/hero/trojkat_srodkowy.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .subject::before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 115vh;
+    bottom: 0;
+    background-image: url(/dist/assets/hero/teeth_bottom.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-size: 100% 100%;
+  }
+
+  .hero {
+    width: 30vw;
+    height: 34vh;
+    position: absolute;
+    top: 35vh;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .hero-lead-small {
+      display: inline-block;
+      // animation: slidein $hero-slidein-duration 1;
+    }
+
+    .hero-lead {
+      display: inline-block;
+      // Possibly a flaw in case css animation fails
+      // opacity: 0;
+      // animation: reveal $hero-reveal-duration $hero-slidein-duration 1 forwards;
+    }
+
+    .hero-subtext {
+      margin: 2vh 0 0 0;
+      // max-width: 30vw;
+      display: inline-block;
+      // Possibly a flaw in case css animation fails
+      // opacity: 0;
+      // animation: reveal $hero-reveal-duration $hero-second-reveal-delay 1 forwards;
+    }
+
+    #hero-btn {
+      margin-top: 4vh;
+
+      .btn-hero {
+        width: 10vw;
+        height: 6vh;
+      }
+
+      .btn-grad {
+        margin: 0;
+        float: left;
+      }
+
+      .btn-flat {
+        margin: 0 0 0 2vw;
+        float: left;
+      }
+      // Possibly a flaw in case css animation fails
+      // opacity: 0;
+      // animation: reveal $button-reveal-duration $hero-button-reveal-delay 1 forwards;
+    }
+  }
+}
