@@ -58,7 +58,7 @@ function animateIcons(delay) {
 }
 
 function animateWhyUs() {
-  console.log(whyUsText);
+  // console.log(whyUsText);
   whyUsText.classList.add('slide-in-blurred-left');
 }
 
@@ -67,7 +67,7 @@ var whyusFired = false;
 // Scrollbar listener
 scrollingElement.addEventListener('scroll', () => {
   scrollpos = scrollingElement.scrollTop;
-  console.log(scrollpos);
+  // console.log(scrollpos);
   // Navbar
   // scrollpos >= 100 ? addTransparentBg() : removeTransparentBg();
   // Icons in info section

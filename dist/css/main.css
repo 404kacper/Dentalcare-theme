@@ -395,18 +395,15 @@ ul {
   background: #1950bd;
   background: linear-gradient(to top, #1950bd 0%, #0965fb 70%);
 }
-.hero-image .deep_layer {
-  height: 110vh;
-  width: 100vw;
-}
-.hero-image .deep_layer .bg {
+.hero-image .deep_layer::before {
+  content: "";
   position: absolute;
   bottom: 0vh;
   left: 44vw;
   width: 55vw;
   height: 70vh;
   background-image: url(/dist/assets/hero/tlo.png);
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -490,7 +487,6 @@ ul {
   position: absolute;
   width: 100vw;
   height: 115vh;
-  bottom: 0;
   background-image: url(/dist/assets/hero/teeth_bottom.png);
   background-position: bottom;
   background-repeat: no-repeat;
@@ -800,15 +796,15 @@ ul {
 }
 
 .deepest_layer {
-  transform: translateZ(-300px) scale(2);
+  transform: translateZ(-900px) scale(4);
 }
 
 .deep_layer {
-  transform: translateZ(-200px) scale(1.6666666667);
+  transform: translateZ(-600px) scale(3);
 }
 
 .back_layer {
-  transform: translateZ(-100px) scale(1.4333333333);
+  transform: translateZ(-300px) scale(2);
 }
 
 .mid_layer {
@@ -816,7 +812,7 @@ ul {
 }
 
 .front_layer {
-  transform: translateZ(210px) scale(0.3);
+  transform: translateZ(200px) scale(0.3333333333);
 }
 
 .parallax_group {
