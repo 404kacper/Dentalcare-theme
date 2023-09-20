@@ -1,8 +1,6 @@
-.hero-image {
+.hero-section {
   height: 110vh;
   width: 100vw;
-  // This cannot be put on groups since it breaks parallax effect
-  // overflow: hidden;
 
   .deepest_layer::before {
     content: '';
@@ -11,27 +9,19 @@
     height: 110vh;
     background: #1950bd;
     background: linear-gradient(to top, #1950bd 0%, #0965fb 70%);
-    // background-image: url(/dist/assets/hero/tlo_grad.png);
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
   }
 
-  .deep_layer {
-    height: 110vh;
-    width: 100vw;
-
-    .bg {
-      position: absolute;
-      bottom: 0vh;
-      left: 44vw;
-      width: 55vw;
-      height: 70vh;
-      background-image: url(/dist/assets/hero/tlo.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
+  .deep_layer::before {
+    content: '';
+    position: absolute;
+    bottom: 0vh;
+    left: 44vw;
+    width: 55vw;
+    height: 70vh;
+    background-image: url(/dist/assets/hero/tlo.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .back_layer {
@@ -122,12 +112,10 @@
     position: absolute;
     width: 100vw;
     height: 115vh;
-    bottom: 0;
     background-image: url(/dist/assets/hero/teeth_bottom.png);
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    // background-size: 100% 100%;
   }
 
   .hero {

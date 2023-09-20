@@ -383,11 +383,11 @@ ul {
   height: 2vh;
 }
 
-.hero-image {
+.hero-section {
   height: 110vh;
   width: 100vw;
 }
-.hero-image .deepest_layer::before {
+.hero-section .deepest_layer::before {
   content: "";
   position: absolute;
   width: 100vw;
@@ -395,26 +395,23 @@ ul {
   background: #1950bd;
   background: linear-gradient(to top, #1950bd 0%, #0965fb 70%);
 }
-.hero-image .deep_layer {
-  height: 110vh;
-  width: 100vw;
-}
-.hero-image .deep_layer .bg {
+.hero-section .deep_layer::before {
+  content: "";
   position: absolute;
   bottom: 0vh;
   left: 44vw;
   width: 55vw;
   height: 70vh;
   background-image: url(/dist/assets/hero/tlo.png);
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
 }
-.hero-image .back_layer {
+.hero-section .back_layer {
   width: 100vw;
   height: 110vh;
 }
-.hero-image .back_layer .bg-extra {
+.hero-section .back_layer .bg-extra {
   position: absolute;
   bottom: 36vh;
   left: 50vw;
@@ -425,7 +422,7 @@ ul {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.hero-image .back_layer .circle-left {
+.hero-section .back_layer .circle-left {
   width: 22.5px;
   height: 22.5px;
   top: 30vh;
@@ -435,7 +432,7 @@ ul {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.hero-image .back_layer .circle-right {
+.hero-section .back_layer .circle-right {
   width: 28px;
   height: 28px;
   position: absolute;
@@ -445,7 +442,7 @@ ul {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.hero-image .back_layer .circle-middle {
+.hero-section .back_layer .circle-middle {
   width: 47px;
   height: 47px;
   position: absolute;
@@ -455,7 +452,7 @@ ul {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.hero-image .back_layer .rectangle-right {
+.hero-section .back_layer .rectangle-right {
   width: 144px;
   height: 144px;
   position: absolute;
@@ -465,7 +462,7 @@ ul {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.hero-image .back_layer .triangle-bottom {
+.hero-section .back_layer .triangle-bottom {
   width: 70px;
   height: 70px;
   position: absolute;
@@ -475,7 +472,7 @@ ul {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.hero-image .back_layer .triangle-middle {
+.hero-section .back_layer .triangle-middle {
   width: 23.5px;
   height: 23.5px;
   position: absolute;
@@ -485,18 +482,17 @@ ul {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.hero-image .subject::before {
+.hero-section .subject::before {
   content: "";
   position: absolute;
   width: 100vw;
   height: 115vh;
-  bottom: 0;
   background-image: url(/dist/assets/hero/teeth_bottom.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.hero-image .hero {
+.hero-section .hero {
   width: 30vw;
   height: 34vh;
   position: absolute;
@@ -507,69 +503,72 @@ ul {
   justify-content: center;
   align-items: flex-start;
 }
-.hero-image .hero .hero-lead-small {
+.hero-section .hero .hero-lead-small {
   display: inline-block;
 }
-.hero-image .hero .hero-lead {
+.hero-section .hero .hero-lead {
   display: inline-block;
 }
-.hero-image .hero .hero-subtext {
+.hero-section .hero .hero-subtext {
   margin: 2vh 0 0 0;
   display: inline-block;
 }
-.hero-image .hero #hero-btn {
+.hero-section .hero #hero-btn {
   margin-top: 4vh;
 }
-.hero-image .hero #hero-btn .btn-hero {
+.hero-section .hero #hero-btn .btn-hero {
   width: 10vw;
   height: 6vh;
 }
-.hero-image .hero #hero-btn .btn-grad {
+.hero-section .hero #hero-btn .btn-grad {
   margin: 0;
   float: left;
 }
-.hero-image .hero #hero-btn .btn-flat {
+.hero-section .hero #hero-btn .btn-flat {
   margin: 0 0 0 2vw;
   float: left;
 }
 
-.infoSection {
-  height: 40vh;
+.info-section {
+  height: 150vh;
+  width: 100vw;
   background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.infoSection .mid_layer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.info-section .mid_layer::before {
+  content: "";
+  position: absolute;
+  bottom: -18vh;
+  width: 100vw;
+  height: 19vh;
+  background-image: url(/dist/assets/info/info-bg-bottom.svg);
+  background-position: top;
+  background-size: cover;
 }
-.infoSection .mid_layer .wrapper {
+.info-section .mid_layer .wrapper {
   padding: 0 10vw 0 10vw;
 }
-.infoSection .mid_layer .wrapper .gallery-container {
+.info-section .mid_layer .wrapper .gallery-container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 1fr;
 }
-.infoSection .mid_layer .wrapper .gallery-container .text-container {
+.info-section .mid_layer .wrapper .gallery-container .text-container {
   margin: 0 2vw 0 2vw;
   min-width: 10vw;
   transition: transform 0.25s linear 0s, text-shadow 0.25s linear 0s;
   opacity: 0;
 }
-.infoSection .mid_layer .wrapper .gallery-container .text-container-animate {
+.info-section .mid_layer .wrapper .gallery-container .text-container-animate {
   animation: reveal 1s 0s 1 forwards;
 }
-.infoSection .mid_layer .wrapper .gallery-container .text-container .info-title {
+.info-section .mid_layer .wrapper .gallery-container .text-container .info-title {
   padding: 0 0 1vw 0;
 }
-.infoSection .mid_layer .wrapper .gallery-container .icon:hover + .text-container {
+.info-section .mid_layer .wrapper .gallery-container .icon:hover + .text-container {
   transform: translateY(-20px);
   text-shadow: 10px 10px 10px #0867ff;
 }
-.infoSection .mid_layer .wrapper .gallery-container .icon {
+.info-section .mid_layer .wrapper .gallery-container .icon {
   height: 10vw;
   max-width: 10vw;
   border: 2px solid #0867ff;
@@ -578,30 +577,12 @@ ul {
   transition: border-radius 0.25s linear 0s;
   opacity: 0;
 }
-.infoSection .mid_layer .wrapper .gallery-container .icon-animate {
+.info-section .mid_layer .wrapper .gallery-container .icon-animate {
   animation: reveal 1s 0s 1 forwards;
 }
-.infoSection .mid_layer .wrapper .gallery-container .icon:hover {
+.info-section .mid_layer .wrapper .gallery-container .icon:hover {
   cursor: pointer;
   border-radius: 50% 20%/10% 40%;
-}
-
-#curveUpColor {
-  position: absolute;
-  z-index: 1;
-  transform: translateY(-100px);
-  fill: #edf0f1;
-  stroke: #0867ff;
-  stroke-width: 2px;
-}
-
-#curveDownColor {
-  position: absolute;
-  z-index: 1;
-  transform: translateY(-1px);
-  fill: #edf0f1;
-  stroke: #0867ff;
-  stroke-width: 2px;
 }
 
 .amenitiesSection {
@@ -609,6 +590,7 @@ ul {
   position: relative;
   background-color: #2ec7ff;
   background-image: linear-gradient(270deg, #2ec7ff 0%, #0867ff 100%);
+  overflow-y: visible;
 }
 .amenitiesSection .whyUs {
   opacity: 0;
@@ -800,15 +782,15 @@ ul {
 }
 
 .deepest_layer {
-  transform: translateZ(-300px) scale(2);
+  transform: translateZ(-900px) scale(4);
 }
 
 .deep_layer {
-  transform: translateZ(-200px) scale(1.6666666667);
+  transform: translateZ(-600px) scale(3);
 }
 
 .back_layer {
-  transform: translateZ(-100px) scale(1.4333333333);
+  transform: translateZ(-300px) scale(2);
 }
 
 .mid_layer {
@@ -816,7 +798,7 @@ ul {
 }
 
 .front_layer {
-  transform: translateZ(210px) scale(0.3);
+  transform: translateZ(200px) scale(0.3333333333);
 }
 
 .parallax_group {

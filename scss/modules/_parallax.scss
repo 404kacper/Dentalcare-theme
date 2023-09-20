@@ -1,3 +1,5 @@
+// keithclark website explaining the effect and layers - https://keithclark.co.uk/articles/pure-css-parallax-websites/
+
 .parallax_wrapper {
   height: 100vh;
   overflow-x: hidden;
@@ -13,17 +15,18 @@
 }
 
 .deepest_layer {
-  transform: translateZ(-300px) scale(parallax-scale-factor(-300px));
-  // background-color: darkblue;
+  transform: translateZ(-900px) scale(parallax-scale-factor(-900px));
+  // background-color: red;
 }
 
 .deep_layer {
-  transform: translateZ(-200px) scale(parallax-scale-factor(-200px));
+  transform: translateZ(-600px) scale(parallax-scale-factor(-600px));
+  // z-index: 999;
   // background-color: green;
 }
 
 .back_layer {
-  transform: translateZ(-100px) scale(parallax-scale-factor(-100px) + 0.1);
+  transform: translateZ(-300px) scale(parallax-scale-factor(-300px));
   // background-color: darkcyan;
 }
 
@@ -32,7 +35,7 @@
 }
 
 .front_layer {
-  transform: translateZ(210px) scale(parallax-scale-factor(210px));
+  transform: translateZ(200px) scale(parallax-scale-factor(200px));
 }
 
 .parallax_group {

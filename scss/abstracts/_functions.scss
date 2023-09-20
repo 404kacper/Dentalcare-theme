@@ -1,12 +1,15 @@
+@use "sass:math";
+
+// Keith clark depth correction formula: https://keithclark.co.uk/articles/pure-css-parallax-websites/
 @function parallax-scale-factor($zDistance) {
-  $result: 0;
-  $result: $parallaxPerspective - $zDistance;
-  $result: $result / $parallaxPerspective;
+  $result: $parallaxPerspective - $zDistance; // This is equal to -translateZ
+  $result: math.div($result, $parallaxPerspective);
   @return $result;
 }
 
+
 @function scale-hero($dim, $scaleFactor) {
   $result: 0;
-  $result: $dim/$scaleFactor;
+  $result: math.div($dim,$scaleFactor);
   @return $result
 }
