@@ -1,44 +1,53 @@
-.infoSection {
-  height: 40vh;
+.info-section {
+  height: 150vh;
+  width: 100vw;
   background-color: $info-bg;
-  // overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  // In react this SVG will be a different component
+  // I also believe this implementation is more prone to bugs - missaligned (color lines between elements) / overlapping (with other contents these cover)
+  .mid_layer::before {
+    // In terms of responsive design only thing that should change is height & bottom distance
+    // background-size stays the same
+    content: '';
+    position: absolute;
+    bottom: (-1 * $info-bottom-shape-size) + 1vh;
+    width: 100vw;
+    height: $info-bottom-shape-size;
+    background-image: url(/dist/assets/info/info-bg-bottom.svg);
+    background-position: top;
+    background-size: cover;
+  }
 
   .mid_layer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     .wrapper {
       padding: 0 10vw 0 10vw;
-  
+
       .gallery-container {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: 1fr;
-  
+
         .text-container {
           margin: 0 2vw 0 2vw;
           min-width: 10vw;
           transition: transform $icon-hover-duration linear 0s,
-          text-shadow $icon-hover-duration linear 0s;
+            text-shadow $icon-hover-duration linear 0s;
           opacity: 0;
-  
+
           &-animate {
-            animation: reveal $icon-reveal-duration $icon-reveal-delay 1 forwards;
+            animation: reveal $icon-reveal-duration $icon-reveal-delay 1
+              forwards;
           }
           .info-title {
             padding: 0 0 1vw 0;
           }
         }
-  
+
         .icon:hover + .text-container {
           transform: translateY(-20px);
           text-shadow: 10px 10px 10px $primary-color;
         }
-  
+
         .icon {
           height: 10vw;
           max-width: 10vw;
@@ -47,11 +56,12 @@
           border-radius: 50%;
           transition: border-radius $icon-hover-duration linear 0s;
           opacity: 0;
-  
+
           &-animate {
-            animation: reveal $icon-reveal-duration $icon-reveal-delay 1 forwards;
+            animation: reveal $icon-reveal-duration $icon-reveal-delay 1
+              forwards;
           }
-  
+
           &:hover {
             cursor: pointer;
             border-radius: 50% 20% / 10% 40%;
@@ -60,22 +70,4 @@
       }
     }
   }
-}
-
-#curveUpColor {
-  position: absolute;
-  z-index: 1;
-  transform: translateY(-100px);
-  fill: $hero-curve-fill;
-  stroke: $hero-curve-stroke;
-  stroke-width: $hero-curve-stroke-width;
-}
-
-#curveDownColor {
-  position: absolute;
-  z-index: 1;
-  transform: translateY(-1px);
-  fill: $hero-curve-fill;
-  stroke: $hero-curve-stroke;
-  stroke-width: $hero-curve-stroke-width;
 }
