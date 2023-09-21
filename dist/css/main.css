@@ -561,6 +561,31 @@ ul {
   justify-content: center;
   margin-top: 15vh;
 }
+.info-section .wrapper .info-image-bg {
+  margin-top: 30vh;
+  position: absolute;
+  height: 80vh;
+  width: 80vw;
+  top: -5vh;
+  background-image: url(/dist/assets/info/info-image-bg.svg);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(-20deg);
+}
+.info-section .wrapper .info-image {
+  margin-top: 30vh;
+  position: absolute;
+  height: 80vh;
+  width: 80vw;
+  left: 10vw;
+  background-image: url(/dist/assets/info/info-image.png);
+  mask-image: url(/dist/assets/info/info-image-bg.svg);
+  background-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
 
 .amenitiesSection {
   height: 370vh;

@@ -4,3 +4,8 @@ Technologies/techniques:
 - custom css framework
 - pure css parallax
 - fully responsive design
+
+
+ToDos:
+
+- do something about image in info section (the vase cannot be skewed it must be straight to match the flow of the website)
