@@ -1,35 +1,35 @@
 .separator {
-    font-family: 'Share Tech Mono', monospace;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
-    padding: 10vh 0 10vh 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
+  font-family: 'Share Tech Mono', monospace;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+  padding: 10vh 0 10vh 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
 
-    &::before,
-    &::after {
-      content: '';
-      display: block;
-      height: 0.09em;
-      min-width: 30vw;
-    }
-
-    &::before {
-      background: linear-gradient(
-        to right,
-        rgba(240, 240, 240, 0),
-        $separator-fill
-      );
-      margin-right: 4vh;
-    }
-
-    &::after {
-      background: linear-gradient(
-        to left,
-        rgba(240, 240, 240, 0),
-        $separator-fill
-      );
-      margin-left: 4vh;
-    }
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 0.09em;
+    min-width: 30vw;
   }
+
+  &::before {
+    background: linear-gradient(
+      to right,
+      rgba(240, 240, 240, 0),
+      rgba(255, 255, 255, 0)
+    );
+    margin-right: 4vh;
+  }
+
+  &::after {
+    background: linear-gradient(
+      to left,
+      rgba(240, 240, 240, 0),
+      rgba(255, 255, 255, 0)
+    );
+    margin-left: 4vh;
+  }
+}

@@ -1,0 +1,6 @@
+Technologies/techniques:
+
+- custom sass Typography framework
+- custom css framework
+- pure css parallax
+- fully responsive design

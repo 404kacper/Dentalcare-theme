@@ -6,6 +6,10 @@
   color: #edf0f1;
 }
 
+.wrapper {
+  margin: 0 15vw 0 15vw;
+}
+
 @keyframes zoomIn {
   0% {
     filter: brightness(20%);
@@ -84,23 +88,27 @@ ul {
     font-size: 16px;
   }
 }
-.navbar-text a, .navbar-text li {
+.navbar-text a,
+.navbar-text li {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif;
   white-space: nowrap;
   font-weight: 400;
   text-align: left;
   color: white;
 }
-.navbar-text a, .navbar-text li {
+.navbar-text a,
+.navbar-text li {
   font-size: 12px;
 }
 @media screen and (min-width: 1000px) {
-  .navbar-text a, .navbar-text li {
+  .navbar-text a,
+  .navbar-text li {
     font-size: calc(12px + 4 * ((100vw - 1000px) / 920));
   }
 }
 @media screen and (min-width: 1920px) {
-  .navbar-text a, .navbar-text li {
+  .navbar-text a,
+  .navbar-text li {
     font-size: 16px;
   }
 }
@@ -212,41 +220,44 @@ ul {
 }
 
 .info-title {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  text-align: center;
   font-weight: 400;
-  text-align: left;
-  color: #000000;
+  color: #1a2980;
+  line-height: 10vh;
 }
 .info-title {
-  font-size: 16px;
+  font-size: 32px;
 }
 @media screen and (min-width: 1000px) {
   .info-title {
-    font-size: calc(16px + 8 * ((100vw - 1000px) / 920));
+    font-size: calc(32px + 32 * ((100vw - 1000px) / 920));
   }
 }
 @media screen and (min-width: 1920px) {
   .info-title {
-    font-size: 24px;
+    font-size: 64px;
   }
 }
-.info-text {
-  font-family: "Titillium Web", Helvetica, sans-serif;
+.info-title-sub {
+  font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  text-align: center;
   font-weight: 400;
-  text-align: left;
-  color: #636363;
+  color: #000000;
 }
-.info-text {
-  font-size: 12px;
+.info-title-sub {
+  font-size: 6px;
 }
 @media screen and (min-width: 1000px) {
-  .info-text {
-    font-size: calc(12px + 6 * ((100vw - 1000px) / 920));
+  .info-title-sub {
+    font-size: calc(6px + 14 * ((100vw - 1000px) / 920));
   }
 }
 @media screen and (min-width: 1920px) {
-  .info-text {
-    font-size: 18px;
+  .info-title-sub {
+    font-size: 20px;
   }
 }
 
@@ -322,7 +333,7 @@ ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 20% 0 15%;
+  padding: 0 15vw 0 15vw;
   background-color: transparent;
   transition: all 0.3s ease 0s;
 }
@@ -347,7 +358,7 @@ ul {
 }
 
 .nav-info {
-  padding: 0.5vh 20% 0.5vh 15%;
+  padding: 0.5vh 15vw 0.5vh 15vw;
 }
 .nav-info .info-container {
   display: flex;
@@ -486,7 +497,8 @@ ul {
   content: "";
   position: absolute;
   width: 100vw;
-  height: 115vh;
+  height: 110vh;
+  bottom: -1vh;
   background-image: url(/dist/assets/hero/teeth_bottom.png);
   background-position: bottom;
   background-repeat: no-repeat;
@@ -544,45 +556,10 @@ ul {
   background-position: top;
   background-size: cover;
 }
-.info-section .mid_layer .wrapper {
-  padding: 0 10vw 0 10vw;
-}
-.info-section .mid_layer .wrapper .gallery-container {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: 1fr;
-}
-.info-section .mid_layer .wrapper .gallery-container .text-container {
-  margin: 0 2vw 0 2vw;
-  min-width: 10vw;
-  transition: transform 0.25s linear 0s, text-shadow 0.25s linear 0s;
-  opacity: 0;
-}
-.info-section .mid_layer .wrapper .gallery-container .text-container-animate {
-  animation: reveal 1s 0s 1 forwards;
-}
-.info-section .mid_layer .wrapper .gallery-container .text-container .info-title {
-  padding: 0 0 1vw 0;
-}
-.info-section .mid_layer .wrapper .gallery-container .icon:hover + .text-container {
-  transform: translateY(-20px);
-  text-shadow: 10px 10px 10px #0867ff;
-}
-.info-section .mid_layer .wrapper .gallery-container .icon {
-  height: 10vw;
-  max-width: 10vw;
-  border: 2px solid #0867ff;
-  padding: 2px;
-  border-radius: 50%;
-  transition: border-radius 0.25s linear 0s;
-  opacity: 0;
-}
-.info-section .mid_layer .wrapper .gallery-container .icon-animate {
-  animation: reveal 1s 0s 1 forwards;
-}
-.info-section .mid_layer .wrapper .gallery-container .icon:hover {
-  cursor: pointer;
-  border-radius: 50% 20%/10% 40%;
+.info-section .wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 15vh;
 }
 
 .amenitiesSection {
@@ -760,11 +737,11 @@ ul {
   min-width: 30vw;
 }
 .separator::before {
-  background: linear-gradient(to right, rgba(240, 240, 240, 0), #000000);
+  background: linear-gradient(to right, rgba(240, 240, 240, 0), rgba(255, 255, 255, 0));
   margin-right: 4vh;
 }
 .separator::after {
-  background: linear-gradient(to left, rgba(240, 240, 240, 0), #000000);
+  background: linear-gradient(to left, rgba(240, 240, 240, 0), rgba(255, 255, 255, 0));
   margin-left: 4vh;
 }
 
