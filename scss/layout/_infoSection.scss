@@ -21,33 +21,127 @@
   .wrapper {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin-top: 15vh;
 
-    .info-image-bg {
-      margin-top: 30vh;
-      position: absolute;
-      height: 80vh;
-      width: 80vw;
-      top: -5vh;
-      background-image: url(/dist/assets/info/info-image-bg.svg);
-      background-position: left;
-      background-size: contain;
-      background-repeat: no-repeat;
-      transform: rotate(-20deg);
+    .info-button {
+      margin-top: 15vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .info-image {
-      margin-top: 30vh;
-      position: absolute;
+    .info-container {
+      margin-top: 10vh;
       height: 80vh;
-      width: 80vw;
-      left: 10vw;
-      background-image: url(/dist/assets/info/info-image.png);
-      mask-image: url(/dist/assets/info/info-image-bg.svg);
-      background-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      background-position: left;
-      background-size: contain;
+      display: flex;
+
+      .info-image-bg {
+        z-index: -1;
+        margin-top: 30vh;
+        position: absolute;
+        height: 70vh;
+        width: 70vw;
+        top: 0;
+        background-image: url(/dist/assets/info/info-image-bg.svg);
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-20deg);
+      }
+
+      // should make this positioned relatively so it actually scales properly
+      .info-image {
+        margin-top: 10vh;
+        height: 70vh;
+        background-image: url(/dist/assets/info/info-image.png);
+        mask-image: url(/dist/assets/info/info-image-bg.svg);
+        mask-repeat: no-repeat;
+        mask-position: left;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
+      }
+
+      .image-col {
+        width: 50%;
+        height: 100%;
+      }
+
+      .icons-col {
+        width: 50%;
+        height: 100%;
+        z-index: 1;
+        padding-top: 10vh;
+        padding-left: 5vw;
+
+
+        .icons-container {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .info-icon {
+            display: flex;
+
+            &-hospital {
+              height: $info-icons-size;
+              width: $info-icons-size;
+              background: url(/dist/assets/info/info-hospital.svg)
+                center/contain no-repeat;
+            }
+
+            &-tooth {
+              height: $info-icons-size;
+              width: $info-icons-size;
+              background: url(/dist/assets/info/info-tooth.svg) center/contain
+                no-repeat;
+            }
+
+            &-jaw {
+              height: $info-icons-size;
+              width: $info-icons-size;
+              background: url(/dist/assets/info/info-jaw.svg) center/contain
+                no-repeat;
+            }
+
+            &-tools {
+              height: $info-icons-size;
+              width: $info-icons-size;
+              background: url(/dist/assets/info/info-tools.svg) center/contain
+                no-repeat;
+            }
+
+            &-link {
+              display: flex;
+              align-content: center;
+
+              .arrow-right {
+                width: 0.3vw;
+                height: 100%;
+                margin-top: 0.15vh;
+                margin-left: 0.2vw;
+                background: url(/dist/assets/info/arrow-right.svg)
+                  center/contain no-repeat;
+              }
+            }
+
+            .info-text-container {
+              display: flex;
+              flex-direction: column;
+              align-content: space-between;
+              justify-content: space-between;
+              margin-left: 3vw;
+
+              .info-icon-link:hover {
+                cursor: pointer;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -1,11 +1,13 @@
 Technologies/techniques:
 
-- custom sass Typography framework
-- custom css framework
+- custom sass Typography framework (quickly customizable colors/font sizes)
+- custom css framework (quicikly customizable colors/element sizes)
 - pure css parallax
 - fully responsive design
 
 
 ToDos:
 
-- do something about image in info section (the vase cannot be skewed it must be straight to match the flow of the website)
+- (aesthetics) do something about image in info section (the vase cannot be skewed it must be straight to match the flow of the website)
+- (scaling) bg in image section, pos absolute (?) makes it scale differently from the image itself
+- (aesthetics) right side of info text icons is not matching with margin (either increase margin in hero || write more text to reach the margin boundary)

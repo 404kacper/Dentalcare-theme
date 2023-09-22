@@ -58,6 +58,7 @@
           <div class="triangle-middle"></div>
         </div>
 
+        <!-- Should be separate component/svg from subject image -->
         <div class="parallax_layer mid_layer subject"></div>
 
         <div class="parallax_layer mid_layer">
@@ -123,6 +124,7 @@
       <!-- Info -->
       <section class="parallax_group info-section" id="group-info">
         <div class="parallax_layer mid_layer">
+          <!-- The before here should also be a component (svg file) -->
           <div class="wrapper">
             <div class="info">
               <p class="info-title">Twój Uśmiech Jest Dla Nas Ważny</p>
@@ -132,8 +134,81 @@
               </p>
             </div>
 
-            <div class="info-image-bg"></div>
-            <div class="info-image"></div>
+            <div class="info-container">
+              <!-- Should be components -->
+              <div class="image-col">
+                <div class="info-image-bg"></div>
+                <div class="info-image"></div>
+              </div>
+
+              <div class="icons-col">
+                <div class="icons-container">
+                  <div class="info-icon">
+                    <div class="info-icon-hospital"></div>
+                    <div class="info-text-container">
+                      <p class="info-icon-title">Pogotowie Dentystyczne</p>
+                      <p class="info-icon-description">
+                        Przypadki nagłe, leczenie kanałowe i wiele więcej.
+                      </p>
+                      <div class="info-icon-link">
+                        Dowiedz się więcej
+                        <div class="arrow-right"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="info-icon">
+                    <div class="info-icon-tooth"></div>
+                    <div class="info-text-container">
+                      <p class="info-icon-title">Profilaktyka Dentystyczna</p>
+                      <p class="info-icon-description">
+                        Wykonywane zabiegi to min: skaling, wybielanie,
+                        lakowanie.
+                      </p>
+                      <div class="info-icon-link">
+                        Dowiedz się więcej
+                        <div class="arrow-right"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="info-icon">
+                    <div class="info-icon-jaw"></div>
+                    <div class="info-text-container">
+                      <p class="info-icon-title">Protetyka Dentystyczna</p>
+                      <p class="info-icon-description">
+                        Kompleksowe usługi dotyczące protez ruchomych i stałych.
+                      </p>
+                      <div class="info-icon-link">
+                        Dowiedz się więcej
+                        <div class="arrow-right"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="info-icon">
+                    <div class="info-icon-tools"></div>
+                    <div class="info-text-container">
+                      <p class="info-icon-title">Radiografia Cyfrowa</p>
+                      <p class="info-icon-description">
+                        Zdjęcia rętgenowskie i wiele więcej.
+                      </p>
+                      <div class="info-icon-link">
+                        Dowiedz się więcej
+                        <div class="arrow-right"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-button">
+              <button class="btn-flat btn-flat-primary">
+                <a href="#" class="info-btn-text">Zobacz Usługi</a>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 

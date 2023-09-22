@@ -7,59 +7,68 @@
     #fff 100%
   );
 
-    font-family: 'Roboto', sans-serif;
-    margin: 10px;
-    padding: 9px 25px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: $navbar-second-font;
-    // box-shadow: 1px 7px 10px 2px #00000090;
-    border-radius: 50px;
-    display: block;
+  font-family: 'Roboto', sans-serif;
+  margin: 10px;
+  padding: 9px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: $navbar-second-font;
+  // box-shadow: 1px 7px 10px 2px #00000090;
+  border-radius: 50px;
+  display: block;
 
-    a {
+  a {
     color: $navbar-second-font;
-    }
-
-    &-rectangle {
-      border-radius: 10px;
-    }
   }
 
-  .btn-flat {
-    background-image: linear-gradient(
-      to right,
-      #fff 0%,
-      #fff 50%,
-      $secondary-color 100%
-    );
+  &-rectangle {
+    border-radius: 10px;
+  }
+}
 
-    font-family: 'Roboto', sans-serif;
-    box-shadow: 1px 3px 10px 2px #00000090;
-    margin: 10px;
-    padding: 9px 25px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
+.btn-flat {
+  background-image: linear-gradient(
+    to right,
+    #fff 0%,
+    #fff 50%,
+    $secondary-color 100%
+  );
+
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 1px 3px 10px 2px #00000090;
+  margin: 10px;
+  padding: 9px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: $primary-gradient;
+  border-radius: 50px;
+  display: block;
+
+  a {
     color: $primary-gradient;
-    border-radius: 50px;
-    display: block;
+  }
+
+  &-primary {
+    background-image: none;
+    background-color: $primary-gradient;
 
     a {
-      color: $primary-gradient;
-      }
+      color: white;
+    }
   }
-  
-  .btn-grad:hover {
-    transform: translateY(-1vh);
-    background-position: right center; /* change the direction of the change here */
-    text-decoration: none;
-  }
+}
 
-  .btn-flat:hover {
-    transform: translateY(-1vh);
-    text-decoration: none;
-  }
+.btn-grad:hover {
+  transform: translateY(-1vh);
+  background-position: right center; /* change the direction of the change here */
+  text-decoration: none;
+}
+
+.btn-flat:hover {
+  transform: translateY(-1vh);
+  text-decoration: none;
+}

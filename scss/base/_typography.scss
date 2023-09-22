@@ -110,6 +110,17 @@
   $min_font: 16px;
   $max_font: 24px;
 
+  &-btn-text {
+    $min-font: 12px;
+    $max-font: 20px;
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    // line-height: $max-font;
+    white-space: nowrap;
+    text-transform: none;
+    font-weight: 400;
+  }
+
   &-title {
     $min-font: 32px;
     $max-font: 64px;
@@ -130,6 +141,38 @@
       text-align: center;
       font-weight: 400;
       color: $title-sub-color;
+    }
+  }
+
+  &-icon {
+    $min-font: 8px;
+    $max-font: 18px;
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    text-align: left;
+    font-weight: 400;
+    color: black;
+
+    &-link {
+      $min-font: 12px;
+      $max-font: 20px;
+      color: $icon-link-color;
+      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    }
+
+    &-description {
+      $min-font: 12px;
+      $max-font: 18px;
+      font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+      color: black;
+      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    }
+
+    &-title {
+      $min-font: 12px;
+      $max-font: 24px;
+      color: $icon-title-color;
+      @include fluid-type($min-width, $max-width, $min-font, $max-font);
     }
   }
 }
