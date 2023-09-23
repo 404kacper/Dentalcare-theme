@@ -1,12 +1,18 @@
 @use "sass:math";
 
-// Navbar utility classes
+// Utility classes
 .navbar-transform-bg {
   background-color: $navbar-second-bg;
 }
 .navbar-transform-text {
   color: $navbar-second-font;
 }
+
+.wrapper {
+  margin: 0 15vw 0 15vw;
+}
+
+
 
 // Zoom animation on hero section
 @keyframes zoomIn {
