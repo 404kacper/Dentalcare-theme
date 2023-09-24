@@ -15,18 +15,17 @@
 }
 
 .deepest_layer {
-  transform: translateZ(-900px) scale(parallax-scale-factor(-900px));
+  transform: translateZ(-300px) scale(parallax-scale-factor(-300px));
   // background-color: red;
 }
 
 .deep_layer {
-  transform: translateZ(-600px) scale(parallax-scale-factor(-600px));
-  // z-index: 999;
+  transform: translateZ(-150px) scale(parallax-scale-factor(-150px));
   // background-color: green;
 }
 
 .back_layer {
-  transform: translateZ(-300px) scale(parallax-scale-factor(-300px));
+  transform: translateZ(-50px) scale(parallax-scale-factor(-50px));
   // background-color: darkcyan;
 }
 
