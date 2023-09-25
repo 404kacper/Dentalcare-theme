@@ -1,137 +1,31 @@
 .amenitiesSection {
-  height: 370vh;
-  position: relative;
-  background-color: #2ec7ff;
-  background-image: linear-gradient(270deg, #2ec7ff 0%, #0867ff 100%);
-  overflow-y: visible;
+  height: 150vh;
+  width: 100vw;
 
-  .whyUs {
-      opacity: 0;
-      height: 100vh;
-      padding: 100px 0 10vh 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(-67deg, $amenities-lead-primary 50%, $amenities-lead-secondary 0);
-      background-clip: text;
-      -webkit-background-clip: text;
+  .deepest_layer {
+    background-color: red;
   }
 
-  .image-card {
-    position: relative;
-    height: 30vw;
-    width: 60vw;
-    background-color: #fff;
-    border-radius: 25px;
-    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-    margin: 0 auto 40vh auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .deep_layer {
+    .wrapper {
+      width: 70vw;
+      height: 100vh;
 
-    .image-container {
-      position: relative;
-      height: 20vw;
-      width: 20vw;
-      border-radius: 25px;
-
-      .experience {
-        display: block;
-        position: relative;
-        height: 20vw;
-        width: 20vw;
-        object-fit: cover;
-        border-radius: 25px;
-        box-shadow: 4px 13px 30px 1px rgba(10, 12, 139, 0.3);
-
-        &-left {
-          transform: translateX(-5vw);
-        }
-
-        &-right {
-          transform: translateX(5vw);
-        }
-        // overflow: hidden;
-      }
-
-      &-left {
-        &:after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          transform: translateX(-5vw);
-          width: 100%;
-          height: 100%;
-          background-image: linear-gradient(
-            90deg,
-            $secondary-color 0%,
-            $primary-color 100%
-          );
-          opacity: 0.5;
-          border-radius: 25px;
-        }
-      }
-
-      &-right {
-        // This should be inside .experience but doesn't get rendered
-        &:after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          transform: translateX(5vw);
-          width: 100%;
-          height: 100%;
-          background-image: linear-gradient(
-            90deg,
-            $secondary-color 0%,
-            $primary-color 100%
-          );
-          opacity: 0.5;
-          border-radius: 25px;
-        }
-      }
-    }
-
-    .image-card-content {
-      font-family: 'Fira Sans', sans-serif;
-      height: 20vw;
-      width: 40vw;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(4, 1fr);
-      grid-template-areas: 'title' 'text' 'text' 'btn';
-      font-weight: 400;
-      padding: 0 10vw 0 0;
-
-      &-right {
-        padding: 0 0 0 10vw;
-      }
-
-      .image-card-title {
-        padding-top: 1vh;
-        grid-area: title;
-        // justify-self: center;
-      }
-
-      .image-card-description {
-        grid-area: text;
-        overflow-y: auto;
-        text-align: justify;
-        max-width: 30vw;
-      }
-
-      .btn-grad {
-        // justify-self: center;
-        align-self: end;
-        grid-area: btn;
-        white-space: nowrap;
-        height: 5vh;
-        min-width: 160px;
-        max-width: 13vw;
-        margin: 0;
-        font-weight: 500;
+      .mouth {
+        height: 70vh;
+        margin-top: 30vh;
+        // Neat trick if you don't want to position with left edge
+        // transform: translateX(
+        //   -50%
+        // ); /* Center element horizontally (shift 50% left of it's own width) that way you're moving centre of the element and not it's left edge */
+        background-image: url(/dist/assets/amenities/mouth.jpg);
+        mask-image: url(/dist/assets/amenities/amenities-mouth.svg);
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: right;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
       }
     }
   }
