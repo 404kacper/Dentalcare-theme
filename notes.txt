@@ -13,3 +13,4 @@ ToDos:
 - (aesthetics) right side of info text icons is not matching with margin (either increase margin in hero || write more text to reach the margin boundary)
 - (typography) change the slogan from "A Reason To Smile"
 - (effects/aesthetics) change elements on hero between layers - so that some of them move faster than other and image feels more alive
+- (!aesthetics) hero image should be within a wrapper boundaries (but doesn't need to the website flow can shrink down to a wrapper too)

@@ -685,11 +685,27 @@ ul {
 }
 
 .amenitiesSection {
-  height: 100vh;
+  height: 150vh;
   width: 100vw;
 }
 .amenitiesSection .deepest_layer {
   background-color: red;
+}
+.amenitiesSection .deep_layer .wrapper {
+  width: 70vw;
+  height: 100vh;
+}
+.amenitiesSection .deep_layer .wrapper .mouth {
+  height: 70vh;
+  margin-top: 30vh;
+  background-image: url(/dist/assets/amenities/mouth.jpg);
+  mask-image: url(/dist/assets/amenities/amenities-mouth.svg);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: right;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
 }
 
 .btn-grad {
@@ -790,11 +806,11 @@ ul {
 }
 
 .deep_layer {
-  transform: translateZ(-150px) scale(1.5);
+  transform: translateZ(-299px) scale(1.9966666667);
 }
 
 .back_layer {
-  transform: translateZ(-50px) scale(1.1666666667);
+  transform: translateZ(-100px) scale(1.3333333333);
 }
 
 .mid_layer {

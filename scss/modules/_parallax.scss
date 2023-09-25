@@ -20,12 +20,12 @@
 }
 
 .deep_layer {
-  transform: translateZ(-150px) scale(parallax-scale-factor(-150px));
+  transform: translateZ(-299px) scale(parallax-scale-factor(-299px));
   // background-color: green;
 }
 
 .back_layer {
-  transform: translateZ(-50px) scale(parallax-scale-factor(-50px));
+  transform: translateZ(-100px) scale(parallax-scale-factor(-100px));
   // background-color: darkcyan;
 }
 
