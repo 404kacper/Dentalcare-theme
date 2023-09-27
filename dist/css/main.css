@@ -687,9 +687,11 @@ ul {
 .amenitiesSection {
   height: 150vh;
   width: 100vw;
+  background-color: rgba(122, 122, 122, 0.5);
 }
 .amenitiesSection .deepest_layer {
   background-color: red;
+  bottom: 30vh;
 }
 .amenitiesSection .deep_layer .wrapper {
   width: 70vw;
@@ -706,6 +708,18 @@ ul {
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
+}
+.amenitiesSection .mid_layer svg {
+  position: absolute;
+  width: 100vw;
+  height: 26.5vh;
+  bottom: -1vh;
+}
+
+.articlesSection {
+  height: 500vh;
+  width: 100vw;
+  background-color: rgba(93, 236, 117, 0.7);
 }
 
 .btn-grad {
