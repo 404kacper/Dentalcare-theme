@@ -1,18 +1,19 @@
 .amenitiesSection {
   height: 150vh;
   width: 100vw;
-  background-color: rgba(122, 122, 122, 0.5);
+  // background-color: rgba(122, 122, 122, 0.5);
 
   .deepest_layer {
-    background-color: red;
-    bottom: 30vh;
+    background-color: #0867ff;
   }
 
   .deep_layer {
+    // background-color: rgba(229, 255, 0, 0.5);
+    transition: transform 0.3s ease;
+
     .wrapper {
       width: 70vw;
       height: 100vh;
-
       // What you need to do is have the mouth element as low as possible
       // Keep the mouth layer as small as possible (little to no space on the upside) and very near bottom
       // OR create a css animation that moves it to the front when 50 % of the layer is reached (would have to be 50% of the mid layer I think?)
@@ -33,6 +34,13 @@
         background-size: contain;
       }
     }
+  }
+
+  .deep_layer_active {
+    transform: translateZ(-1px);
+  }
+
+  .mid_layer {
   }
 
   .mid_layer svg {

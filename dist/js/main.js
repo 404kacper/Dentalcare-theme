@@ -12,71 +12,72 @@ var scrollpos = scrollingElement.scrollTop;
 // number = time in ms
 var iconRevealDelay = 350;
 
-// Wait for the page to load
-document.body.classList.add('js-loading');
+var ticking = false;
 
-window.addEventListener('load', showPage());
+scrollingElement.addEventListener('scroll', (event) => {
+  maxScroll = scrollingElement.scrollHeight;
+  lastKnownScrollPosition = scrollingElement.scrollTop;
 
-function showPage() {
-  document.body.classList.remove('js-loading');
-  console.log('Page loaded');
-}
+  if (lastKnownScrollPosition >= maxScroll/2) {
+    scrollingElement.querySelector('.amenitiesSection .deep_layer').classList.add('deep_layer_active');
+    console.log("Reached 50%")
+  } else {
+    scrollingElement.querySelector('.amenitiesSection .deep_layer').classList.remove('deep_layer_active');
+  }
+
+  // console.log(lastKnownScrollPosition);
+});
 
 // Navbar animation
-function addTransparentBg() {
-  navbar.classList.add('navbar-transform-bg');
-  nav_links.forEach((link) => {
-    link.querySelector('a').classList.add('navbar-transform-text');
-  });
-}
+// function addTransparentBg() {
+//   navbar.classList.add('navbar-transform-bg');
+//   nav_links.forEach((link) => {
+//     link.querySelector('a').classList.add('navbar-transform-text');
+//   });
+// }
 
-function removeTransparentBg() {
-  navbar.classList.remove('navbar-transform-bg');
-  nav_links.forEach((link) => {
-    link.querySelector('a').classList.remove('navbar-transform-text');
-  });
-}
+// function removeTransparentBg() {
+//   navbar.classList.remove('navbar-transform-bg');
+//   nav_links.forEach((link) => {
+//     link.querySelector('a').classList.remove('navbar-transform-text');
+//   });
+// }
 
-function animateIcons(delay) {
-  var icons = galleryContainer.querySelectorAll('.icon');
-  var textContainers = galleryContainer.querySelectorAll('.text-container');
-  var i = 0;
+// function animateIcons(delay) {
+//   var icons = galleryContainer.querySelectorAll('.icon');
+//   var textContainers = galleryContainer.querySelectorAll('.text-container');
+//   var i = 0;
 
-  function delayedLoop() {
-    setTimeout(function () {
-      icons[i].classList.add('icon-animate');
-      textContainers[i].classList.add('text-container-animate');
-      i++;
-      // Icons length will always be equal the textContainers length
-      if (i < icons.length) {
-        delayedLoop();
-      }
-    }, delay);
-  }
+//   function delayedLoop() {
+//     setTimeout(function () {
+//       icons[i].classList.add('icon-animate');
+//       textContainers[i].classList.add('text-container-animate');
+//       i++;
+//       // Icons length will always be equal the textContainers length
+//       if (i < icons.length) {
+//         delayedLoop();
+//       }
+//     }, delay);
+//   }
 
-  delayedLoop();
-}
+//   delayedLoop();
+// }
 
-function animateWhyUs() {
-  // console.log(whyUsText);
-  whyUsText.classList.add('slide-in-blurred-left');
-}
-
-var iconsFired = false;
-var whyusFired = false;
-// Scrollbar listener
-scrollingElement.addEventListener('scroll', () => {
-  scrollpos = scrollingElement.scrollTop;
-  // console.log(scrollpos);
-  // Navbar
-  // scrollpos >= 100 ? addTransparentBg() : removeTransparentBg();
-  // Icons in info section
-  if (scrollpos >= 200 && iconsFired === false) {
-    animateIcons(iconRevealDelay);
-    iconsFired = true;
-  }
-  if (scrollpos >= 1090 && whyusFired === false) {
-    animateWhyUs();
-    whyusFired = true;
-  }
-});
+// var iconsFired = false;
+// var whyusFired = false;
+// // Scrollbar listener
+// scrollingElement.addEventListener('scroll', () => {
+//   scrollpos = scrollingElement.scrollTop;
+//   // console.log(scrollpos);
+//   // Navbar
+//   // scrollpos >= 100 ? addTransparentBg() : removeTransparentBg();
+//   // Icons in info section
+//   if (scrollpos >= 200 && iconsFired === false) {
+//     animateIcons(iconRevealDelay);
+//     iconsFired = true;
+//   }
+//   if (scrollpos >= 1090 && whyusFired === false) {
+//     animateWhyUs();
+//     whyusFired = true;
+//   }
+// });

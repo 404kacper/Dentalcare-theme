@@ -687,11 +687,12 @@ ul {
 .amenitiesSection {
   height: 150vh;
   width: 100vw;
-  background-color: rgba(122, 122, 122, 0.5);
 }
 .amenitiesSection .deepest_layer {
-  background-color: red;
-  bottom: 30vh;
+  background-color: #0867ff;
+}
+.amenitiesSection .deep_layer {
+  transition: transform 0.3s ease;
 }
 .amenitiesSection .deep_layer .wrapper {
   width: 70vw;
@@ -709,6 +710,9 @@ ul {
   background-position: right;
   background-size: contain;
 }
+.amenitiesSection .deep_layer_active {
+  transform: translateZ(-1px);
+}
 .amenitiesSection .mid_layer svg {
   position: absolute;
   width: 100vw;
@@ -717,7 +721,7 @@ ul {
 }
 
 .articlesSection {
-  height: 500vh;
+  height: 100vh;
   width: 100vw;
   background-color: rgba(93, 236, 117, 0.7);
 }
