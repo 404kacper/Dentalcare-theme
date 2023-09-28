@@ -14,6 +14,7 @@
   inset: 0;
 }
 
+// Usually for background
 .deepest_layer {
   transform: translateZ(-300px) scale(parallax-scale-factor(-300px));
   // background-color: red;
@@ -22,6 +23,10 @@
 .deep_layer {
   transform: translateZ(-299px) scale(parallax-scale-factor(-299px));
   // background-color: green;
+}
+
+.deep_mid_layer {
+  transform: translateZ(-50px) scale(parallax-scale-factor(-50px));
 }
 
 .back_layer {

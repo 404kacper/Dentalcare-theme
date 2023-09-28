@@ -18,11 +18,21 @@ scrollingElement.addEventListener('scroll', (event) => {
   maxScroll = scrollingElement.scrollHeight;
   lastKnownScrollPosition = scrollingElement.scrollTop;
 
-  if (lastKnownScrollPosition >= maxScroll/2) {
-    scrollingElement.querySelector('.amenitiesSection .deep_layer').classList.add('deep_layer_active');
-    console.log("Reached 50%")
+  if (lastKnownScrollPosition >= maxScroll / 2.1) {
+    scrollingElement
+      .querySelector('.amenitiesSection .deep_layer')
+      .classList.add('deep_layer_active');
+    scrollingElement
+      .querySelector('.amenitiesSection .deep_mid_layer')
+      .classList.add('deep_mid_layer_active');
+    console.log('Reached 50%');
   } else {
-    scrollingElement.querySelector('.amenitiesSection .deep_layer').classList.remove('deep_layer_active');
+    scrollingElement
+      .querySelector('.amenitiesSection .deep_layer')
+      .classList.remove('deep_layer_active');
+    scrollingElement
+      .querySelector('.amenitiesSection .deep_mid_layer')
+      .classList.remove('deep_mid_layer_active');
   }
 
   // console.log(lastKnownScrollPosition);
