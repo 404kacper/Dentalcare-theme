@@ -729,14 +729,14 @@ ul {
 .amenitiesSection .deepest_layer {
   background-color: #0867ff;
 }
-.amenitiesSection .deep_layer {
+.amenitiesSection .front_layer {
   transition: transform 1s ease;
 }
-.amenitiesSection .deep_layer .wrapper {
+.amenitiesSection .front_layer .wrapper {
   width: 70vw;
   height: 100vh;
 }
-.amenitiesSection .deep_layer .wrapper .mouth {
+.amenitiesSection .front_layer .wrapper .mouth {
   height: 60vh;
   margin-top: 25vh;
   background-image: url(/dist/assets/amenities/mouth.jpg);
@@ -748,7 +748,7 @@ ul {
   background-position: right;
   background-size: contain;
 }
-.amenitiesSection .deep_layer .wrapper .mouth-shape {
+.amenitiesSection .front_layer .wrapper .mouth-shape {
   position: absolute;
   right: 17.5vw;
   top: 25vh;
@@ -758,7 +758,7 @@ ul {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.amenitiesSection .deep_layer .wrapper .mouth-ball {
+.amenitiesSection .front_layer .wrapper .mouth-ball {
   position: absolute;
   right: 15vw;
   top: 35vh;
@@ -768,14 +768,15 @@ ul {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.amenitiesSection .deep_layer_active {
+.amenitiesSection .front_layer_active {
   transform: translateZ(0px);
-  z-index: 2;
+  z-index: 1;
 }
 .amenitiesSection .deep_mid_layer {
   padding-top: 30vh;
   opacity: 0;
   transition: transform 1s ease 0.5s, opacity 1s ease 0.5s;
+  z-index: -1;
 }
 .amenitiesSection .deep_mid_layer .wrapper {
   margin-left: 0;
@@ -789,6 +790,38 @@ ul {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+.amenitiesSection .deep_mid_layer_front {
+  transition: transform 1s ease 0.5s;
+}
+.amenitiesSection .deep_mid_layer_front .wrapper {
+  height: 100%;
+}
+.amenitiesSection .deep_mid_layer_front .wrapper .bg-circle-dashed {
+  margin-left: auto;
+  margin-right: 38%;
+  padding-top: 125vh;
+  width: 6vh;
+  height: 6vh;
+  background-image: url(/dist/assets/amenities/amenities-bg-ball-dashed.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.amenitiesSection .deep_mid_layer_front .wrapper .bg-circle {
+  margin-left: auto;
+  margin-right: 20vw;
+  padding-top: 175vh;
+  width: 6vh;
+  height: 6vh;
+  background-image: url(/dist/assets/amenities/amenities-bg-ball.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.amenitiesSection .deep_mid_layer_front_active {
+  transform: translateZ(0px);
+  z-index: 0;
 }
 .amenitiesSection .deep_mid_layer_active {
   transform: translateZ(0px);
@@ -914,7 +947,11 @@ ul {
 }
 
 .deep_mid_layer {
-  transform: translateZ(-50px) scale(1.1666666667);
+  transform: translateZ(-150px) scale(1.5);
+}
+
+.deep_mid_layer_front {
+  transform: translateZ(-149px) scale(1.4966666667);
 }
 
 .back_layer {

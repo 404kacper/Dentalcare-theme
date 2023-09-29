@@ -18,21 +18,28 @@ scrollingElement.addEventListener('scroll', (event) => {
   maxScroll = scrollingElement.scrollHeight;
   lastKnownScrollPosition = scrollingElement.scrollTop;
 
-  if (lastKnownScrollPosition >= maxScroll / 2.1) {
+  if (lastKnownScrollPosition >= maxScroll / 2.0) {
     scrollingElement
-      .querySelector('.amenitiesSection .deep_layer')
-      .classList.add('deep_layer_active');
+      .querySelector('.amenitiesSection .front_layer')
+      .classList.add('front_layer_active');
+
     scrollingElement
       .querySelector('.amenitiesSection .deep_mid_layer')
       .classList.add('deep_mid_layer_active');
-    console.log('Reached 50%');
+
+      scrollingElement
+      .querySelectorAll('.amenitiesSection .deep_mid_layer_front').forEach(element => {element.classList.add('deep_mid_layer_front_active');})
   } else {
     scrollingElement
-      .querySelector('.amenitiesSection .deep_layer')
-      .classList.remove('deep_layer_active');
+      .querySelector('.amenitiesSection .front_layer')
+      .classList.remove('front_layer_active');
+
     scrollingElement
       .querySelector('.amenitiesSection .deep_mid_layer')
       .classList.remove('deep_mid_layer_active');
+      
+      scrollingElement
+      .querySelectorAll('.amenitiesSection .deep_mid_layer_front').forEach(element => {element.classList.remove('deep_mid_layer_front_active');})
   }
 
   // console.log(lastKnownScrollPosition);

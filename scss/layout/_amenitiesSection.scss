@@ -7,7 +7,7 @@
     background-color: #0867ff;
   }
 
-  .deep_layer {
+  .front_layer {
     // background-color: rgba(229, 255, 0, 0.5);
     transition: transform 1s ease;
 
@@ -54,15 +54,17 @@
     }
   }
 
-  .deep_layer_active {
+  .front_layer_active {
     transform: translateZ(0px);
-    z-index: 2;
+    z-index: 1;
   }
 
   .deep_mid_layer {
     padding-top: 30vh;
     opacity: 0;
     transition: transform 1s ease 0.5s, opacity 1s ease 0.5s;
+    z-index: -1;
+
     .wrapper {
       margin-left: 0;
       height: 150vh;
@@ -76,6 +78,40 @@
         background-position: center;
       }
     }
+  }
+
+  .deep_mid_layer_front {
+    transition: transform 1s ease 0.5s;
+    .wrapper {
+      height: 100%;
+      .bg-circle-dashed {
+        margin-left: auto;
+        margin-right: 38%;
+        padding-top: 125vh;
+        width: 6vh;
+        height: 6vh;
+        background-image: url(/dist/assets/amenities/amenities-bg-ball-dashed.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .bg-circle {
+        margin-left: auto;
+        margin-right: 20vw;
+        padding-top: 175vh;
+        width: 6vh;
+        height: 6vh;
+        background-image: url(/dist/assets/amenities/amenities-bg-ball.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  .deep_mid_layer_front_active {
+    transform: translateZ(0px);
+    z-index: 0;
   }
 
   .deep_mid_layer_active {

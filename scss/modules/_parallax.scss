@@ -26,7 +26,11 @@
 }
 
 .deep_mid_layer {
-  transform: translateZ(-50px) scale(parallax-scale-factor(-50px));
+  transform: translateZ(-150px) scale(parallax-scale-factor(-150px));
+}
+
+.deep_mid_layer_front {
+  transform: translateZ(-149px) scale(parallax-scale-factor(-149px));
 }
 
 .back_layer {
