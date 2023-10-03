@@ -1,19 +1,22 @@
 .amenitiesSection {
   height: 150vh;
   width: 100vw;
+  // background-color: rgba(122, 122, 122, 0.5);
 
   .deepest_layer {
-    background-color: red;
+    background-color: #0867ff;
   }
 
-  .deep_layer {
+  .front_layer {
+    // background-color: rgba(229, 255, 0, 0.5);
+    transition: transform 1s ease;
+
     .wrapper {
       width: 70vw;
       height: 100vh;
-
       .mouth {
-        height: 70vh;
-        margin-top: 30vh;
+        height: 60vh;
+        margin-top: 25vh;
         // Neat trick if you don't want to position with left edge
         // transform: translateX(
         //   -50%
@@ -27,6 +30,107 @@
         background-position: right;
         background-size: contain;
       }
+      .mouth-shape {
+        position: absolute;
+        right: 17.5vw;
+        top: 25vh;
+        width: 10vh;
+        height: 10vh;
+        background-image: url(/dist/assets/amenities/amenities-mouth-shape.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .mouth-ball {
+        position: absolute;
+        right: 15vw;
+        top: 35vh;
+        width: 1vh;
+        height: 1vh;
+        background-image: url(/dist/assets/amenities/amenities-mouth-ball.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+    }
+  }
+
+  .front_layer_active {
+    transform: translateZ(0px);
+    z-index: 1;
+  }
+
+  .deep_mid_layer {
+    padding-top: 30vh;
+    opacity: 0;
+    transition: transform 1s ease 0.5s, opacity 1s ease 0.5s;
+    z-index: -1;
+
+    .wrapper {
+      margin-left: 0;
+      height: 150vh;
+      .bg-shape {
+        margin-left: auto;
+        width: 75vw;
+        height: 75vh;
+        background-image: url(/dist//assets/amenities/amenities-bg-shape.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  .deep_mid_layer_front {
+    transition: transform 1s ease 0.5s;
+    .wrapper {
+      height: 100%;
+      .bg-circle-dashed {
+        margin-left: auto;
+        margin-right: 38%;
+        padding-top: 125vh;
+        width: 6vh;
+        height: 6vh;
+        background-image: url(/dist/assets/amenities/amenities-bg-ball-dashed.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .bg-circle {
+        margin-left: auto;
+        margin-right: 20vw;
+        padding-top: 175vh;
+        width: 6vh;
+        height: 6vh;
+        background-image: url(/dist/assets/amenities/amenities-bg-ball.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  .deep_mid_layer_front_active {
+    transform: translateZ(0px);
+    z-index: 0;
+  }
+
+  .deep_mid_layer_active {
+    transform: translateZ(0px);
+    opacity: 1;
+  }
+
+  .mid_layer svg {
+    position: absolute;
+    width: 100vw;
+    height: 26.5vh;
+    bottom: -1vh;
+  }
+
+  .mid_layer {
+    .wrapper {
+      padding-top: 40vh;
+      padding-left: 14vw;
+      display: flex;
     }
   }
 }

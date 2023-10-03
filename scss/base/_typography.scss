@@ -183,4 +183,24 @@
   $max_width: 1920px;
   $min_font: 24px;
   $max_font: 144px;
+
+  &-title {
+    $min-font: 12px;
+    $max-font: 64px;
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: white;
+    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    &-sub {
+      $min-font: 12px;
+      $max-font: 32px;
+      font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+      color: black;
+      font-weight: 400;
+      color: $primary-gradient;
+      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    }
+  }
+
+  
 }

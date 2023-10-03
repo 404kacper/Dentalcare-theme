@@ -348,6 +348,44 @@ ul {
   }
 }
 
+.amenities-title {
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: white;
+}
+.amenities-title {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .amenities-title {
+    font-size: calc(12px + 52 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .amenities-title {
+    font-size: 64px;
+  }
+}
+.amenities-title-sub {
+  font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  color: black;
+  font-weight: 400;
+  color: #1a2980;
+}
+.amenities-title-sub {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .amenities-title-sub {
+    font-size: calc(12px + 20 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .amenities-title-sub {
+    font-size: 32px;
+  }
+}
+
 #nav {
   height: 10vh;
   width: 100vw;
@@ -689,15 +727,18 @@ ul {
   width: 100vw;
 }
 .amenitiesSection .deepest_layer {
-  background-color: red;
+  background-color: #0867ff;
 }
-.amenitiesSection .deep_layer .wrapper {
+.amenitiesSection .front_layer {
+  transition: transform 1s ease;
+}
+.amenitiesSection .front_layer .wrapper {
   width: 70vw;
   height: 100vh;
 }
-.amenitiesSection .deep_layer .wrapper .mouth {
-  height: 70vh;
-  margin-top: 30vh;
+.amenitiesSection .front_layer .wrapper .mouth {
+  height: 60vh;
+  margin-top: 25vh;
   background-image: url(/dist/assets/amenities/mouth.jpg);
   mask-image: url(/dist/assets/amenities/amenities-mouth.svg);
   mask-repeat: no-repeat;
@@ -706,6 +747,102 @@ ul {
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
+}
+.amenitiesSection .front_layer .wrapper .mouth-shape {
+  position: absolute;
+  right: 17.5vw;
+  top: 25vh;
+  width: 10vh;
+  height: 10vh;
+  background-image: url(/dist/assets/amenities/amenities-mouth-shape.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.amenitiesSection .front_layer .wrapper .mouth-ball {
+  position: absolute;
+  right: 15vw;
+  top: 35vh;
+  width: 1vh;
+  height: 1vh;
+  background-image: url(/dist/assets/amenities/amenities-mouth-ball.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.amenitiesSection .front_layer_active {
+  transform: translateZ(0px);
+  z-index: 1;
+}
+.amenitiesSection .deep_mid_layer {
+  padding-top: 30vh;
+  opacity: 0;
+  transition: transform 1s ease 0.5s, opacity 1s ease 0.5s;
+  z-index: -1;
+}
+.amenitiesSection .deep_mid_layer .wrapper {
+  margin-left: 0;
+  height: 150vh;
+}
+.amenitiesSection .deep_mid_layer .wrapper .bg-shape {
+  margin-left: auto;
+  width: 75vw;
+  height: 75vh;
+  background-image: url(/dist//assets/amenities/amenities-bg-shape.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.amenitiesSection .deep_mid_layer_front {
+  transition: transform 1s ease 0.5s;
+}
+.amenitiesSection .deep_mid_layer_front .wrapper {
+  height: 100%;
+}
+.amenitiesSection .deep_mid_layer_front .wrapper .bg-circle-dashed {
+  margin-left: auto;
+  margin-right: 38%;
+  padding-top: 125vh;
+  width: 6vh;
+  height: 6vh;
+  background-image: url(/dist/assets/amenities/amenities-bg-ball-dashed.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.amenitiesSection .deep_mid_layer_front .wrapper .bg-circle {
+  margin-left: auto;
+  margin-right: 20vw;
+  padding-top: 175vh;
+  width: 6vh;
+  height: 6vh;
+  background-image: url(/dist/assets/amenities/amenities-bg-ball.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.amenitiesSection .deep_mid_layer_front_active {
+  transform: translateZ(0px);
+  z-index: 0;
+}
+.amenitiesSection .deep_mid_layer_active {
+  transform: translateZ(0px);
+  opacity: 1;
+}
+.amenitiesSection .mid_layer svg {
+  position: absolute;
+  width: 100vw;
+  height: 26.5vh;
+  bottom: -1vh;
+}
+.amenitiesSection .mid_layer .wrapper {
+  padding-top: 40vh;
+  padding-left: 14vw;
+  display: flex;
+}
+
+.articlesSection {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
 }
 
 .btn-grad {
@@ -807,6 +944,14 @@ ul {
 
 .deep_layer {
   transform: translateZ(-299px) scale(1.9966666667);
+}
+
+.deep_mid_layer {
+  transform: translateZ(-150px) scale(1.5);
+}
+
+.deep_mid_layer_front {
+  transform: translateZ(-149px) scale(1.4966666667);
 }
 
 .back_layer {
