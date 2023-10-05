@@ -385,6 +385,42 @@ ul {
     font-size: 32px;
   }
 }
+.amenities-title-review {
+  color: #1a2980;
+  font-weight: 500;
+}
+.amenities-title-review {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .amenities-title-review {
+    font-size: calc(12px + 20 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .amenities-title-review {
+    font-size: 32px;
+  }
+}
+.amenities-description {
+  font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+}
+.amenities-description {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .amenities-description {
+    font-size: calc(12px + 6 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .amenities-description {
+    font-size: 18px;
+  }
+}
 
 #nav {
   height: 10vh;
@@ -723,7 +759,7 @@ ul {
 }
 
 .amenitiesSection {
-  height: 150vh;
+  height: 160vh;
   width: 100vw;
 }
 .amenitiesSection .deepest_layer {
@@ -739,7 +775,7 @@ ul {
 .amenitiesSection .front_layer .wrapper .mouth {
   height: 60vh;
   margin-top: 25vh;
-  background-image: url(/dist/assets/amenities/mouth.jpg);
+  background-image: url(/dist/assets/amenities/amenities-mouth.jpg);
   mask-image: url(/dist/assets/amenities/amenities-mouth.svg);
   mask-repeat: no-repeat;
   mask-size: contain;
@@ -770,7 +806,7 @@ ul {
 }
 .amenitiesSection .front_layer_active {
   transform: translateZ(0px);
-  z-index: 1;
+  z-index: 0;
 }
 .amenitiesSection .deep_mid_layer {
   padding-top: 30vh;
@@ -780,12 +816,13 @@ ul {
 }
 .amenitiesSection .deep_mid_layer .wrapper {
   margin-left: 0;
-  height: 150vh;
+  height: 100%;
+  padding-top: 10vh;
 }
 .amenitiesSection .deep_mid_layer .wrapper .bg-shape {
   margin-left: auto;
   width: 75vw;
-  height: 75vh;
+  height: 90vh;
   background-image: url(/dist//assets/amenities/amenities-bg-shape.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -828,6 +865,7 @@ ul {
   opacity: 1;
 }
 .amenitiesSection .mid_layer svg {
+  z-index: 0;
   position: absolute;
   width: 100vw;
   height: 26.5vh;
@@ -835,8 +873,73 @@ ul {
 }
 .amenitiesSection .mid_layer .wrapper {
   padding-top: 40vh;
-  padding-left: 14vw;
   display: flex;
+  flex-direction: column;
+}
+.amenitiesSection .mid_layer .wrapper .amenitiesText {
+  margin-left: 14vw;
+}
+.amenitiesSection .mid_layer .wrapper .reviews-container {
+  margin-top: 60vh;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+}
+.amenitiesSection .mid_layer .wrapper .reviews-container .review {
+  width: 15vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.amenitiesSection .mid_layer .wrapper .reviews-container .review-1 {
+  margin-bottom: 1vh;
+  width: 15vh;
+  height: 15vh;
+  background-image: url(/dist/assets/amenities/amenities-review1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+.amenitiesSection .mid_layer .wrapper .reviews-container .review-2 {
+  margin-bottom: 1vh;
+  width: 15vh;
+  height: 15vh;
+  background-image: url(/dist/assets/amenities/amenities-review2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+.amenitiesSection .mid_layer .wrapper .reviews-container .review-3 {
+  margin-bottom: 1vh;
+  width: 15vh;
+  height: 15vh;
+  background-image: url(/dist/assets/amenities/amenities-review3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+.amenitiesSection .mid_layer .wrapper .reviews-container .review .rating {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  width: 15vh;
+  height: 2vh;
+  background-image: url(/dist/assets/amenities/amenities-rating.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.amenitiesSection button {
+  z-index: 2;
+  bottom: 1vh;
+  left: 45%;
+  position: absolute;
 }
 
 .articlesSection {

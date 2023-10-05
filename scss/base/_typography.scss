@@ -200,6 +200,23 @@
       color: $primary-gradient;
       @include fluid-type($min-width, $max-width, $min-font, $max-font);
     }
+    &-review {
+      $min-font: 12px;
+      $max-font: 32px;
+      color: $primary-gradient;
+      font-weight: 500;
+      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    }
+  }
+
+  &-description {
+    $min-font: 12px;
+    $max-font: 18px;
+    font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    @include fluid-type($min-width, $max-width, $min-font, $max-font);
   }
 
   
