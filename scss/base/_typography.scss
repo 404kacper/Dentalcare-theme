@@ -182,7 +182,7 @@
   $min_width: 1000px;
   $max_width: 1920px;
   $min_font: 24px;
-  $max_font: 144px;
+  $max_font: 32px;
 
   &-title {
     $min-font: 12px;
@@ -200,7 +200,70 @@
       color: $primary-gradient;
       @include fluid-type($min-width, $max-width, $min-font, $max-font);
     }
+    &-review {
+      $min-font: 12px;
+      $max-font: 32px;
+      color: $primary-gradient;
+      font-weight: 500;
+      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    }
   }
 
-  
+  &-description {
+    $min-font: 12px;
+    $max-font: 18px;
+    font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+  }
+}
+
+// Articles section related fonts
+.article {
+  $min_width: 1000px;
+  $max_width: 1920px;
+  $min_font: 24px;
+  $max_font: 32px;
+
+  &-title {
+    $min-font: 12px;
+    $max-font: 28px;
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: black;
+    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+  }
+
+  &-description {
+    $min-font: 12px;
+    $max-font: 16px;
+    font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: #222222;
+    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+  }
+
+
+  &-title-main {
+    $min-font: 12px;
+    $max-font: 64px;
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: $primary-gradient;
+    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+  }
+
+  &-info {
+    $min-font: 12px;
+    $max-font: 16px;
+    font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    color: black;
+  }
+
+
+
 }

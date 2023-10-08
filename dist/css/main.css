@@ -385,6 +385,115 @@ ul {
     font-size: 32px;
   }
 }
+.amenities-title-review {
+  color: #1a2980;
+  font-weight: 500;
+}
+.amenities-title-review {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .amenities-title-review {
+    font-size: calc(12px + 20 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .amenities-title-review {
+    font-size: 32px;
+  }
+}
+.amenities-description {
+  font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+}
+.amenities-description {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .amenities-description {
+    font-size: calc(12px + 6 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .amenities-description {
+    font-size: 18px;
+  }
+}
+
+.article-title {
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: black;
+}
+.article-title {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .article-title {
+    font-size: calc(12px + 16 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .article-title {
+    font-size: 28px;
+  }
+}
+.article-description {
+  font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #222222;
+}
+.article-description {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .article-description {
+    font-size: calc(12px + 4 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .article-description {
+    font-size: 16px;
+  }
+}
+.article-title-main {
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #1a2980;
+}
+.article-title-main {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .article-title-main {
+    font-size: calc(12px + 52 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .article-title-main {
+    font-size: 64px;
+  }
+}
+.article-info {
+  font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: black;
+}
+.article-info {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .article-info {
+    font-size: calc(12px + 4 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .article-info {
+    font-size: 16px;
+  }
+}
 
 #nav {
   height: 10vh;
@@ -723,7 +832,7 @@ ul {
 }
 
 .amenitiesSection {
-  height: 150vh;
+  height: 160vh;
   width: 100vw;
 }
 .amenitiesSection .deepest_layer {
@@ -739,7 +848,7 @@ ul {
 .amenitiesSection .front_layer .wrapper .mouth {
   height: 60vh;
   margin-top: 25vh;
-  background-image: url(/dist/assets/amenities/mouth.jpg);
+  background-image: url(/dist/assets/amenities/amenities-mouth.jpg);
   mask-image: url(/dist/assets/amenities/amenities-mouth.svg);
   mask-repeat: no-repeat;
   mask-size: contain;
@@ -770,7 +879,7 @@ ul {
 }
 .amenitiesSection .front_layer_active {
   transform: translateZ(0px);
-  z-index: 1;
+  z-index: 0;
 }
 .amenitiesSection .deep_mid_layer {
   padding-top: 30vh;
@@ -780,12 +889,13 @@ ul {
 }
 .amenitiesSection .deep_mid_layer .wrapper {
   margin-left: 0;
-  height: 150vh;
+  height: 100%;
+  padding-top: 10vh;
 }
 .amenitiesSection .deep_mid_layer .wrapper .bg-shape {
   margin-left: auto;
   width: 75vw;
-  height: 75vh;
+  height: 90vh;
   background-image: url(/dist//assets/amenities/amenities-bg-shape.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -828,6 +938,7 @@ ul {
   opacity: 1;
 }
 .amenitiesSection .mid_layer svg {
+  z-index: 0;
   position: absolute;
   width: 100vw;
   height: 26.5vh;
@@ -835,14 +946,135 @@ ul {
 }
 .amenitiesSection .mid_layer .wrapper {
   padding-top: 40vh;
-  padding-left: 14vw;
   display: flex;
+  flex-direction: column;
+}
+.amenitiesSection .mid_layer .wrapper .amenitiesText {
+  margin-left: 14vw;
+}
+.amenitiesSection .mid_layer .wrapper .reviews-container {
+  margin-top: 60vh;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+}
+.amenitiesSection .mid_layer .wrapper .reviews-container .review {
+  width: 15vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.amenitiesSection .mid_layer .wrapper .reviews-container .review-1 {
+  margin-bottom: 1vh;
+  width: 15vh;
+  height: 15vh;
+  background-image: url(/dist/assets/amenities/amenities-review1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+.amenitiesSection .mid_layer .wrapper .reviews-container .review-2 {
+  margin-bottom: 1vh;
+  width: 15vh;
+  height: 15vh;
+  background-image: url(/dist/assets/amenities/amenities-review2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+.amenitiesSection .mid_layer .wrapper .reviews-container .review-3 {
+  margin-bottom: 1vh;
+  width: 15vh;
+  height: 15vh;
+  background-image: url(/dist/assets/amenities/amenities-review3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+.amenitiesSection .mid_layer .wrapper .reviews-container .review .rating {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  width: 15vh;
+  height: 2vh;
+  background-image: url(/dist/assets/amenities/amenities-rating.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.amenitiesSection button {
+  z-index: 2;
+  bottom: 1vh;
+  left: 45%;
+  position: absolute;
 }
 
 .articlesSection {
   height: 100vh;
   width: 100vw;
   background-color: rgb(255, 255, 255);
+}
+.articlesSection .article-title-main {
+  margin: 10vh 0 10vh 0;
+}
+.articlesSection .articles-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 30vh;
+}
+.articlesSection .articles-container .article {
+  height: 15vh;
+  width: 25%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "left right" "bottom bottom";
+}
+.articlesSection .articles-container .article-1-image {
+  grid-area: left;
+  height: 15vh;
+  width: 15vh;
+  border-radius: 50%;
+  background: center/cover no-repeat url(/dist/assets/articles/articles-dentist.jpg);
+  margin-right: 1vw;
+}
+.articlesSection .articles-container .article-info {
+  grid-area: right;
+  align-self: center;
+}
+.articlesSection .articles-container .article-time {
+  display: flex;
+  margin: 0.5vh 0 0.5vh;
+}
+.articlesSection .articles-container .article-time-icon {
+  height: 1.5vh;
+  width: 2vh;
+  margin-right: 0.4vw;
+  background: center/contain no-repeat url(/dist/assets/articles/articles-clock.svg);
+}
+.articlesSection .articles-container .article-comments {
+  display: flex;
+}
+.articlesSection .articles-container .article-comments-icon {
+  float: left;
+  height: 1.5vh;
+  width: 2vh;
+  margin-right: 0.4vw;
+  background: center/contain no-repeat url(/dist/assets/articles/articles-comment.svg);
+}
+.articlesSection .articles-container .article-text {
+  grid-area: bottom;
+}
+.articlesSection .articles-container .article-title {
+  margin: 5vh 0 2vh 0;
 }
 
 .btn-grad {
