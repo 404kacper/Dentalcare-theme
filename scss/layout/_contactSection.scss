@@ -1,0 +1,99 @@
+.contactSection {
+  // Preserve 3d
+  margin-top: -1vh;
+  height: 130vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 1);
+
+  .wrapper {
+    display: flex;
+    height: 100%;
+
+    .image-wrapper {
+      height: 100%;
+      width: 50%;
+
+      .image {
+        height: 70vh;
+        width: 100%;
+        z-index: 1;
+        margin-top: 25vh;
+        background-image: url(/dist/assets/contact/location.png);
+        mask-image: url(/dist/assets/contact/contact-image.svg);
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: left;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        &-bg {
+          position: absolute;
+          z-index: -1;
+          height: 68.5vh;
+          width: 35vw;
+          top: 30vh;
+          background-image: url(/dist/assets/contact/contact-image-bg.svg);
+          background-repeat: no-repeat;
+          background-position: left;
+          background-size: contain;
+
+          &-addition {
+            position: absolute;
+            height: 5vh;
+            width: 5vw;
+            left: 23vw;
+            top: 105vh;
+            background-image: url(/dist/assets/contact/contact-image-bg-addition.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+          }
+
+          &-circle-outline {
+            position: absolute;
+            height: 3vh;
+            width: 3vw;
+            left: 45vw;
+            top: 98vh;
+            background-image: url(/dist/assets/contact/contact-image-bg-circle-outline.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+          }
+
+          &-circle-fill {
+            position: absolute;
+            height: 2vh;
+            width: 2vw;
+            left: 28vw;
+            top: 18vh;
+            background-image: url(/dist/assets/contact/contact-image-bg-circle-fill.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+          }
+        }
+
+        
+        &-pin {
+          z-index: 2;
+          position: absolute;
+          height: 4vh;
+          width: 4vw;
+          left: 23.2vw;
+          top: 71.8vh;
+          background-image: url(/dist/assets/contact/location-pin.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+      }
+    }
+
+    .info-wrapper {
+      height: 100%;
+      width: 50%;
+    }
+  }
+}
