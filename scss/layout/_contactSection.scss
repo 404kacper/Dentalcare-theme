@@ -22,7 +22,7 @@
         mask-image: url(/dist/assets/contact/contact-image.svg);
         mask-repeat: no-repeat;
         mask-size: contain;
-        mask-position: left;
+        mask-position: left top;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -94,6 +94,74 @@
     .info-wrapper {
       height: 100%;
       width: 50%;
+      padding-top: 25vh;
+      
+      .info {
+        &-text {
+          margin-bottom: 10vh;
+        }
+
+        &-icons {
+
+           .icon-container {
+              display: flex;
+              align-items: center;
+              margin: 10vh 0;
+              
+              .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &-emergency {
+                  width: 7.5vh;
+                  height: 7.5vh;
+                  background-color: $primary-gradient;
+                  border-radius: 50%;
+                }
+
+                &-emergency::before{
+                  content: '';
+                  width: 60%;
+                  height: 60%;
+                  background: center/contain no-repeat url("/dist/assets/contact/contact-emergency.svg");
+                }
+
+                &-address {
+                  width: 7.5vh;
+                  height: 7.5vh;
+                  background-color: $primary-color;
+                  border-radius: 50%;
+                }
+
+                &-address::before{
+                  content: '';
+                  width: 60%;
+                  height: 60%;
+                  background: center/contain no-repeat url("/dist/assets/contact/contact-address.svg");
+                }
+
+                &-chat {
+                  width: 7.5vh;
+                  height: 7.5vh;
+                  background-color: $primary-color;
+                  border-radius: 50%;
+                }
+
+                &-chat::before{
+                  content: '';
+                  width: 50%;
+                  height: 50%;
+                  background: center/contain no-repeat url("/dist/assets/contact/contact-chat.svg");
+                }
+
+                &-text {
+                  margin-left: 1vw;
+                }
+              }
+            }
+        }
+      }
     }
   }
 }

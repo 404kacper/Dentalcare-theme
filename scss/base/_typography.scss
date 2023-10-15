@@ -245,7 +245,6 @@
     @include fluid-type($min-width, $max-width, $min-font, $max-font);
   }
 
-
   &-title-main {
     $min-font: 12px;
     $max-font: 64px;
@@ -263,7 +262,60 @@
     @include fluid-type($min-width, $max-width, $min-font, $max-font);
     color: black;
   }
+}
 
+.contact {
+  $min_width: 1000px;
+  $max_width: 1920px;
+  $min_font: 24px;
+  $max_font: 32px;
 
+  &-title {
+    &-lead {
+      $min-font: 12px;
+      $max-font: 64px;
+      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      color: $primary-gradient;
+      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    }
 
+    &-description {
+      $min-font: 12px;
+      $max-font: 22px;
+      font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      color: black;
+      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    }
+  }
+
+  &-icon {
+    &-lead {
+      $min-font: 12px;
+      $max-font: 32px;
+      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      color: $primary-gradient;
+      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+
+      &-light {
+        $min-font: 12px;
+        $max-font: 32px;
+        font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: $primary-color;
+        @include fluid-type($min-width, $max-width, $min-font, $max-font);
+      }
+    }
+
+    &-description {
+      $min-font: 12px;
+      $max-font: 22px;
+      font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      color: black;
+      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    }
+  }
 }

@@ -495,6 +495,97 @@ ul {
   }
 }
 
+.contact-title-lead {
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #1a2980;
+}
+.contact-title-lead {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .contact-title-lead {
+    font-size: calc(12px + 52 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .contact-title-lead {
+    font-size: 64px;
+  }
+}
+.contact-title-description {
+  font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: black;
+}
+.contact-title-description {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .contact-title-description {
+    font-size: calc(12px + 10 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .contact-title-description {
+    font-size: 22px;
+  }
+}
+.contact-icon-lead {
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #1a2980;
+}
+.contact-icon-lead {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .contact-icon-lead {
+    font-size: calc(12px + 20 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .contact-icon-lead {
+    font-size: 32px;
+  }
+}
+.contact-icon-lead-light {
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #0867ff;
+}
+.contact-icon-lead-light {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .contact-icon-lead-light {
+    font-size: calc(12px + 20 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .contact-icon-lead-light {
+    font-size: 32px;
+  }
+}
+.contact-icon-description {
+  font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: black;
+}
+.contact-icon-description {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .contact-icon-description {
+    font-size: calc(12px + 10 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .contact-icon-description {
+    font-size: 22px;
+  }
+}
+
 #nav {
   height: 10vh;
   width: 100vw;
@@ -1100,7 +1191,7 @@ ul {
   mask-image: url(/dist/assets/contact/contact-image.svg);
   mask-repeat: no-repeat;
   mask-size: contain;
-  mask-position: left;
+  mask-position: left top;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1164,6 +1255,59 @@ ul {
 .contactSection .wrapper .info-wrapper {
   height: 100%;
   width: 50%;
+  padding-top: 25vh;
+}
+.contactSection .wrapper .info-wrapper .info-text {
+  margin-bottom: 10vh;
+}
+.contactSection .wrapper .info-wrapper .info-icons .icon-container {
+  display: flex;
+  align-items: center;
+  margin: 10vh 0;
+}
+.contactSection .wrapper .info-wrapper .info-icons .icon-container .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contactSection .wrapper .info-wrapper .info-icons .icon-container .icon-emergency {
+  width: 7.5vh;
+  height: 7.5vh;
+  background-color: #1a2980;
+  border-radius: 50%;
+}
+.contactSection .wrapper .info-wrapper .info-icons .icon-container .icon-emergency::before {
+  content: "";
+  width: 60%;
+  height: 60%;
+  background: center/contain no-repeat url("/dist/assets/contact/contact-emergency.svg");
+}
+.contactSection .wrapper .info-wrapper .info-icons .icon-container .icon-address {
+  width: 7.5vh;
+  height: 7.5vh;
+  background-color: #0867ff;
+  border-radius: 50%;
+}
+.contactSection .wrapper .info-wrapper .info-icons .icon-container .icon-address::before {
+  content: "";
+  width: 60%;
+  height: 60%;
+  background: center/contain no-repeat url("/dist/assets/contact/contact-address.svg");
+}
+.contactSection .wrapper .info-wrapper .info-icons .icon-container .icon-chat {
+  width: 7.5vh;
+  height: 7.5vh;
+  background-color: #0867ff;
+  border-radius: 50%;
+}
+.contactSection .wrapper .info-wrapper .info-icons .icon-container .icon-chat::before {
+  content: "";
+  width: 50%;
+  height: 50%;
+  background: center/contain no-repeat url("/dist/assets/contact/contact-chat.svg");
+}
+.contactSection .wrapper .info-wrapper .info-icons .icon-container .icon-text {
+  margin-left: 1vw;
 }
 
 .btn-grad {
