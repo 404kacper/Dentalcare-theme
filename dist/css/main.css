@@ -1383,6 +1383,24 @@ ul {
   position: absolute;
   background: center/contain no-repeat url("/dist/assets/footer/footer-bg-shape.svg");
 }
+.footerSection .footer-triangle {
+  width: 3vh;
+  height: 3vh;
+  top: -50vh;
+  right: 5vw;
+  z-index: -1;
+  position: absolute;
+  background: center/contain no-repeat url("/dist/assets/footer/footer-triangle.svg");
+}
+.footerSection .footer-circle {
+  width: 13vh;
+  height: 13vh;
+  top: -27vh;
+  right: 35vw;
+  z-index: -1;
+  position: absolute;
+  background: center/contain no-repeat url("/dist/assets/footer/footer-circle.svg");
+}
 .footerSection footer .wrapper {
   height: 100%;
   display: grid;

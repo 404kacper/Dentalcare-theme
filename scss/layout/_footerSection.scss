@@ -14,6 +14,26 @@
       url('/dist/assets/footer/footer-bg-shape.svg');
   }
 
+  .footer-triangle {
+    width: 3vh;
+    height: 3vh;
+    top: -50vh;
+    right: 5vw;
+    z-index: -1;
+    position: absolute;
+    background: center/contain no-repeat url('/dist/assets/footer/footer-triangle.svg');
+  }
+
+  .footer-circle {
+    width: 13vh;
+    height: 13vh;
+    top: -27vh;
+    right: 35vw;
+    z-index: -1;
+    position: absolute;
+    background: center/contain no-repeat url('/dist/assets/footer/footer-circle.svg');
+  }
+
   footer .wrapper {
     height: 100%;
     display: grid;
