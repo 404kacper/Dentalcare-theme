@@ -586,6 +586,65 @@ ul {
   }
 }
 
+.footer-lead {
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+}
+.footer-lead {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .footer-lead {
+    font-size: calc(12px + 20 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .footer-lead {
+    font-size: 32px;
+  }
+}
+.footer-description {
+  line-height: 2.7vh;
+  font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+}
+.footer-description {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .footer-description {
+    font-size: calc(12px + 6 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .footer-description {
+    font-size: 18px;
+  }
+}
+.footer-description-light {
+  font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: #cfcfcf;
+}
+.footer-description-light {
+  font-size: 12px;
+}
+@media screen and (min-width: 1000px) {
+  .footer-description-light {
+    font-size: calc(12px + 6 * ((100vw - 1000px) / 920));
+  }
+}
+@media screen and (min-width: 1920px) {
+  .footer-description-light {
+    font-size: 18px;
+  }
+}
+
 #nav {
   height: 10vh;
   width: 100vw;
@@ -1313,26 +1372,28 @@ ul {
 .footerSection {
   width: 100vw;
   height: 40vh;
-  background-color: #0867ff;
   margin-top: 20vh;
+  background-color: #0867ff;
 }
 .footerSection footer::before {
   content: "";
   width: 100vw;
   height: 40vh;
-  top: -30vh;
+  top: -38vh;
   position: absolute;
   background: center/contain no-repeat url("/dist/assets/footer/footer-bg-shape.svg");
 }
 .footerSection footer .wrapper {
   height: 100%;
-  padding-bottom: 10vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 3fr 1fr;
   grid-template-areas: "logo links hours blank" "socials socials socials socials";
   justify-items: center;
   align-items: center;
+}
+.footerSection footer .wrapper .footer-lead {
+  margin-bottom: 2vh;
 }
 .footerSection footer .wrapper .logo {
   height: 100%;
@@ -1345,29 +1406,55 @@ ul {
 }
 .footerSection footer .wrapper .logo::before {
   content: "";
-  width: 10vw;
-  height: 15vw;
+  width: 9vw;
+  height: 12vw;
   display: block;
-  background: left bottom/contain no-repeat url("/dist/assets/footer/footer-logo-text-below.svg");
+  background: center/contain no-repeat url("/dist/assets/footer/footer-logo-text-below.svg");
 }
 .footerSection footer .wrapper .links {
+  grid-area: links;
   width: 100%;
   height: 100%;
-  grid-area: links;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-right: 0.15vw solid rgba(255, 255, 255, 0.07);
+}
+.footerSection footer .wrapper .links li {
+  cursor: pointer;
+}
+.footerSection footer .wrapper .links li:hover {
+  color: #1a2980;
 }
 .footerSection footer .wrapper .hours {
   width: 100%;
   height: 100%;
   grid-area: hours;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-right: 0.15vw solid rgba(255, 255, 255, 0.07);
+}
+.footerSection footer .wrapper .blank {
+  grid-area: blank;
 }
 .footerSection footer .wrapper .socials {
   grid-area: socials;
-  margin-top: 2vh;
+  padding-top: 2vh;
   width: 100%;
-  height: 100%;
   border-top: 0.15vw solid rgba(255, 255, 255, 0.07);
+}
+.footerSection footer .wrapper .socials .facebook-icon {
+  width: 3vh;
+  height: 3vh;
+  background: center/contain url("/dist/assets/footer/facebook-logo.svg");
+  transition: filter 0.3s ease;
+}
+.footerSection footer .wrapper .socials .facebook-icon:hover {
+  filter: opacity(50%);
 }
 
 .btn-grad {
