@@ -16,3 +16,5 @@ ToDos:
 - (!aesthetics) hero image should be within a wrapper boundaries (but doesn't need to the website flow can shrink down to a wrapper too)
 - (!calculations/parallax) keep in mind that current solution to locking mouth in place with .scrollTop has some fallacy (on parallax_wrapper element with perspective the scroll works weirdly) .scrollHeight is the real height.
    But even at the very bottom of the page it isn't the actual .scrollHeight value.
+- (ideas) think about adding smooth scrolling here is the example: https://www.poppr.be/en/work
+- (ideas) def more animations opacity (fading in with elements) - svg elements morphing & more movement below amenities 

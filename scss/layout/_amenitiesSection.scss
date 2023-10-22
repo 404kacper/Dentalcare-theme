@@ -1,14 +1,12 @@
 .amenitiesSection {
   height: 160vh;
   width: 100vw;
-  // background-color: rgba(122, 122, 122, 0.5);
 
   .deepest_layer {
-    background-color: #0867ff;
+    background-color: $primary-color;
   }
 
   .front_layer {
-    // background-color: rgba(229, 255, 0, 0.5);
     transition: transform 1s ease;
 
     .wrapper {

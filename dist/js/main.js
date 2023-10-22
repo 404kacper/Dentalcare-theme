@@ -17,8 +17,10 @@ var ticking = false;
 scrollingElement.addEventListener('scroll', (event) => {
   maxScroll = scrollingElement.scrollHeight;
   lastKnownScrollPosition = scrollingElement.scrollTop;
+  // The smaller this value the later animations will appear
+  let viewportDivisor = 2.5;
 
-  if (lastKnownScrollPosition >= maxScroll / 2.0) {
+  if (lastKnownScrollPosition >= maxScroll / viewportDivisor) {
     scrollingElement
       .querySelector('.amenitiesSection .front_layer')
       .classList.add('front_layer_active');

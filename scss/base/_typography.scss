@@ -319,3 +319,41 @@
     }
   }
 }
+
+.footer {
+  $min_width: 1000px;
+  $max_width: 1920px;
+  $min_font: 12px;
+  $max_font: 20px;
+
+  &-lead {
+    $min-font: 12px;
+    $max-font: 32px;
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+  }
+
+  &-description {
+    $min-font: 12px;
+    $max-font: 18px;
+    line-height: 2.7vh;
+    font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+
+    &-light {
+      $min-font: 12px;
+      $max-font: 18px;
+      font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      text-align: center;
+      color: #cfcfcf;
+      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    }
+  }
+}
