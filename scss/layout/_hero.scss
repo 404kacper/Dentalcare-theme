@@ -115,7 +115,7 @@
     content: '';
     position: absolute;
     width: 100vw;
-    height: 110vh;
+    aspect-ratio: 16/9;
     bottom: -1vh;
     background-image: url(/dist/assets/hero/teeth_bottom.png);
     background-position: bottom;

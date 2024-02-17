@@ -818,7 +818,7 @@ ul {
   content: "";
   position: absolute;
   width: 100vw;
-  height: 110vh;
+  aspect-ratio: 16/9;
   bottom: -1vh;
   background-image: url(/dist/assets/hero/teeth_bottom.png);
   background-position: bottom;
@@ -870,9 +870,10 @@ ul {
 .info-section .mid_layer::before {
   content: "";
   position: absolute;
-  bottom: -18vh;
+  bottom: 1vh;
+  transform: translateY(100%);
   width: 100vw;
-  height: 19vh;
+  aspect-ratio: 10.4492/1;
   background-image: url(/dist/assets/info/info-bg-bottom.svg);
   background-position: top;
   background-size: cover;
@@ -1090,10 +1091,10 @@ ul {
 .amenitiesSection .mid_layer::after {
   content: "";
   width: 100vw;
-  height: 45vh;
-  bottom: -10vh;
+  bottom: -1vh;
+  aspect-ratio: 7.4329/1;
   position: absolute;
-  background: center/contain no-repeat url("/dist/assets/amenities/amenities-shape-bottom.svg");
+  background: center/cover no-repeat url("/dist/assets/amenities/amenities-shape-bottom.svg");
 }
 .amenitiesSection .mid_layer .wrapper {
   padding-top: 40vh;
@@ -1379,10 +1380,11 @@ ul {
 .footerSection footer::before {
   content: "";
   width: 100vw;
-  height: 40vh;
-  top: -38vh;
+  top: 1vh;
+  transform: translateY(-100%);
+  aspect-ratio: 5.34226/1;
   position: absolute;
-  background: center/contain no-repeat url("/dist/assets/footer/footer-bg-shape.svg");
+  background: center/cover no-repeat url("/dist/assets/footer/footer-bg-shape.svg");
 }
 .footerSection .footer-triangle {
   width: 3vh;

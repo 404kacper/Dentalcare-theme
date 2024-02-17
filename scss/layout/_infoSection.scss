@@ -6,13 +6,12 @@
   // In react this SVG will be a different component
   // I also believe this implementation is more prone to bugs - missaligned (color lines between elements) / overlapping (with other contents these cover)
   .mid_layer::before {
-    // In terms of responsive design only thing that should change is height & bottom distance
-    // background-size stays the same
     content: '';
     position: absolute;
-    bottom: (-1 * $info-bottom-shape-size) + 1vh;
+    bottom: 1vh;
+    transform: translateY(100%);
     width: 100vw;
-    height: $info-bottom-shape-size;
+    aspect-ratio: 10.4492/1;
     background-image: url(/dist/assets/info/info-bg-bottom.svg);
     background-position: top;
     background-size: cover;
@@ -74,7 +73,6 @@
         z-index: 1;
         padding-top: 10vh;
         padding-left: 5vw;
-
 
         .icons-container {
           height: 100%;

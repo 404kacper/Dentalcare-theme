@@ -120,10 +120,10 @@
   .mid_layer::after {
     content: '';
     width: 100vw;
-    height: 45vh;
-    bottom: -10vh;
+    bottom: -1vh;
+    aspect-ratio: 7.4329/1;
     position: absolute;
-    background: center/contain no-repeat
+    background: center/cover no-repeat
       url('/dist/assets/amenities/amenities-shape-bottom.svg');
   }
 
