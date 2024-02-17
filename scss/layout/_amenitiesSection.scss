@@ -48,7 +48,6 @@
         background-size: contain;
         background-repeat: no-repeat;
       }
-
     }
   }
 
@@ -118,12 +117,14 @@
     opacity: 1;
   }
 
-  .mid_layer svg {
-    z-index: 0;
-    position: absolute;
+  .mid_layer::after {
+    content: '';
     width: 100vw;
-    height: 26.5vh;
-    bottom: -1vh;
+    height: 45vh;
+    bottom: -10vh;
+    position: absolute;
+    background: center/contain no-repeat
+      url('/dist/assets/amenities/amenities-shape-bottom.svg');
   }
 
   .mid_layer {

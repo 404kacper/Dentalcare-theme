@@ -80,7 +80,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .navbar-btn-text a {
-    font-size: calc(12px + 4 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 4 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -103,7 +103,7 @@ ul {
 @media screen and (min-width: 1000px) {
   .navbar-text a,
   .navbar-text li {
-    font-size: calc(12px + 4 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 4 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -124,7 +124,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .navbar-text-info {
-    font-size: calc(6px + 8 * ((100vw - 1000px) / 920));
+    font-size: calc(6px + 8 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -149,7 +149,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .hero-lead {
-    font-size: calc(32px + 58 * ((100vw - 1000px) / 920));
+    font-size: calc(32px + 58 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -170,7 +170,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .hero-lead-small {
-    font-size: calc(32px + 22 * ((100vw - 1000px) / 920));
+    font-size: calc(32px + 22 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -191,7 +191,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .hero-subtext {
-    font-size: calc(9px + 9 * ((100vw - 1000px) / 920));
+    font-size: calc(9px + 9 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -210,7 +210,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .hero-btn-text {
-    font-size: calc(12px + 6 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 6 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -230,7 +230,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .info-btn-text {
-    font-size: calc(12px + 8 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 8 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -251,7 +251,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .info-title {
-    font-size: calc(32px + 32 * ((100vw - 1000px) / 920));
+    font-size: calc(32px + 32 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -271,7 +271,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .info-title-sub {
-    font-size: calc(6px + 14 * ((100vw - 1000px) / 920));
+    font-size: calc(6px + 14 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -290,7 +290,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .info-icon {
-    font-size: calc(8px + 10 * ((100vw - 1000px) / 920));
+    font-size: calc(8px + 10 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -306,7 +306,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .info-icon-link {
-    font-size: calc(12px + 8 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 8 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -323,7 +323,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .info-icon-description {
-    font-size: calc(12px + 6 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 6 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -339,7 +339,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .info-icon-title {
-    font-size: calc(12px + 12 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 12 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -358,7 +358,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .amenities-title {
-    font-size: calc(12px + 52 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 52 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -377,7 +377,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .amenities-title-sub {
-    font-size: calc(12px + 20 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 20 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -394,7 +394,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .amenities-title-review {
-    font-size: calc(12px + 20 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 20 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -413,7 +413,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .amenities-description {
-    font-size: calc(12px + 6 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 6 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -432,7 +432,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .article-title {
-    font-size: calc(12px + 16 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 16 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -450,7 +450,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .article-description {
-    font-size: calc(12px + 4 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 4 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -468,7 +468,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .article-title-main {
-    font-size: calc(12px + 52 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 52 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -486,7 +486,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .article-info {
-    font-size: calc(12px + 4 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 4 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -505,7 +505,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .contact-title-lead {
-    font-size: calc(12px + 52 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 52 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -523,7 +523,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .contact-title-description {
-    font-size: calc(12px + 10 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 10 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -541,7 +541,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .contact-icon-lead {
-    font-size: calc(12px + 20 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 20 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -559,7 +559,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .contact-icon-lead-light {
-    font-size: calc(12px + 20 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 20 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -577,7 +577,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .contact-icon-description {
-    font-size: calc(12px + 10 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 10 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -597,7 +597,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .footer-lead {
-    font-size: calc(12px + 20 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 20 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -617,7 +617,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .footer-description {
-    font-size: calc(12px + 6 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 6 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -636,7 +636,7 @@ ul {
 }
 @media screen and (min-width: 1000px) {
   .footer-description-light {
-    font-size: calc(12px + 6 * ((100vw - 1000px) / 920));
+    font-size: calc(12px + 6 * (100vw - 1000px) / 920);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -1087,12 +1087,13 @@ ul {
   transform: translateZ(0px);
   opacity: 1;
 }
-.amenitiesSection .mid_layer svg {
-  z-index: 0;
-  position: absolute;
+.amenitiesSection .mid_layer::after {
+  content: "";
   width: 100vw;
-  height: 26.5vh;
-  bottom: -1vh;
+  height: 45vh;
+  bottom: -10vh;
+  position: absolute;
+  background: center/contain no-repeat url("/dist/assets/amenities/amenities-shape-bottom.svg");
 }
 .amenitiesSection .mid_layer .wrapper {
   padding-top: 40vh;
