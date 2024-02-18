@@ -69,68 +69,29 @@ ul {
 
 .navbar-btn-text a {
   font-family: "Playfair Display";
+  font-size: clamp(12px, 1vw, 18px);
   white-space: nowrap;
   font-variant-numeric: lining-nums;
   font-weight: 400;
   text-align: center;
   color: white;
 }
-.navbar-btn-text a {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .navbar-btn-text a {
-    font-size: calc(12px + 4 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .navbar-btn-text a {
-    font-size: 16px;
-  }
-}
 .navbar-text a,
 .navbar-text li {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif;
-  white-space: nowrap;
-  font-weight: 400;
-  text-align: left;
-  color: white;
-}
-.navbar-text a,
-.navbar-text li {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .navbar-text a,
-  .navbar-text li {
-    font-size: calc(12px + 4 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .navbar-text a,
-  .navbar-text li {
-    font-size: 16px;
-  }
-}
-.navbar-text-info {
-  font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-size: clamp(12px, 1vw, 16px);
   white-space: nowrap;
   font-weight: 400;
   text-align: left;
   color: white;
 }
 .navbar-text-info {
-  font-size: 6px;
-}
-@media screen and (min-width: 1000px) {
-  .navbar-text-info {
-    font-size: calc(6px + 8 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .navbar-text-info {
-    font-size: 14px;
-  }
+  font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-size: clamp(6px, 1vw, 14px);
+  white-space: nowrap;
+  font-weight: 400;
+  text-align: left;
+  color: white;
 }
 .navbar-text-info-thin {
   opacity: 0.6;
@@ -138,511 +99,186 @@ ul {
 
 .hero-lead {
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
-  line-height: 90px;
+  font-size: clamp(50px, 3.5vw, 100px);
+  line-height: 110px;
   white-space: nowrap;
   font-weight: 700;
   text-align: left;
   color: white;
 }
-.hero-lead {
-  font-size: 32px;
-}
-@media screen and (min-width: 1000px) {
-  .hero-lead {
-    font-size: calc(32px + 58 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .hero-lead {
-    font-size: 90px;
-  }
-}
 .hero-lead-small {
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
-  line-height: 54px;
+  font-size: clamp(32px, 3vw, 54px);
+  line-height: 32px;
   white-space: nowrap;
   font-weight: 400;
   text-align: left;
   color: #1a2980;
 }
-.hero-lead-small {
-  font-size: 32px;
-}
-@media screen and (min-width: 1000px) {
-  .hero-lead-small {
-    font-size: calc(32px + 22 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .hero-lead-small {
-    font-size: 54px;
-  }
-}
 .hero-subtext {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif;
-  line-height: 18px;
-  line-height: 27px;
+  font-size: clamp(9px, 1vw, 18px);
+  line-height: 50px;
   font-weight: 300;
   text-align: left;
   color: white;
 }
-.hero-subtext {
-  font-size: 9px;
-}
-@media screen and (min-width: 1000px) {
-  .hero-subtext {
-    font-size: calc(9px + 9 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .hero-subtext {
-    font-size: 18px;
-  }
-}
 .hero-btn-text {
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-size: clamp(12px, 1vw, 18px);
   white-space: nowrap;
   text-transform: none;
   font-weight: 500;
 }
-.hero-btn-text {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .hero-btn-text {
-    font-size: calc(12px + 6 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .hero-btn-text {
-    font-size: 18px;
-  }
-}
 
 .info-btn-text {
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-size: clamp(12px, 1vw, 20px);
   white-space: nowrap;
   text-transform: none;
   font-weight: 400;
 }
-.info-btn-text {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .info-btn-text {
-    font-size: calc(12px + 8 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .info-btn-text {
-    font-size: 20px;
-  }
-}
 .info-title {
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-size: clamp(32px, 3vw, 64px);
   white-space: nowrap;
   text-align: center;
   font-weight: 400;
   color: #1a2980;
   line-height: 10vh;
 }
-.info-title {
-  font-size: 32px;
-}
-@media screen and (min-width: 1000px) {
-  .info-title {
-    font-size: calc(32px + 32 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .info-title {
-    font-size: 64px;
-  }
-}
 .info-title-sub {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-size: clamp(6px, 1vw, 20px);
   white-space: nowrap;
   text-align: center;
   font-weight: 400;
   color: #000000;
 }
-.info-title-sub {
-  font-size: 6px;
-}
-@media screen and (min-width: 1000px) {
-  .info-title-sub {
-    font-size: calc(6px + 14 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .info-title-sub {
-    font-size: 20px;
-  }
-}
 .info-icon {
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-size: clamp(8px, 1vw, 18px);
   text-align: left;
   font-weight: 400;
   color: black;
 }
-.info-icon {
-  font-size: 8px;
-}
-@media screen and (min-width: 1000px) {
-  .info-icon {
-    font-size: calc(8px + 10 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .info-icon {
-    font-size: 18px;
-  }
-}
 .info-icon-link {
   color: #1a2980;
-}
-.info-icon-link {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .info-icon-link {
-    font-size: calc(12px + 8 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .info-icon-link {
-    font-size: 20px;
-  }
+  font-size: clamp(12px, 1vw, 20px);
 }
 .info-icon-description {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif;
   color: black;
-}
-.info-icon-description {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .info-icon-description {
-    font-size: calc(12px + 6 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .info-icon-description {
-    font-size: 18px;
-  }
+  font-size: clamp(12px, 1vw, 18px);
 }
 .info-icon-title {
   color: #1a2980;
-}
-.info-icon-title {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .info-icon-title {
-    font-size: calc(12px + 12 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .info-icon-title {
-    font-size: 24px;
-  }
+  font-size: clamp(12px, 1vw, 24px);
 }
 
 .amenities-title {
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
   font-weight: 500;
   color: white;
-}
-.amenities-title {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .amenities-title {
-    font-size: calc(12px + 52 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .amenities-title {
-    font-size: 64px;
-  }
+  font-size: clamp(12px, 4vw, 64px);
 }
 .amenities-title-sub {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif;
   color: black;
   font-weight: 400;
   color: #1a2980;
-}
-.amenities-title-sub {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .amenities-title-sub {
-    font-size: calc(12px + 20 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .amenities-title-sub {
-    font-size: 32px;
-  }
+  font-size: clamp(24px, 2vw, 32px);
 }
 .amenities-title-review {
   color: #1a2980;
   font-weight: 500;
-}
-.amenities-title-review {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .amenities-title-review {
-    font-size: calc(12px + 20 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .amenities-title-review {
-    font-size: 32px;
-  }
+  font-size: clamp(18px, 1vw, 32px);
 }
 .amenities-description {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-size: clamp(12px, 1vw, 18px);
   font-weight: 400;
   text-align: center;
   color: white;
 }
-.amenities-description {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .amenities-description {
-    font-size: calc(12px + 6 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .amenities-description {
-    font-size: 18px;
-  }
-}
 
 .article-title {
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-size: clamp(12px, 1vw, 28px);
   font-weight: 400;
   color: black;
 }
-.article-title {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .article-title {
-    font-size: calc(12px + 16 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .article-title {
-    font-size: 28px;
-  }
-}
 .article-description {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-size: clamp(12px, 1vw, 16px);
   font-weight: 400;
   color: #222222;
 }
-.article-description {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .article-description {
-    font-size: calc(12px + 4 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .article-description {
-    font-size: 16px;
-  }
-}
 .article-title-main {
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-size: clamp(48px, 4vw, 64px);
   font-weight: 400;
   color: #1a2980;
 }
-.article-title-main {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .article-title-main {
-    font-size: calc(12px + 52 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .article-title-main {
-    font-size: 64px;
-  }
-}
 .article-info {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-size: clamp(12px, 1vw, 16px);
   font-weight: 400;
   color: black;
-}
-.article-info {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .article-info {
-    font-size: calc(12px + 4 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .article-info {
-    font-size: 16px;
-  }
 }
 
 .contact-title-lead {
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-size: clamp(48px, 4vw, 64px);
   font-weight: 400;
   color: #1a2980;
-}
-.contact-title-lead {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .contact-title-lead {
-    font-size: calc(12px + 52 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .contact-title-lead {
-    font-size: 64px;
-  }
 }
 .contact-title-description {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-size: clamp(12px, 1vw, 22px);
   font-weight: 400;
   color: black;
 }
-.contact-title-description {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .contact-title-description {
-    font-size: calc(12px + 10 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .contact-title-description {
-    font-size: 22px;
-  }
-}
 .contact-icon-lead {
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-size: clamp(24px, 1.5vw, 32px);
   font-weight: 400;
   color: #1a2980;
 }
-.contact-icon-lead {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .contact-icon-lead {
-    font-size: calc(12px + 20 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .contact-icon-lead {
-    font-size: 32px;
-  }
-}
 .contact-icon-lead-light {
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-size: clamp(24px, 1.5vw, 32px);
   font-weight: 400;
   color: #0867ff;
 }
-.contact-icon-lead-light {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .contact-icon-lead-light {
-    font-size: calc(12px + 20 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .contact-icon-lead-light {
-    font-size: 32px;
-  }
-}
 .contact-icon-description {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-size: clamp(18px, 1vw, 22px);
   font-weight: 400;
   color: black;
-}
-.contact-icon-description {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .contact-icon-description {
-    font-size: calc(12px + 10 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .contact-icon-description {
-    font-size: 22px;
-  }
 }
 
 .footer-lead {
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-size: clamp(18px, 1vw, 32px);
   font-weight: 400;
   text-align: center;
   color: white;
 }
-.footer-lead {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .footer-lead {
-    font-size: calc(12px + 20 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .footer-lead {
-    font-size: 32px;
-  }
-}
 .footer-description {
-  line-height: 2.7vh;
   font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-size: clamp(12px, 1vw, 18px);
   font-weight: 400;
+  line-height: 2.7vh;
   text-align: center;
   color: white;
-}
-.footer-description {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .footer-description {
-    font-size: calc(12px + 6 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .footer-description {
-    font-size: 18px;
-  }
 }
 .footer-description-light {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+  font-size: clamp(12px, 1vw, 18px);
   font-weight: 400;
   text-align: center;
   color: #cfcfcf;
-}
-.footer-description-light {
-  font-size: 12px;
-}
-@media screen and (min-width: 1000px) {
-  .footer-description-light {
-    font-size: calc(12px + 6 * (100vw - 1000px) / 920);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .footer-description-light {
-    font-size: 18px;
-  }
 }
 
 #nav {
