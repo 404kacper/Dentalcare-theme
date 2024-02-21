@@ -1,84 +1,286 @@
-#nav {
-  height: 10vh;
-  width: 100vw;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 15vw 0 15vw;
-  background-color: $navbar-bg;
-  transition: all 0.3s ease 0s;
+// for portrait
+// logo is out of the navbar compleately
+.logo-mobile {
+  position: absolute;
+  top: 5vw;
+  left: 4.5vw;
+  max-height: 5vw;
+  z-index: 1002;
 
-  .logo {
-    cursor: pointer;
-    margin-right: auto;
-    max-height: 70%;
+  @include phone {
+    display: block;
   }
 
-  .nav-links li {
-    display: inline-block;
-    padding: 0px 20px;
+  @include tablet-portrait {
+    display: block;
   }
 
-  .nav-links li a {
-    transition: all 0.3s ease 0s;
-  }
-
-  .nav-links li a:hover {
-    color: $primary-gradient;
-  }
-
-  button {
-    border-radius: 50px;
-    transition: all 0.3s ease 0s;
+  @include tablet-landscape {
+    display: none;
   }
 }
 
-.nav-info {
-  padding: 0.5vh 15vw 0.5vh 15vw;
+.nav-container {
+  position: fixed;
+  z-index: 1001;
+  transition: clip-path 0.5s ease-in-out;
 
-  .info-container {
+  @include phone {
+    background-color: white;
+    clip-path: circle(4% at 92.5% 4.25%);
+  }
+
+  @include tablet-portrait {
+    background-color: white;
+    // rectangular clip path placed at the button - responsive
+    clip-path: circle(4% at 92.5% 4.25%);
+  }
+
+  @include tablet-landscape {
+    background-color: transparent;
+    clip-path: inset(0);
+  }
+
+  .nav-info {
+    @include phone {
+      display: none;
+    }
+
+    @include tablet-portrait {
+      display: none;
+    }
+
+    @include tablet-landscape {
+      display: block;
+      padding: 0.5vh 10vw 0.5vh 10vw;
+    }
+
+    @include desktop-small {
+      padding: 0.5vh 15vw 0.5vh 15vw;
+    }
+
+    .info-container {
+      display: flex;
+      padding: 0.2vh 0.2vw 1vh 0.2vw;
+      background: linear-gradient(
+          to right,
+          transparent 45%,
+          white 60%,
+          white 95%,
+          transparent 100%
+        )
+        left bottom transparent no-repeat;
+      background-size: 100% 1px;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .time {
+      max-width: 20vw;
+    }
+
+    .time-icon {
+      max-width: 0.8vw;
+      margin: 0 0.4vw 0 0;
+    }
+
+    .location-icon {
+      max-width: 0.9vw;
+      margin: 0 0.3vw 0 1vw;
+    }
+
+    .location {
+      max-width: 20vw;
+    }
+  }
+
+  #phone-btn {
     display: flex;
-    padding: 0.2vh 0.2vw 1vh 0.2vw;
-    background: linear-gradient(
-        to right,
-        transparent 45%,
-        white 60%,
-        white 95%,
-        transparent 100%
-      )
-      left bottom transparent no-repeat;
-    background-size: 100% 1px;
+    align-items: center;
+
+    .phone {
+      padding-right: 0.5vw;
+      width: 2vw;
+      height: 2vh;
+    }
+  }
+
+  .nav {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
 
-  .time {
-    max-width: 20vw;
-  }
+    @include phone {
+      padding: 0 5vw 0 5vw;
+      flex-direction: column;
 
-  .time-icon {
-    max-width: 0.8vw;
-    margin: 0 0.4vw 0 0;
-  }
+      li a {
+        color: #222222;
+      }
 
-  .location-icon {
-    max-width: 0.9vw;
-    margin: 0 0.3vw 0 1vw;
-  }
+      #navbar-btn-expand {
+        display: block;
+      }
+    }
 
-  .location {
-    max-width: 20vw;
+    @include tablet-portrait {
+      height: 120vh;
+      padding: 0 5vw 0 5vw;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      #phone-btn {
+        display: none;
+      }
+
+      .nav-tools {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .logo {
+          display: none;
+        }
+
+        #navbar-btn-expand {
+          display: flex;
+          align-items: center;
+          justify-self: center;
+          flex-direction: column;
+          width: 5vw;
+
+          div {
+            margin-bottom: 4px;
+            border-radius: 3px;
+            width: 100%;
+            height: 3px;
+            background-color: $primary-gradient;
+            transition: opacity 0.3s, transform 0.6s;
+          }
+        }
+
+        .expanded-btn {
+          :nth-child(1) {
+            transform: translate(0, 230%) rotate(-45deg);
+          }
+
+          :nth-child(2) {
+            opacity: 0;
+          }
+
+          :nth-child(3) {
+            transform: translate(0, -230%) rotate(45deg);
+          }
+        }
+      }
+
+      .nav-contents {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+
+        li {
+          display: block;
+          padding: 20px 0;
+        }
+      }
+
+      li a {
+        color: #222222;
+      }
+
+      #navbar-btn-expand {
+        display: block;
+      }
+    }
+
+    @include tablet-landscape {
+      height: 10vh;
+      padding: 0 10vw 0 10vw;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      #phone-btn {
+        display: flex;
+      }
+
+      .nav-tools {
+        flex-basis: 50%;
+
+        #navbar-btn-expand {
+          display: none;
+        }
+
+        .logo {
+          display: block;
+        }
+      }
+
+      .nav-contents {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-self: center;
+
+        li {
+          display: inline-block;
+          padding: 0px 20px;
+        }
+      }
+
+      #phone-btn {
+        padding: 9px 15px;
+      }
+
+      li a {
+        color: white;
+      }
+
+      #navbar-btn-expand {
+        display: none;
+      }
+    }
+
+    @include desktop-small {
+      padding: 0 15vw 0 15vw;
+
+      #phone-btn {
+        padding: 9px 25px;
+      }
+    }
+
+    .logo {
+      cursor: pointer;
+
+      @include phone {
+        max-height: 40%;
+      }
+
+      @include tablet-portrait {
+        max-height: 40%;
+      }
+
+      @include tablet-landscape {
+        max-height: 50%;
+      }
+
+      @include desktop-hd {
+        max-height: 65%;
+      }
+    }
+
+    .nav-links li a:hover {
+      color: $primary-gradient;
+    }
   }
 }
 
-#navbar-btn {
-  display: flex;
-  align-items: center;
-  justify-self: center;
-  padding-left: 15px;
-
-  .phone {
-    width: 2vw;
-    height: 2vh;
-  }
+.expanded {
+  clip-path: circle(90% at 60% 0%);
 }

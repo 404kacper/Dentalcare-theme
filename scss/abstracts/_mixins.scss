@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 // Utility classes
 .navbar-transform-bg {
@@ -11,8 +11,6 @@
 .wrapper {
   margin: 0 15vw 0 15vw;
 }
-
-
 
 // Zoom animation on hero section
 @keyframes zoomIn {
@@ -47,26 +45,38 @@
 }
 
 // Media Query Mixins
-@mixin mediaSm {
-  @media screen and (max-width: 500px) {
+@mixin phone {
+  @media (max-width: 599px) {
     @content;
   }
 }
 
-@mixin mediaMd {
-  @media screen and (max-width: 768px) {
+@mixin tablet-portrait {
+  @media (min-width: 600px) {
     @content;
   }
 }
 
-@mixin mediaLg {
-  @media screen and (min-width: 769px) and (max-width: 1170px) {
+@mixin tablet-landscape {
+  @media (min-width: 900px) {
     @content;
   }
 }
 
-@mixin mediaXl {
-  @media screen and (min-width: 1171px) {
+@mixin desktop-small {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin desktop-hd {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin desktop-2k {
+  @media (min-width: 2300px) {
     @content;
   }
 }

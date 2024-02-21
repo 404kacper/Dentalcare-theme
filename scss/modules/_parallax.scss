@@ -7,6 +7,13 @@
   perspective: $parallaxPerspective;
   // Ios safari fix for touch scrolling
   -webkit-overflow-scrolling: touch;
+  // Hiding the scrollbar element within parallax wrapper
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .parallax_layer {

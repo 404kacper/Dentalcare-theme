@@ -40,6 +40,53 @@
   </head>
 
   <body>
+    <!-- Navbar -->
+    <!-- Needs to be outside the wrapper for fixed to work -->
+    <img class="logo-mobile" src="assets/navbar/logo_tekst_mobile.svg" alt="Logo" />
+    <header class="nav-container">
+      <div class="nav-info navbar-text-info">
+        <div class="info-container">
+          <img src="/dist/assets/navbar/clock.svg" class="time-icon" alt="" />
+          <div class="time">
+            Poniedziałek do Piątku
+            <span class="navbar-text-info-thin">8:00 - 15:00</span>
+          </div>
+          <img src="/dist/assets/navbar/pin.svg" class="location-icon" />
+          <div class="location">
+            Adres
+            <span class="navbar-text-info-thin">Metalowa 57, 22-100 Chełm</span>
+          </div>
+        </div>
+      </div>
+      <div class="nav">
+        <div class="nav-tools">
+          <img
+            class="logo"
+            src="assets/navbar/logo_tekst_mobile.svg"
+            alt="Logo"
+          />
+          <button id="navbar-btn-expand">
+            <div></div>
+            <div></div>
+            <div></div>
+          </button>
+        </div>
+        <nav class="nav-contents">
+          <ul class="nav-links navbar-text">
+            <li><a href="#">O nas</a></li>
+            <li><a href="#">Usługi</a></li>
+            <li><a href="#">Kadra</a></li>
+            <li><a href="#">Nowości</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </nav>
+        <button id="phone-btn" class="btn-grad navbar-btn-text">
+          <img class="phone" src="assets/navbar/phone.svg" alt="Logo" />
+          <a href="#">731-105-109</a>
+        </button>
+      </div>
+    </header>
+
     <!-- Parallax wrapper for whole page -->
     <div class="parallax_wrapper">
       <!-- Hero -->
@@ -58,7 +105,6 @@
           <div class="triangle-middle"></div>
         </div>
 
-        <!-- Should be separate component/svg from subject image -->
         <div class="parallax_layer mid_layer subject"></div>
 
         <div class="parallax_layer mid_layer">
@@ -78,47 +124,6 @@
               </button>
             </div>
           </div>
-          <!-- Navbar -->
-          <header>
-            <div class="nav-info navbar-text-info">
-              <div class="info-container">
-                <img
-                  src="/dist/assets/navbar/clock.svg"
-                  class="time-icon"
-                  alt=""
-                />
-                <div class="time">
-                  Poniedziałek do Piątku
-                  <span class="navbar-text-info-thin">8:00 - 15:00</span>
-                </div>
-                <img src="/dist/assets/navbar/pin.svg" class="location-icon" />
-                <div class="location">
-                  Adres
-                  <span class="navbar-text-info-thin"
-                    >Metalowa 57, 22-100 Chełm</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div id="nav">
-              <img class="logo" src="assets/navbar/logo_tekst.svg" alt="Logo" />
-              <nav>
-                <ul class="nav-links navbar-text">
-                  <li><a href="#">O nas</a></li>
-                  <li><a href="#">Usługi</a></li>
-                  <li><a href="#">Kadra</a></li>
-                  <li><a href="#">Nowości</a></li>
-                  <li><a href="#">FAQ</a></li>
-                </ul>
-              </nav>
-              <button class="btn-grad navbar-btn-text" id="navbar-btn">
-                <img class="phone" src="/dist/assets/navbar/phone.svg" /><a
-                  href=""
-                  >731-105-109</a
-                >
-              </button>
-            </div>
-          </header>
         </div>
       </section>
 

@@ -22,7 +22,6 @@
       white-space: nowrap;
       font-weight: 400;
       text-align: left;
-      color: white;
     }
 
     &-info {
@@ -42,9 +41,6 @@
 
 // Hero related fonts
 .hero {
-  $min_width: 1000px;
-  $max_width: 1920px;
-
   &-lead {
     font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
     font-size: clamp(50px, 3.5vw, 100px);
