@@ -76,13 +76,29 @@ ul {
   text-align: center;
   color: white;
 }
-.navbar-text a,
-.navbar-text li {
-  font-family: "Maven Pro", Arial, Helvetica, sans-serif;
-  font-size: clamp(12px, 1vw, 16px);
-  white-space: nowrap;
-  font-weight: 400;
-  text-align: left;
+@media (min-width: 600px) {
+  .navbar-text a,
+  .navbar-text li {
+    font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+    font-size: clamp(24px, 5vw, 40px);
+    white-space: nowrap;
+    font-weight: 400;
+    text-align: left;
+    line-height: 9vh;
+    font-weight: bold;
+    color: #1a2980;
+  }
+}
+@media (min-width: 900px) {
+  .navbar-text a,
+  .navbar-text li {
+    font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+    font-size: clamp(12px, 1vw, 16px);
+    white-space: nowrap;
+    font-weight: 400;
+    text-align: left;
+    color: white;
+  }
 }
 .navbar-text-info {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif;
@@ -390,9 +406,6 @@ ul {
     padding: 0 5vw 0 5vw;
     flex-direction: column;
   }
-  .nav-container .nav li a {
-    color: #222222;
-  }
   .nav-container .nav #navbar-btn-expand {
     display: block;
   }
@@ -445,13 +458,66 @@ ul {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
+    margin-top: 5vh;
   }
-  .nav-container .nav .nav-contents li {
-    display: block;
-    padding: 20px 0;
+  .nav-container .nav .nav-contents .animate::after {
+    animation: expand 1s 0.7s ease backwards;
   }
-  .nav-container .nav li a {
-    color: #222222;
+  .nav-container .nav .nav-contents ul .animate::before {
+    animation: expand 0.5s ease backwards;
+  }
+  .nav-container .nav .nav-contents ul li {
+    overflow: hidden;
+  }
+  .nav-container .nav .nav-contents ul li::before {
+    content: "";
+    width: 100vw;
+    margin-left: -5vw;
+    position: absolute;
+    border-bottom: 1px solid #1a2980;
+    clip-path: 0% 0% 100% 0%;
+  }
+  .nav-container .nav .nav-contents ul li:nth-of-type(1)::before {
+    display: none;
+  }
+  .nav-container .nav .nav-contents ul li:nth-of-type(1) .animate {
+    animation-delay: 0.2s;
+  }
+  .nav-container .nav .nav-contents ul li:nth-of-type(2)::before {
+    animation-delay: 0.3s;
+  }
+  .nav-container .nav .nav-contents ul li:nth-of-type(2) .animate {
+    animation-delay: 0.3s;
+  }
+  .nav-container .nav .nav-contents ul li:nth-of-type(3)::before {
+    animation-delay: 0.4s;
+  }
+  .nav-container .nav .nav-contents ul li:nth-of-type(3) .animate {
+    animation-delay: 0.4s;
+  }
+  .nav-container .nav .nav-contents ul li:nth-of-type(4)::before {
+    animation-delay: 0.5s;
+  }
+  .nav-container .nav .nav-contents ul li:nth-of-type(4) .animate {
+    animation-delay: 0.5s;
+  }
+  .nav-container .nav .nav-contents ul li:nth-of-type(5)::before {
+    animation-delay: 0.7s;
+  }
+  .nav-container .nav .nav-contents ul li:nth-of-type(5) .animate {
+    animation-delay: 0.7s;
+  }
+  .nav-container .nav .nav-contents ul li .animate {
+    display: inline-block;
+    animation: slide-in 0.7s ease backwards;
+  }
+  .nav-container .nav .nav-contents ul::after {
+    content: "";
+    width: 100vw;
+    margin-left: -5vw;
+    position: absolute;
+    border-bottom: 1px solid #1a2980;
+    clip-path: 0% 0% 100% 0%;
   }
   .nav-container .nav #navbar-btn-expand {
     display: block;
@@ -479,20 +545,24 @@ ul {
   }
   .nav-container .nav .nav-contents {
     width: 100%;
+    margin-top: 0;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-self: center;
   }
-  .nav-container .nav .nav-contents li {
+  .nav-container .nav .nav-contents ul li {
     display: inline-block;
     padding: 0px 20px;
   }
+  .nav-container .nav .nav-contents ul li::before {
+    display: none;
+  }
+  .nav-container .nav .nav-contents ul::after {
+    display: none;
+  }
   .nav-container .nav #phone-btn {
     padding: 9px 15px;
-  }
-  .nav-container .nav li a {
-    color: white;
   }
   .nav-container .nav #navbar-btn-expand {
     display: none;
@@ -537,6 +607,22 @@ ul {
   clip-path: circle(90% at 60% 0%);
 }
 
+@keyframes expand {
+  0% {
+    clip-path: rect(0% 0% 100% 0%);
+  }
+  100% {
+    clip-path: rect(0% 0% 100% 100%);
+  }
+}
+@keyframes slide-in {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 .hero-section {
   height: 110vh;
   width: 100vw;

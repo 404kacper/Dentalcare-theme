@@ -48,14 +48,32 @@ scrollingElement.addEventListener('scroll', (event) => {
 
 const navButton = document.querySelector('#navbar-btn-expand');
 const header = document.querySelector('.nav-container');
+const nav = document.querySelector('.nav');
 
 navButton.addEventListener('click', () => {
   // modify the header/nav-container to hide extra contents based on clip-path
   if (!header.classList.contains('expanded')) {
     header.classList.add('expanded');
     navButton.classList.add('expanded-btn');
+    // adding animate class to li elements
+    nav.querySelectorAll('li').forEach((item) => {
+      item.classList.add('animate');
+      // adding animate class to each a element for text animation
+      item.querySelectorAll('a').forEach((item) => {
+        item.classList.add('animate');
+      });
+    });
+    // adding animate class to ul element
+    nav.querySelector('ul').classList.add('animate');
   } else {
     header.classList.remove('expanded');
     navButton.classList.remove('expanded-btn');
+    nav.querySelectorAll('li').forEach((item) => {
+      item.classList.remove('animate');
+      item.querySelectorAll('a').forEach((item) => {
+        item.classList.remove('animate');
+      });
+    });
+    nav.querySelector('ul').classList.remove('animate');
   }
 });

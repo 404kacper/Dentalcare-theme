@@ -15,13 +15,33 @@
   }
 
   &-text {
-    a,
-    li {
-      font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
-      font-size: clamp(12px, 1vw, 16px);
-      white-space: nowrap;
-      font-weight: 400;
-      text-align: left;
+    @include phone {
+    }
+
+    @include tablet-portrait {
+      a,
+      li {
+        font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+        font-size: clamp(24px, 5vw, 40px);
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: left;
+        line-height: 9vh;
+        font-weight: bold;
+        color: $primary-gradient;
+      }
+    }
+
+    @include tablet-landscape {
+      a,
+      li {
+        font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+        font-size: clamp(12px, 1vw, 16px);
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: left;
+        color: white;
+      }
     }
 
     &-info {
