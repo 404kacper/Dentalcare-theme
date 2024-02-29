@@ -31,7 +31,7 @@
 
   @include phone {
     background-color: white;
-    clip-path: circle(2.75% at 92.5% 4.25%);
+    clip-path: circle(3.25% at 87.5% 4.25%);
   }
 
   @include tablet-portrait {
@@ -118,6 +118,7 @@
 
     @include phone {
       @include shared-phone-portrait-styles-nav;
+      padding-right: 10vw;
     }
 
     @include tablet-portrait {
