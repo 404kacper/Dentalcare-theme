@@ -9,14 +9,14 @@
   @include phone {
     display: block;
     top: 3.5vh;
-    min-height: 41px;
-    max-height: 7vw;
+    min-height: 2vw;
+    max-height: 10vw;
   }
 
   @include tablet-portrait {
     display: block;
-    min-height: 41px;
-    max-height: 5vw;
+    min-height: 4vw;
+    max-height: 6vw;
   }
 
   @include tablet-landscape {
@@ -31,7 +31,7 @@
 
   @include phone {
     background-color: white;
-    clip-path: circle(3.25% at 87.5% 4.25%);
+    clip-path: circle(4% at 87.5% 4.25%);
   }
 
   @include tablet-portrait {
@@ -56,11 +56,11 @@
 
     @include tablet-landscape {
       display: block;
-      padding: 0.5vh 10vw 0.5vh 10vw;
+      padding: $mobile-padding-nav-info;
     }
 
-    @include desktop-small {
-      padding: 0.5vh 15vw 0.5vh 15vw;
+    @include desktop-hd {
+      padding: $desktop-padding-nav-info;
     }
 
     .info-container {
@@ -127,7 +127,7 @@
 
     @include tablet-landscape {
       height: 10vh;
-      padding: 0 10vw 0 10vw;
+      padding: $mobile-padding;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -181,12 +181,14 @@
       }
     }
 
-    @include desktop-small {
-      padding: 0 15vw 0 15vw;
-
+    @include laptop-small {
       #phone-btn {
         padding: 9px 25px;
       }
+    }
+
+    @include desktop-hd {
+      padding: $desktop-padding;
     }
 
     .logo {
@@ -194,8 +196,16 @@
         max-height: 50%;
       }
 
+      @include laptop {
+        max-height: 60%;
+      }
+
       @include desktop-hd {
         max-height: 65%;
+      }
+
+      @include desktop-2k {
+        max-height: 75%;
       }
     }
 
@@ -211,11 +221,11 @@
 
 @keyframes expand {
   0% {
-    clip-path: rect(0% 0% 100% 0%);
+    clip-path: inset(0 100% 0 0);
   }
 
   100% {
-    clip-path: rect(0% 0% 100% 100%);
+    clip-path: inset(0 0 0 0);
   }
 }
 

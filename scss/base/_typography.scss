@@ -73,40 +73,111 @@
 // Hero related fonts
 .hero {
   &-lead {
-    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-    font-size: clamp(50px, 3.5vw, 100px);
-    line-height: 110px;
-    white-space: nowrap;
-    font-weight: 700;
-    text-align: left;
-    color: white;
+    @include phone {
+      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      font-size: clamp(50px, 15vw, 100px);
+      line-height: 120px;
+      white-space: nowrap;
+      font-weight: 700;
+      text-align: left;
+      color: white;
+    }
+
+    @include tablet-portrait {
+      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      font-size: clamp(50px, 5vw, 100px);
+      line-height: 90px;
+      white-space: nowrap;
+      font-weight: 700;
+      text-align: left;
+      color: white;
+    }
+
+    @include tablet-landscape {
+      font-size: clamp(50px, 5vw, 100px);
+      line-height: 110px;
+    }
+
+    @include desktop-hd {
+      font-size: clamp(50px, 3.5vw, 100px);
+    }
 
     &-small {
-      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-      font-size: clamp(32px, 3vw, 54px);
-      line-height: 32px;
-      white-space: nowrap;
-      font-weight: 400;
-      text-align: left;
-      color: $primary-gradient;
+      @include phone {
+        font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+        line-height: 12px;
+        font-size: clamp(40px, 10vw, 54px);
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: left;
+        color: $primary-gradient;
+      }
+
+      @include tablet-portrait {
+        font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+        line-height: 12px;
+        font-size: clamp(32px, 3.5vw, 54px);
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: left;
+        color: $primary-gradient;
+      }
+
+      @include tablet-landscape {
+        line-height: 32px;
+        font-size: clamp(32px, 3.5vw, 54px);
+      }
+
+      @include desktop-hd {
+        font-size: clamp(32px, 2.5vw, 54px);
+      }
+
+      @include desktop-2k {
+        font-size: clamp(32px, 3vw, 54px);
+      }
     }
   }
 
   &-subtext {
-    font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
-    font-size: clamp(9px, 1vw, 18px);
-    line-height: 50px;
-    font-weight: 300;
-    text-align: left;
-    color: white;
+    @include phone {
+      font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+      font-size: clamp(10px, 2.8vw, 16px);
+      color: white;
+    }
+
+    @include tablet-portrait {
+      font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+      font-size: clamp(9px, 1.8vw, 13px);
+      line-height: 50px;
+      text-align: left;
+      color: white;
+    }
+
+    @include tablet-landscape {
+      font-size: clamp(9px, 1.2vw, 14px);
+    }
+
+    @include laptop {
+      font-size: clamp(9px, 1vw, 18px);
+    }
   }
 
   &-btn-text {
-    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-    font-size: clamp(12px, 1vw, 18px);
-    white-space: nowrap;
-    text-transform: none;
-    font-weight: 500;
+    @include phone {
+      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      font-size: clamp(13px, 1vw, 18px);
+      white-space: nowrap;
+      text-transform: none;
+      font-weight: 500;
+    }
+
+    @include tablet-portrait {
+      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      font-size: clamp(14px, 1vw, 18px);
+      white-space: nowrap;
+      text-transform: none;
+      font-weight: 500;
+    }
   }
 }
 
