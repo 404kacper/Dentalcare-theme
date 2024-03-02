@@ -19,6 +19,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    height: 100%;
 
     @include phone {
       margin-top: 15vh;
@@ -33,7 +34,7 @@
     }
 
     .info-button {
-      margin-top: 15vh;
+      margin-bottom: 20vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -41,69 +42,91 @@
 
     .info-container {
       margin-top: 10vh;
-      height: 80vh;
+      height: 100%;
       display: flex;
 
-      .info-image-bg {
-        z-index: -1;
-        margin-top: 30vh;
-        position: absolute;
-        height: 70vh;
-        width: 70vw;
-        top: 0;
-        background-image: url(/dist/assets/info/info-image-bg.svg);
-        background-position: left;
-        background-size: contain;
-        background-repeat: no-repeat;
-        transform: rotate(-20deg);
-      }
+      .info-image-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        --img-size: 50vh;
 
-      // should make this positioned relatively so it actually scales properly
-      .info-image {
-        margin-top: 10vh;
-        height: 70vh;
-        background-image: url(/dist/assets/info/info-image.png);
-        mask-image: url(/dist/assets/info/info-image-bg.svg);
-        mask-repeat: no-repeat;
-        mask-position: left;
-        background-repeat: no-repeat;
-        background-position: left;
-        background-size: contain;
+        @include laptop-small {
+          --img-size: 70vh;
+        }
+
+        @include laptop {
+          --img-size: 75vh;
+        }
+
+        @include desktop-hd {
+          --img-size: 80vh;
+        }
+
+        .info-image {
+          margin-top: 5vh;
+          height: var(--img-size);
+          aspect-ratio: 0.69/1;
+          background-image: url(/dist/assets/info/info-image.png);
+          mask-image: url(/dist/assets/info/info-image-bg.svg);
+          mask-repeat: no-repeat;
+          mask-position: left;
+          background-repeat: no-repeat;
+          background-position: left;
+          background-size: contain;
+        }
+
+        &::before {
+          content: '';
+          z-index: -1;
+          margin-top: 45vh;
+          position: absolute;
+          height: var(--img-size);
+          aspect-ratio: 0.69/1;
+          top: 0;
+          background-image: url(/dist/assets/info/info-image-bg.svg);
+          background-position: left;
+          background-size: contain;
+          background-repeat: no-repeat;
+          transform: rotate(-20deg);
+        }
       }
 
       .image-col {
         width: 50%;
-        height: 100%;
+        height: 80%;
       }
 
       .icons-col {
         width: 50%;
-        height: 100%;
+        height: 80%;
         z-index: 1;
-        padding-top: 10vh;
 
-        // @include tablet-portrait {
-        //   // padding-left: 5vw;
-        // }
+        @include tablet-portrait {
+          // padding-left: 5vw;
+        }
 
-        // @include desktop-hd {
-        //   // padding-left: 2vw;
-        // }
+        @include laptop-small {
+          padding-left: 4vw;
+        }
 
-        // @include desktop-2k {
-        //   padding-left: 5vw;
-        // }
+        @include desktop-2k {
+          padding-left: 5vw;
+        }
 
         .icons-container {
           height: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(4, 1fr);
+          align-items: center;
+
+          @include laptop {
+            margin-top: 5vh;
+          }
 
           .info-icon {
             display: flex;
-            flex-wrap: wrap-reverse;
-            // align-content: flex-end;
 
             &-hospital {
               height: $info-icons-size;
@@ -150,9 +173,8 @@
             .info-text-container {
               display: flex;
               flex-direction: column;
-              align-content: space-between;
               justify-content: space-between;
-              margin-left: 3vw;
+              margin-left: 4vw;
 
               .info-icon-link:hover {
                 cursor: pointer;

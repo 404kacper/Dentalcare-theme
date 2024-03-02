@@ -56,6 +56,10 @@
 
     @include tablet-landscape {
       display: block;
+      padding: $mobile-padding-nav-info;
+    }
+
+    @include laptop {
       padding: $desktop-padding-nav-info;
     }
 
@@ -127,7 +131,7 @@
 
     @include tablet-landscape {
       height: 10vh;
-      padding: $desktop-padding;
+      padding: $mobile-padding;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -194,7 +198,7 @@
       }
     }
 
-    @include desktop-hd {
+    @include laptop {
       padding: $desktop-padding;
     }
 

@@ -87,10 +87,6 @@
         bottom: 20vw;
       }
 
-      @include laptop {
-        bottom: 15vw;
-      }
-
       @include desktop-hd {
         bottom: 20vw;
         height: 25vw;

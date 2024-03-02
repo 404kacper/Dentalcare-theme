@@ -290,7 +290,7 @@
 
     @include tablet-portrait {
       font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-      font-size: clamp(40px, 5vw, 40px);
+      font-size: clamp(30px, 5.5vw, 50px);
       white-space: nowrap;
       text-align: center;
       font-weight: 400;
