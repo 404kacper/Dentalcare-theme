@@ -56,15 +56,11 @@
 
     @include tablet-landscape {
       display: block;
-      padding: $mobile-padding-nav-info;
+      padding: $desktop-padding-nav-info;
     }
 
     @include desktop-hd {
       padding: $desktop-padding-nav-info;
-    }
-
-    @include desktop-2k {
-      padding: $large-desktop-padding-nav-info;
     }
 
     .info-container {
@@ -131,7 +127,7 @@
 
     @include tablet-landscape {
       height: 10vh;
-      padding: $mobile-padding;
+      padding: $desktop-padding;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -163,7 +159,14 @@
         ul {
           li {
             display: inline-block;
-            padding: 0px 20px;
+
+            @include tablet-landscape {
+              padding: 0px 15px;
+            }
+
+            @include laptop-small {
+              padding: 0px 20px;
+            }
 
             &::before {
               display: none;
@@ -195,10 +198,6 @@
       padding: $desktop-padding;
     }
 
-    @include desktop-2k {
-      padding: $large-desktop-padding;
-    }
-
     .logo {
       @include tablet-landscape {
         max-height: 50%;
@@ -210,10 +209,6 @@
 
       @include desktop-hd {
         max-height: 65%;
-      }
-
-      @include desktop-2k {
-        max-height: 75%;
       }
     }
 

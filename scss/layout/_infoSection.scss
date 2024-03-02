@@ -19,7 +19,18 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 15vh;
+
+    @include phone {
+      margin-top: 15vh;
+    }
+
+    @include tablet-portrait {
+      margin-top: 8vh;
+    }
+
+    @include laptop-small {
+      margin-top: 15vh;
+    }
 
     .info-button {
       margin-top: 15vh;

@@ -1,13 +1,17 @@
 .wrapper {
+  @include phone {
+    margin: $mobile-padding;
+  }
+
+  @include tablet-portrait {
+    margin: $mobile-padding;
+  }
+
   @include tablet-landscape {
     margin: $mobile-padding;
   }
 
   @include desktop-hd {
     margin: $desktop-padding;
-  }
-
-  @include desktop-2k {
-    margin: $large-desktop-padding;
   }
 }

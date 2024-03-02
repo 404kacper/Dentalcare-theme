@@ -14,6 +14,10 @@
   }
 
   @include laptop {
+    height: 105vh;
+  }
+
+  @include desktop-hd {
     height: 110vh;
   }
 
@@ -254,11 +258,10 @@
 
     @include desktop-hd {
       top: 40vh;
-      left: 10%;
     }
 
     @include desktop-2k {
-      left: 15%;
+      left: 12.5%;
     }
 
     .hero-lead-small {
@@ -291,7 +294,7 @@
         margin-top: 2vh;
       }
 
-      @include tablet-landscape {
+      @include desktop-2k {
         margin-top: 4vh;
       }
 
