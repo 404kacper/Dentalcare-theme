@@ -63,14 +63,38 @@ ul {
   list-style: none;
 }
 
-.navbar-btn-text a {
-  font-family: "Playfair Display";
-  font-size: clamp(12px, 1vw, 18px);
-  white-space: nowrap;
-  font-variant-numeric: lining-nums;
-  font-weight: 400;
-  text-align: center;
-  color: white;
+@media (min-width: 1025px) {
+  .navbar-btn-text a {
+    font-family: "Playfair Display";
+    font-size: clamp(12px, 1vw, 18px);
+    white-space: nowrap;
+    font-variant-numeric: lining-nums;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+  }
+}
+@media (min-width: 1800px) {
+  .navbar-btn-text a {
+    font-family: "Playfair Display";
+    font-size: clamp(12px, 1.1vw, 20px);
+    white-space: nowrap;
+    font-variant-numeric: lining-nums;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+  }
+}
+@media (min-width: 2300px) {
+  .navbar-btn-text a {
+    font-family: "Playfair Display";
+    font-size: clamp(12px, 1.1vw, 22px);
+    white-space: nowrap;
+    font-variant-numeric: lining-nums;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+  }
 }
 @media (max-width: 599px) {
   .navbar-text a,
@@ -109,6 +133,28 @@ ul {
     color: white;
   }
 }
+@media (min-width: 1800px) {
+  .navbar-text a,
+  .navbar-text li {
+    font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+    font-size: clamp(12px, 0.8vw, 18px);
+    white-space: nowrap;
+    font-weight: 400;
+    text-align: left;
+    color: white;
+  }
+}
+@media (min-width: 2300px) {
+  .navbar-text a,
+  .navbar-text li {
+    font-family: "Maven Pro", Arial, Helvetica, sans-serif;
+    font-size: clamp(12px, 0.7vw, 18px);
+    white-space: nowrap;
+    font-weight: 400;
+    text-align: left;
+    color: white;
+  }
+}
 .navbar-text-info {
   font-family: "Maven Pro", Arial, Helvetica, sans-serif;
   font-size: clamp(6px, 1vw, 14px);
@@ -135,7 +181,7 @@ ul {
 @media (min-width: 600px) {
   .hero-lead {
     font-family: "Playfair Display", Arial, Helvetica, sans-serif;
-    font-size: clamp(50px, 5vw, 100px);
+    font-size: clamp(50px, 8vw, 80px);
     line-height: 90px;
     white-space: nowrap;
     font-weight: 700;
@@ -150,6 +196,11 @@ ul {
   }
 }
 @media (min-width: 1800px) {
+  .hero-lead {
+    font-size: clamp(50px, 4vw, 100px);
+  }
+}
+@media (min-width: 2300px) {
   .hero-lead {
     font-size: clamp(50px, 3.5vw, 100px);
   }
@@ -168,8 +219,8 @@ ul {
 @media (min-width: 600px) {
   .hero-lead-small {
     font-family: "Playfair Display", Arial, Helvetica, sans-serif;
-    line-height: 12px;
-    font-size: clamp(32px, 3.5vw, 54px);
+    line-height: 24px;
+    font-size: clamp(32px, 5.5vw, 54px);
     white-space: nowrap;
     font-weight: 400;
     text-align: left;
@@ -184,11 +235,6 @@ ul {
 }
 @media (min-width: 1800px) {
   .hero-lead-small {
-    font-size: clamp(32px, 2.5vw, 54px);
-  }
-}
-@media (min-width: 2300px) {
-  .hero-lead-small {
     font-size: clamp(32px, 3vw, 54px);
   }
 }
@@ -202,7 +248,7 @@ ul {
 @media (min-width: 600px) {
   .hero-subtext {
     font-family: "Maven Pro", Arial, Helvetica, sans-serif;
-    font-size: clamp(9px, 1.8vw, 13px);
+    font-size: clamp(9px, 1.8vw, 16px);
     line-height: 50px;
     text-align: left;
     color: white;
@@ -218,6 +264,16 @@ ul {
     font-size: clamp(9px, 1vw, 18px);
   }
 }
+@media (min-width: 1800px) {
+  .hero-subtext {
+    font-size: clamp(9px, 1.5vw, 18px);
+  }
+}
+@media (min-width: 2300px) {
+  .hero-subtext {
+    font-size: clamp(9px, 2vw, 20px);
+  }
+}
 @media (max-width: 599px) {
   .hero-btn-text {
     font-family: "Playfair Display", Arial, Helvetica, sans-serif;
@@ -230,10 +286,20 @@ ul {
 @media (min-width: 600px) {
   .hero-btn-text {
     font-family: "Playfair Display", Arial, Helvetica, sans-serif;
-    font-size: clamp(14px, 1vw, 18px);
+    font-size: clamp(14px, 2vw, 18px);
     white-space: nowrap;
     text-transform: none;
     font-weight: 500;
+  }
+}
+@media (min-width: 1800px) {
+  .hero-btn-text {
+    font-size: clamp(14px, 1vw, 18px);
+  }
+}
+@media (min-width: 2300px) {
+  .hero-btn-text {
+    font-size: clamp(14px, 1vw, 22px);
   }
 }
 
@@ -1034,7 +1100,7 @@ ul {
 @media (min-width: 600px) {
   .hero-section .subject::before {
     aspect-ratio: 11/12;
-    background-position: right 40% bottom;
+    background-position: right 45% bottom;
   }
 }
 @media (min-width: 1025px) {
@@ -1098,6 +1164,11 @@ ul {
 @media (min-width: 1800px) {
   .hero-section .hero {
     top: 40vh;
+    left: 10%;
+  }
+}
+@media (min-width: 2300px) {
+  .hero-section .hero {
     left: 15%;
   }
 }

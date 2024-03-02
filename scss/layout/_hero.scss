@@ -196,7 +196,7 @@
 
     @include tablet-portrait {
       aspect-ratio: 11/12;
-      background-position: right 40% bottom;
+      background-position: right 45% bottom;
     }
 
     @include tablet-landscape {
@@ -254,6 +254,10 @@
 
     @include desktop-hd {
       top: 40vh;
+      left: 10%;
+    }
+
+    @include desktop-2k {
       left: 15%;
     }
 

@@ -3,14 +3,40 @@
 // Navbar related fonts
 .navbar {
   &-btn-text {
-    a {
-      font-family: 'Playfair Display';
-      font-size: clamp(12px, 1vw, 18px);
-      white-space: nowrap;
-      font-variant-numeric: lining-nums;
-      font-weight: 400;
-      text-align: center;
-      color: white;
+    @include tablet-landscape {
+      a {
+        font-family: 'Playfair Display';
+        font-size: clamp(12px, 1vw, 18px);
+        white-space: nowrap;
+        font-variant-numeric: lining-nums;
+        font-weight: 400;
+        text-align: center;
+        color: white;
+      }
+    }
+
+    @include desktop-hd {
+      a {
+        font-family: 'Playfair Display';
+        font-size: clamp(12px, 1.1vw, 20px);
+        white-space: nowrap;
+        font-variant-numeric: lining-nums;
+        font-weight: 400;
+        text-align: center;
+        color: white;
+      }
+    }
+
+    @include desktop-2k {
+      a {
+        font-family: 'Playfair Display';
+        font-size: clamp(12px, 1.1vw, 22px);
+        white-space: nowrap;
+        font-variant-numeric: lining-nums;
+        font-weight: 400;
+        text-align: center;
+        color: white;
+      }
     }
   }
 
@@ -55,6 +81,30 @@
       }
     }
 
+    @include desktop-hd {
+      a,
+      li {
+        font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+        font-size: clamp(12px, 0.8vw, 18px);
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: left;
+        color: white;
+      }
+    }
+
+    @include desktop-2k {
+      a,
+      li {
+        font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+        font-size: clamp(12px, 0.7vw, 18px);
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: left;
+        color: white;
+      }
+    }
+
     &-info {
       font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
       font-size: clamp(6px, 1vw, 14px);
@@ -85,7 +135,7 @@
 
     @include tablet-portrait {
       font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-      font-size: clamp(50px, 5vw, 100px);
+      font-size: clamp(50px, 8vw, 80px);
       line-height: 90px;
       white-space: nowrap;
       font-weight: 700;
@@ -99,6 +149,10 @@
     }
 
     @include desktop-hd {
+      font-size: clamp(50px, 4vw, 100px);
+    }
+
+    @include desktop-2k {
       font-size: clamp(50px, 3.5vw, 100px);
     }
 
@@ -115,8 +169,8 @@
 
       @include tablet-portrait {
         font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-        line-height: 12px;
-        font-size: clamp(32px, 3.5vw, 54px);
+        line-height: 24px;
+        font-size: clamp(32px, 5.5vw, 54px);
         white-space: nowrap;
         font-weight: 400;
         text-align: left;
@@ -129,10 +183,6 @@
       }
 
       @include desktop-hd {
-        font-size: clamp(32px, 2.5vw, 54px);
-      }
-
-      @include desktop-2k {
         font-size: clamp(32px, 3vw, 54px);
       }
     }
@@ -147,7 +197,7 @@
 
     @include tablet-portrait {
       font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
-      font-size: clamp(9px, 1.8vw, 13px);
+      font-size: clamp(9px, 1.8vw, 16px);
       line-height: 50px;
       text-align: left;
       color: white;
@@ -159,6 +209,14 @@
 
     @include laptop {
       font-size: clamp(9px, 1vw, 18px);
+    }
+
+    @include desktop-hd {
+      font-size: clamp(9px, 1.5vw, 18px);
+    }
+
+    @include desktop-2k {
+      font-size: clamp(9px, 2vw, 20px);
     }
   }
 
@@ -173,10 +231,18 @@
 
     @include tablet-portrait {
       font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-      font-size: clamp(14px, 1vw, 18px);
+      font-size: clamp(14px, 2vw, 18px);
       white-space: nowrap;
       text-transform: none;
       font-weight: 500;
+    }
+
+    @include desktop-hd {
+      font-size: clamp(14px, 1vw, 18px);
+    }
+
+    @include desktop-2k {
+      font-size: clamp(14px, 1vw, 22px);
     }
   }
 }
