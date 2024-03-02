@@ -63,6 +63,10 @@
       padding: $desktop-padding-nav-info;
     }
 
+    @include desktop-2k {
+      padding: $large-desktop-padding-nav-info;
+    }
+
     .info-container {
       display: flex;
       padding: 0.2vh 0.2vw 1vh 0.2vw;
@@ -137,7 +141,7 @@
       }
 
       .nav-tools {
-        flex-basis: 50%;
+        justify-content: flex-start;
 
         #navbar-btn-expand {
           display: none;
@@ -189,6 +193,10 @@
 
     @include desktop-hd {
       padding: $desktop-padding;
+    }
+
+    @include desktop-2k {
+      padding: $large-desktop-padding;
     }
 
     .logo {

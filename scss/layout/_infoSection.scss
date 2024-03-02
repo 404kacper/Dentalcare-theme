@@ -3,8 +3,6 @@
   width: 100vw;
   background-color: $info-bg;
 
-  // In react this SVG will be a different component
-  // I also believe this implementation is more prone to bugs - missaligned (color lines between elements) / overlapping (with other contents these cover)
   .mid_layer::before {
     content: '';
     position: absolute;
@@ -72,7 +70,18 @@
         height: 100%;
         z-index: 1;
         padding-top: 10vh;
-        padding-left: 5vw;
+
+        // @include tablet-portrait {
+        //   // padding-left: 5vw;
+        // }
+
+        // @include desktop-hd {
+        //   // padding-left: 2vw;
+        // }
+
+        // @include desktop-2k {
+        //   padding-left: 5vw;
+        // }
 
         .icons-container {
           height: 100%;
@@ -82,6 +91,8 @@
 
           .info-icon {
             display: flex;
+            flex-wrap: wrap-reverse;
+            // align-content: flex-end;
 
             &-hospital {
               height: $info-icons-size;
