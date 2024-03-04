@@ -369,13 +369,26 @@
 
     &-description {
       font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
-      color: black;
-      font-size: clamp(12px, 1vw, 18px);
+      color: white;
+      font-size: clamp(12px, 1.5vw, 14px);
+      text-align: center;
+
+      @include laptop {
+        color: black;
+        font-size: clamp(12px, 1vw, 18px);
+      }
     }
 
     &-title {
-      color: $icon-title-color;
-      font-size: clamp(12px, 1vw, 24px);
+      color: white;
+      font-size: clamp(12px, 2.3vw, 32px);
+      text-align: center;
+
+      @include laptop {
+        color: $icon-title-color;
+        font-size: clamp(12px, 1vw, 24px);
+        text-align: left;
+      }
     }
   }
 }

@@ -49,6 +49,7 @@
         display: flex;
         align-items: flex-start;
         justify-content: center;
+
         --img-size: 50vh;
 
         @include laptop-small {
@@ -93,20 +94,27 @@
       }
 
       .image-col {
-        width: 50%;
-        height: 80%;
+        @include phone {
+          display: none;
+        }
+
+        @include tablet-portrait {
+          display: none;
+        }
+
+        @include laptop {
+          display: block;
+          width: 50%;
+          height: 80%;
+        }
       }
 
       .icons-col {
-        width: 50%;
+        width: 100%;
         height: 80%;
-        z-index: 1;
 
-        @include tablet-portrait {
-          // padding-left: 5vw;
-        }
-
-        @include laptop-small {
+        @include laptop {
+          width: 50%;
           padding-left: 4vw;
         }
 
@@ -117,48 +125,306 @@
         .icons-container {
           height: 100%;
           display: grid;
-          grid-template-columns: repeat(1, 1fr);
-          grid-template-rows: repeat(4, 1fr);
           align-items: center;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          gap: 2vw;
+
+          & > * {
+            &:nth-child(1) {
+              margin-left: auto;
+            }
+
+            &:nth-child(3) {
+              margin-left: auto;
+            }
+          }
 
           @include laptop {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4, 1fr);
             margin-top: 5vh;
+
+            & > * {
+              &:nth-child(1) {
+                margin-left: 0;
+              }
+
+              &:nth-child(3) {
+                margin-left: 0;
+              }
+            }
           }
 
           .info-icon {
+            position: relative;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4vw;
+            background-color: $primary-color;
+            aspect-ratio: 1/1;
+            height: 75%;
+            padding: 4vw 2vw;
+            border-radius: 20%;
+
+            &:nth-child(1) {
+              align-self: end;
+
+              &::before {
+                content: '';
+                width: 5vw;
+                height: 5vw;
+                position: absolute;
+                left: 10%;
+                top: 10%;
+                background-image: url(/dist/assets/hero/trojkat_dolny.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                @include laptop {
+                  display: none;
+                }
+              }
+
+              &::after {
+                content: '';
+                width: 10vw;
+                height: 10vw;
+                position: absolute;
+                right: -5%;
+                top: -5%;
+                background-image: url(/dist/assets/hero/kolo_srodkowe.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                @include laptop {
+                  display: none;
+                }
+              }
+            }
+
+            &:nth-child(2) {
+              align-self: end;
+              background-color: $primary-gradient;
+
+              @include laptop {
+                background-color: transparent;
+              }
+            }
+
+            &:nth-child(3) {
+              align-self: start;
+              background-color: $primary-gradient;
+
+              @include laptop {
+                background-color: transparent;
+              }
+            }
+
+            &:nth-child(4) {
+              align-self: start;
+            }
+
+            @include laptop {
+              flex-direction: row;
+              justify-content: flex-start;
+              align-items: stretch;
+              gap: 0;
+              background-color: transparent;
+              aspect-ratio: auto;
+              height: auto;
+              padding: 0;
+              border-radius: 0;
+
+              &:nth-child(1) {
+                align-self: start;
+              }
+
+              &:nth-child(2) {
+                align-self: start;
+              }
+
+              &:nth-child(3) {
+                align-self: start;
+              }
+
+              &:nth-child(4) {
+                align-self: start;
+              }
+            }
+
+            // dimensions for all icons
+            $icon-height: 10vw;
+            $icon-width: $icon-height;
 
             &-hospital {
-              height: $info-icons-size;
-              width: $info-icons-size;
-              background: url(/dist/assets/info/info-hospital.svg)
-                center/contain no-repeat;
+              height: $icon-height;
+              width: $icon-width;
+
+              &::before {
+                content: '';
+                position: absolute;
+                height: $icon-height;
+                width: $icon-width;
+                background-color: white;
+                border-radius: 50%;
+
+                @include laptop {
+                  display: none;
+                }
+              }
+
+              &::after {
+                content: '';
+                position: absolute;
+                height: $icon-height;
+                width: $icon-width;
+                background: url(/dist/assets/info/info-hospital-mobile.svg)
+                  center/contain no-repeat;
+                border-radius: 50%;
+                scale: 0.95;
+
+                @include laptop {
+                  display: none;
+                }
+              }
+
+              @include laptop {
+                background: url(/dist/assets/info/info-hospital.svg)
+                  center/contain no-repeat;
+                height: 10vh;
+                width: 10vh;
+              }
             }
 
             &-tooth {
-              height: $info-icons-size;
-              width: $info-icons-size;
-              background: url(/dist/assets/info/info-tooth.svg) center/contain
-                no-repeat;
+              height: $icon-height;
+              width: $icon-width;
+
+              &::before {
+                content: '';
+                position: absolute;
+                height: $icon-height;
+                width: $icon-width;
+                background-color: white;
+                border-radius: 50%;
+
+                @include laptop {
+                  display: none;
+                }
+              }
+
+              &::after {
+                content: '';
+                position: absolute;
+                height: $icon-height;
+                width: $icon-width;
+                background: url(/dist/assets/info/info-tooth-mobile.svg)
+                  center/contain no-repeat;
+                border-radius: 50%;
+                scale: 0.95;
+
+                @include laptop {
+                  display: none;
+                }
+              }
+
+              @include laptop {
+                background: url(/dist/assets/info/info-tooth.svg) center/contain
+                  no-repeat;
+                height: 10vh;
+                width: 10vh;
+              }
             }
 
             &-jaw {
-              height: $info-icons-size;
-              width: $info-icons-size;
-              background: url(/dist/assets/info/info-jaw.svg) center/contain
-                no-repeat;
+              height: $icon-height;
+              width: $icon-width;
+
+              &::before {
+                content: '';
+                position: absolute;
+                height: $icon-height;
+                width: $icon-width;
+                background-color: white;
+                border-radius: 50%;
+
+                @include laptop {
+                  display: none;
+                }
+              }
+
+              &::after {
+                content: '';
+                position: absolute;
+                height: $icon-height;
+                width: $icon-width;
+                background: url(/dist/assets/info/info-jaw-mobile.svg)
+                  center/contain no-repeat;
+                border-radius: 50%;
+
+                @include laptop {
+                  display: none;
+                }
+              }
+
+              @include laptop {
+                background: url(/dist/assets/info/info-jaw.svg) center/contain
+                  no-repeat;
+                height: 10vh;
+                width: 10vh;
+              }
             }
 
             &-tools {
-              height: $info-icons-size;
-              width: $info-icons-size;
-              background: url(/dist/assets/info/info-tools.svg) center/contain
-                no-repeat;
+              height: $icon-height;
+              width: $icon-width;
+
+              &::before {
+                content: '';
+                position: absolute;
+                height: $icon-height;
+                width: $icon-width;
+                background-color: white;
+                border-radius: 50%;
+
+                @include laptop {
+                  display: none;
+                }
+              }
+
+              &::after {
+                content: '';
+                position: absolute;
+                height: $icon-height;
+                width: $icon-width;
+                background: url(/dist/assets/info/info-tools-mobile.svg)
+                  center/contain no-repeat;
+                border-radius: 50%;
+                scale: 0.95;
+
+                @include laptop {
+                  display: none;
+                }
+              }
+
+              @include laptop {
+                background: url(/dist/assets/info/info-tools.svg) center/contain
+                  no-repeat;
+                height: 10vh;
+                width: 10vh;
+              }
             }
 
             &-link {
-              display: flex;
-              align-content: center;
+              display: none;
+
+              @include laptop {
+                display: flex;
+                align-content: center;
+              }
 
               .arrow-right {
                 width: 0.3vw;
@@ -174,11 +440,31 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-              margin-left: 4vw;
+              margin-left: 0;
+
+              @include laptop {
+                margin-left: 4vw;
+              }
 
               .info-icon-link:hover {
                 cursor: pointer;
                 text-decoration: underline;
+              }
+
+              .info-icon-title {
+                margin-bottom: 2vw;
+
+                @include laptop {
+                  margin-bottom: 0;
+                }
+              }
+
+              .info-icon-description {
+                margin-bottom: 1vw;
+
+                @include laptop {
+                  margin-bottom: 0;
+                }
               }
             }
           }
