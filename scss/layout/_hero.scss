@@ -100,82 +100,174 @@
     }
 
     .circle-left {
-      width: scale-hero(45px, 2);
-      height: scale-hero(45px, 2);
+      aspect-ratio: 1/1;
       top: 30vh;
-      left: 30vw;
       position: absolute;
-      background-image: url(/dist/assets/hero/kolo_lewe.png);
+      background-image: url(/dist/assets/hero/kolo_lewe.svg);
       background-size: contain;
       background-repeat: no-repeat;
+
+      @include phone {
+        width: 7vw;
+        left: 20vw;
+      }
+
+      @include tablet-portrait {
+        width: 2.5vw;
+        left: 20vw;
+      }
+
+      @include tablet-landscape {
+        width: 1.5vw;
+        left: 30vw;
+      }
+
+      @include laptop-small {
+        left: 20vw;
+      }
+
+      @include desktop-hd {
+        left: 30vw;
+      }
     }
 
     .circle-right {
-      width: 28px;
-      height: 28px;
+      aspect-ratio: 1/1;
       position: absolute;
       top: 30vh;
       right: 9vw;
-      background-image: url(/dist/assets/hero/kolo_prawe.png);
+      background-image: url(/dist/assets/hero/kolo_prawe.svg);
       background-size: contain;
       background-repeat: no-repeat;
+
+      @include phone {
+        width: 4vw;
+      }
+
+      @include tablet-portrait {
+        width: 2vw;
+      }
+
+      @include tablet-landscape {
+        width: 1.5vw;
+      }
+
+      @include desktop-hd {
+        width: 1vw;
+      }
     }
 
     .circle-middle {
-      width: 47px;
-      height: 47px;
+      aspect-ratio: 1/1;
       position: absolute;
       top: 18vh;
       right: 37vw;
-      background-image: url(/dist/assets/hero/kolo_srodkowe.png);
+      background-image: url(/dist/assets/hero/kolo_srodkowe.svg);
       background-size: contain;
       background-repeat: no-repeat;
+
+      @include phone {
+        width: 7vw;
+      }
+
+      @include tablet-portrait {
+        width: 5vw;
+      }
+
+      @include tablet-landscape {
+        width: 3vw;
+      }
+
+      @include desktop-hd {
+        width: 2vw;
+      }
     }
 
     .rectangle-right {
-      width: 144px;
-      height: 144px;
+      aspect-ratio: 1/1;
       position: absolute;
-      background-image: url(/dist/assets/hero/prostokat_prawy.png);
+      background-image: url(/dist/assets/hero/prostokat_prawy.svg);
       background-size: contain;
       background-repeat: no-repeat;
 
       @include phone {
         top: 20vh;
         right: 90vw;
+        width: 20vw;
       }
 
       @include tablet-portrait {
-        top: -6vh;
-        right: 50vw;
+        top: 15vh;
+        left: 95vw;
+        width: 15vw;
       }
 
       @include tablet-landscape {
-        top: 0vh;
-        right: 0vw;
+        top: 1vh;
+        right: -3vw;
+        width: 6vw;
+      }
+
+      @include desktop-hd {
+        top: -3vw;
+        width: 6vw;
       }
     }
 
     .triangle-bottom {
-      width: 70px;
-      height: 70px;
       position: absolute;
       bottom: 15vh;
       left: 20vw;
-      background-image: url(/dist/assets/hero/trojkat_dolny.png);
+      background-image: url(/dist/assets/hero/trojkat_dolny.svg);
       background-size: contain;
       background-repeat: no-repeat;
+      transform: rotate(30deg);
+
+      @include phone {
+        aspect-ratio: 1/1;
+        width: 15vw;
+      }
+
+      @include tablet-portrait {
+        aspect-ratio: 1/1;
+        width: 7vw;
+      }
+
+      @include tablet-landscape {
+        aspect-ratio: 1/1;
+        width: 5vw;
+      }
+
+      @include desktop-hd {
+        aspect-ratio: 1/1;
+        width: 3vw;
+      }
     }
 
     .triangle-middle {
-      width: scale-hero(47px, 2);
-      height: scale-hero(47px, 2);
+      aspect-ratio: 1/1;
       position: absolute;
       top: 25vh;
       left: 35vw;
-      background-image: url(/dist/assets/hero/trojkat_srodkowy.png);
+      background-image: url(/dist/assets/hero/trojkat_srodkowy.svg);
       background-size: contain;
       background-repeat: no-repeat;
+
+      @include phone {
+        width: 4vw;
+      }
+
+      @include tablet-portrait {
+        width: 1.6vw;
+      }
+
+      @include tablet-landscape {
+        width: 1vw;
+      }
+
+      @include desktop-hd {
+        width: 0.8vw;
+      }
     }
   }
 

@@ -3,6 +3,18 @@
   width: 100vw;
   background-color: $info-bg;
 
+  @include phone {
+    height: 450vw;
+  }
+
+  @include laptop-small {
+    height: 170vh;
+  }
+
+  @include laptop {
+    height: 150vh;
+  }
+
   .mid_layer::before {
     content: '';
     position: absolute;
@@ -140,6 +152,22 @@
             }
           }
 
+          @include phone {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            justify-items: center;
+
+            & > * {
+              &:nth-child(1) {
+                margin-left: 0;
+              }
+
+              &:nth-child(3) {
+                margin-left: 0;
+              }
+            }
+          }
+
           @include laptop {
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(4, 1fr);
@@ -169,17 +197,27 @@
             padding: 4vw 2vw;
             border-radius: 20%;
 
+            @include phone {
+              gap: 5vh;
+              height: auto;
+              width: 90%;
+            }
+
             &:nth-child(1) {
               align-self: end;
 
+              @include phone {
+                align-self: auto;
+              }
+
               &::before {
                 content: '';
-                width: 5vw;
-                height: 5vw;
+                width: 1vw;
+                aspect-ratio: 1/1;
                 position: absolute;
-                left: 10%;
-                top: 10%;
-                background-image: url(/dist/assets/hero/trojkat_dolny.png);
+                left: 30%;
+                bottom: 50%;
+                background-image: url(/dist/assets/hero/kolo_lewe.svg);
                 background-size: contain;
                 background-repeat: no-repeat;
 
@@ -190,12 +228,12 @@
 
               &::after {
                 content: '';
-                width: 10vw;
-                height: 10vw;
+                aspect-ratio: 1/1;
+                width: 2vw;
                 position: absolute;
-                right: -5%;
-                top: -5%;
-                background-image: url(/dist/assets/hero/kolo_srodkowe.png);
+                right: 20%;
+                top: 15%;
+                background-image: url(/dist/assets/hero/kolo_srodkowe.svg);
                 background-size: contain;
                 background-repeat: no-repeat;
 
@@ -209,8 +247,45 @@
               align-self: end;
               background-color: $primary-gradient;
 
+              @include phone {
+                align-self: auto;
+              }
+
               @include laptop {
                 background-color: transparent;
+              }
+
+              &::before {
+                content: '';
+                width: 1.5vw;
+                aspect-ratio: 1/1;
+                position: absolute;
+                left: 30%;
+                top: 15%;
+                background-image: url(/dist/assets/hero/trojkat_srodkowy.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                @include laptop {
+                  display: none;
+                }
+              }
+
+              &::after {
+                content: '';
+                aspect-ratio: 1/1;
+                width: 3vw;
+                position: absolute;
+                right: 25%;
+                bottom: 50%;
+                transform: rotate(60deg);
+                background-image: url(/dist/assets/hero/trojkat_dolny.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                @include laptop {
+                  display: none;
+                }
               }
             }
 
@@ -218,13 +293,92 @@
               align-self: start;
               background-color: $primary-gradient;
 
+              @include phone {
+                align-self: auto;
+              }
+
               @include laptop {
                 background-color: transparent;
+              }
+
+              &::before {
+                content: '';
+                width: 3vw;
+                aspect-ratio: 1/1;
+                position: absolute;
+                left: 20%;
+                top: 15%;
+                background-image: url(/dist/assets/hero/trojkat_dolny.svg);
+                transform: rotate(30deg);
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                @include laptop {
+                  display: none;
+                }
+              }
+
+              &::after {
+                content: '';
+                aspect-ratio: 1/1;
+                position: absolute;
+                width: 2vw;
+                right: 22.5%;
+                bottom: 50%;
+                background-image: url(/dist/assets/hero/kolo_lewe.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                @include laptop-small {
+                  width: 1vw;
+                  right: 25%;
+                  bottom: 50%;
+                }
+
+                @include laptop {
+                  display: none;
+                }
               }
             }
 
             &:nth-child(4) {
               align-self: start;
+
+              @include phone {
+                align-self: auto;
+              }
+
+              &::before {
+                content: '';
+                width: 3vw;
+                aspect-ratio: 1/1;
+                position: absolute;
+                right: 25%;
+                top: 15%;
+                background-image: url(/dist/assets/info/prostokat.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                @include laptop {
+                  display: none;
+                }
+              }
+
+              &::after {
+                content: '';
+                aspect-ratio: 1/1;
+                width: 1.5vw;
+                position: absolute;
+                left: 30%;
+                bottom: 47.5%;
+                background-image: url(/dist/assets/hero/trojkat_srodkowy.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                @include laptop {
+                  display: none;
+                }
+              }
             }
 
             @include laptop {
@@ -256,17 +410,17 @@
             }
 
             // dimensions for all icons
-            $icon-height: 10vw;
-            $icon-width: $icon-height;
+            $icon-aspect-ratio: 1/1;
+            $icon-width: 10vw;
 
             &-hospital {
-              height: $icon-height;
+              aspect-ratio: $icon-aspect-ratio;
               width: $icon-width;
 
               &::before {
                 content: '';
                 position: absolute;
-                height: $icon-height;
+                aspect-ratio: $icon-aspect-ratio;
                 width: $icon-width;
                 background-color: white;
                 border-radius: 50%;
@@ -279,7 +433,7 @@
               &::after {
                 content: '';
                 position: absolute;
-                height: $icon-height;
+                aspect-ratio: $icon-aspect-ratio;
                 width: $icon-width;
                 background: url(/dist/assets/info/info-hospital-mobile.svg)
                   center/contain no-repeat;
@@ -294,19 +448,18 @@
               @include laptop {
                 background: url(/dist/assets/info/info-hospital.svg)
                   center/contain no-repeat;
-                height: 10vh;
                 width: 10vh;
               }
             }
 
             &-tooth {
-              height: $icon-height;
+              aspect-ratio: $icon-aspect-ratio;
               width: $icon-width;
 
               &::before {
                 content: '';
                 position: absolute;
-                height: $icon-height;
+                aspect-ratio: $icon-aspect-ratio;
                 width: $icon-width;
                 background-color: white;
                 border-radius: 50%;
@@ -319,7 +472,7 @@
               &::after {
                 content: '';
                 position: absolute;
-                height: $icon-height;
+                aspect-ratio: $icon-aspect-ratio;
                 width: $icon-width;
                 background: url(/dist/assets/info/info-tooth-mobile.svg)
                   center/contain no-repeat;
@@ -334,19 +487,18 @@
               @include laptop {
                 background: url(/dist/assets/info/info-tooth.svg) center/contain
                   no-repeat;
-                height: 10vh;
                 width: 10vh;
               }
             }
 
             &-jaw {
-              height: $icon-height;
+              aspect-ratio: $icon-aspect-ratio;
               width: $icon-width;
 
               &::before {
                 content: '';
                 position: absolute;
-                height: $icon-height;
+                aspect-ratio: $icon-aspect-ratio;
                 width: $icon-width;
                 background-color: white;
                 border-radius: 50%;
@@ -359,7 +511,7 @@
               &::after {
                 content: '';
                 position: absolute;
-                height: $icon-height;
+                aspect-ratio: $icon-aspect-ratio;
                 width: $icon-width;
                 background: url(/dist/assets/info/info-jaw-mobile.svg)
                   center/contain no-repeat;
@@ -373,19 +525,18 @@
               @include laptop {
                 background: url(/dist/assets/info/info-jaw.svg) center/contain
                   no-repeat;
-                height: 10vh;
                 width: 10vh;
               }
             }
 
             &-tools {
-              height: $icon-height;
+              aspect-ratio: $icon-aspect-ratio;
               width: $icon-width;
 
               &::before {
                 content: '';
                 position: absolute;
-                height: $icon-height;
+                aspect-ratio: $icon-aspect-ratio;
                 width: $icon-width;
                 background-color: white;
                 border-radius: 50%;
@@ -398,7 +549,7 @@
               &::after {
                 content: '';
                 position: absolute;
-                height: $icon-height;
+                aspect-ratio: $icon-aspect-ratio;
                 width: $icon-width;
                 background: url(/dist/assets/info/info-tools-mobile.svg)
                   center/contain no-repeat;
@@ -413,7 +564,6 @@
               @include laptop {
                 background: url(/dist/assets/info/info-tools.svg) center/contain
                   no-repeat;
-                height: 10vh;
                 width: 10vh;
               }
             }

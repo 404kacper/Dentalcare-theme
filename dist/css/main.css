@@ -1111,40 +1111,103 @@ ul {
   }
 }
 .hero-section .back_layer .circle-left {
-  width: 22.5px;
-  height: 22.5px;
+  aspect-ratio: 1/1;
   top: 30vh;
-  left: 30vw;
   position: absolute;
-  background-image: url(/dist/assets/hero/kolo_lewe.png);
+  background-image: url(/dist/assets/hero/kolo_lewe.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
+@media (max-width: 599px) {
+  .hero-section .back_layer .circle-left {
+    width: 7vw;
+    left: 20vw;
+  }
+}
+@media (min-width: 600px) {
+  .hero-section .back_layer .circle-left {
+    width: 2.5vw;
+    left: 20vw;
+  }
+}
+@media (min-width: 1025px) {
+  .hero-section .back_layer .circle-left {
+    width: 1.5vw;
+    left: 30vw;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-section .back_layer .circle-left {
+    left: 20vw;
+  }
+}
+@media (min-width: 1800px) {
+  .hero-section .back_layer .circle-left {
+    left: 30vw;
+  }
+}
 .hero-section .back_layer .circle-right {
-  width: 28px;
-  height: 28px;
+  aspect-ratio: 1/1;
   position: absolute;
   top: 30vh;
   right: 9vw;
-  background-image: url(/dist/assets/hero/kolo_prawe.png);
+  background-image: url(/dist/assets/hero/kolo_prawe.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
+@media (max-width: 599px) {
+  .hero-section .back_layer .circle-right {
+    width: 4vw;
+  }
+}
+@media (min-width: 600px) {
+  .hero-section .back_layer .circle-right {
+    width: 2vw;
+  }
+}
+@media (min-width: 1025px) {
+  .hero-section .back_layer .circle-right {
+    width: 1.5vw;
+  }
+}
+@media (min-width: 1800px) {
+  .hero-section .back_layer .circle-right {
+    width: 1vw;
+  }
+}
 .hero-section .back_layer .circle-middle {
-  width: 47px;
-  height: 47px;
+  aspect-ratio: 1/1;
   position: absolute;
   top: 18vh;
   right: 37vw;
-  background-image: url(/dist/assets/hero/kolo_srodkowe.png);
+  background-image: url(/dist/assets/hero/kolo_srodkowe.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
+@media (max-width: 599px) {
+  .hero-section .back_layer .circle-middle {
+    width: 7vw;
+  }
+}
+@media (min-width: 600px) {
+  .hero-section .back_layer .circle-middle {
+    width: 5vw;
+  }
+}
+@media (min-width: 1025px) {
+  .hero-section .back_layer .circle-middle {
+    width: 3vw;
+  }
+}
+@media (min-width: 1800px) {
+  .hero-section .back_layer .circle-middle {
+    width: 2vw;
+  }
+}
 .hero-section .back_layer .rectangle-right {
-  width: 144px;
-  height: 144px;
+  aspect-ratio: 1/1;
   position: absolute;
-  background-image: url(/dist/assets/hero/prostokat_prawy.png);
+  background-image: url(/dist/assets/hero/prostokat_prawy.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1152,39 +1215,90 @@ ul {
   .hero-section .back_layer .rectangle-right {
     top: 20vh;
     right: 90vw;
+    width: 20vw;
   }
 }
 @media (min-width: 600px) {
   .hero-section .back_layer .rectangle-right {
-    top: -6vh;
-    right: 50vw;
+    top: 15vh;
+    left: 95vw;
+    width: 15vw;
   }
 }
 @media (min-width: 1025px) {
   .hero-section .back_layer .rectangle-right {
-    top: 0vh;
-    right: 0vw;
+    top: 1vh;
+    right: -3vw;
+    width: 6vw;
+  }
+}
+@media (min-width: 1800px) {
+  .hero-section .back_layer .rectangle-right {
+    top: -3vw;
+    width: 6vw;
   }
 }
 .hero-section .back_layer .triangle-bottom {
-  width: 70px;
-  height: 70px;
   position: absolute;
   bottom: 15vh;
   left: 20vw;
-  background-image: url(/dist/assets/hero/trojkat_dolny.png);
+  background-image: url(/dist/assets/hero/trojkat_dolny.svg);
   background-size: contain;
   background-repeat: no-repeat;
+  transform: rotate(30deg);
+}
+@media (max-width: 599px) {
+  .hero-section .back_layer .triangle-bottom {
+    aspect-ratio: 1/1;
+    width: 15vw;
+  }
+}
+@media (min-width: 600px) {
+  .hero-section .back_layer .triangle-bottom {
+    aspect-ratio: 1/1;
+    width: 7vw;
+  }
+}
+@media (min-width: 1025px) {
+  .hero-section .back_layer .triangle-bottom {
+    aspect-ratio: 1/1;
+    width: 5vw;
+  }
+}
+@media (min-width: 1800px) {
+  .hero-section .back_layer .triangle-bottom {
+    aspect-ratio: 1/1;
+    width: 3vw;
+  }
 }
 .hero-section .back_layer .triangle-middle {
-  width: 23.5px;
-  height: 23.5px;
+  aspect-ratio: 1/1;
   position: absolute;
   top: 25vh;
   left: 35vw;
-  background-image: url(/dist/assets/hero/trojkat_srodkowy.png);
+  background-image: url(/dist/assets/hero/trojkat_srodkowy.svg);
   background-size: contain;
   background-repeat: no-repeat;
+}
+@media (max-width: 599px) {
+  .hero-section .back_layer .triangle-middle {
+    width: 4vw;
+  }
+}
+@media (min-width: 600px) {
+  .hero-section .back_layer .triangle-middle {
+    width: 1.6vw;
+  }
+}
+@media (min-width: 1025px) {
+  .hero-section .back_layer .triangle-middle {
+    width: 1vw;
+  }
+}
+@media (min-width: 1800px) {
+  .hero-section .back_layer .triangle-middle {
+    width: 0.8vw;
+  }
 }
 .hero-section .subject::before {
   content: "";
@@ -1333,6 +1447,21 @@ ul {
   width: 100vw;
   background-color: #fff;
 }
+@media (max-width: 599px) {
+  .info-section {
+    height: 450vw;
+  }
+}
+@media (min-width: 1200px) {
+  .info-section {
+    height: 170vh;
+  }
+}
+@media (min-width: 1400px) {
+  .info-section {
+    height: 150vh;
+  }
+}
 .info-section .mid_layer::before {
   content: "";
   position: absolute;
@@ -1469,6 +1598,19 @@ ul {
 .info-section .wrapper .info-container .icons-col .icons-container > *:nth-child(3) {
   margin-left: auto;
 }
+@media (max-width: 599px) {
+  .info-section .wrapper .info-container .icons-col .icons-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+  }
+  .info-section .wrapper .info-container .icons-col .icons-container > *:nth-child(1) {
+    margin-left: 0;
+  }
+  .info-section .wrapper .info-container .icons-col .icons-container > *:nth-child(3) {
+    margin-left: 0;
+  }
+}
 @media (min-width: 1400px) {
   .info-section .wrapper .info-container .icons-col .icons-container {
     grid-template-columns: repeat(1, 1fr);
@@ -1495,17 +1637,29 @@ ul {
   padding: 4vw 2vw;
   border-radius: 20%;
 }
+@media (max-width: 599px) {
+  .info-section .wrapper .info-container .icons-col .icons-container .info-icon {
+    gap: 5vh;
+    height: auto;
+    width: 90%;
+  }
+}
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(1) {
   align-self: end;
 }
+@media (max-width: 599px) {
+  .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(1) {
+    align-self: auto;
+  }
+}
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(1)::before {
   content: "";
-  width: 5vw;
-  height: 5vw;
+  width: 1vw;
+  aspect-ratio: 1/1;
   position: absolute;
-  left: 10%;
-  top: 10%;
-  background-image: url(/dist/assets/hero/trojkat_dolny.png);
+  left: 30%;
+  bottom: 50%;
+  background-image: url(/dist/assets/hero/kolo_lewe.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1516,12 +1670,12 @@ ul {
 }
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(1)::after {
   content: "";
-  width: 10vw;
-  height: 10vw;
+  aspect-ratio: 1/1;
+  width: 2vw;
   position: absolute;
-  right: -5%;
-  top: -5%;
-  background-image: url(/dist/assets/hero/kolo_srodkowe.png);
+  right: 20%;
+  top: 15%;
+  background-image: url(/dist/assets/hero/kolo_srodkowe.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1534,22 +1688,142 @@ ul {
   align-self: end;
   background-color: #1a2980;
 }
+@media (max-width: 599px) {
+  .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(2) {
+    align-self: auto;
+  }
+}
 @media (min-width: 1400px) {
   .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(2) {
     background-color: transparent;
+  }
+}
+.info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(2)::before {
+  content: "";
+  width: 1.5vw;
+  aspect-ratio: 1/1;
+  position: absolute;
+  left: 30%;
+  top: 15%;
+  background-image: url(/dist/assets/hero/trojkat_srodkowy.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1400px) {
+  .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(2)::before {
+    display: none;
+  }
+}
+.info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(2)::after {
+  content: "";
+  aspect-ratio: 1/1;
+  width: 3vw;
+  position: absolute;
+  right: 25%;
+  bottom: 50%;
+  transform: rotate(60deg);
+  background-image: url(/dist/assets/hero/trojkat_dolny.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1400px) {
+  .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(2)::after {
+    display: none;
   }
 }
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(3) {
   align-self: start;
   background-color: #1a2980;
 }
+@media (max-width: 599px) {
+  .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(3) {
+    align-self: auto;
+  }
+}
 @media (min-width: 1400px) {
   .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(3) {
     background-color: transparent;
   }
 }
+.info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(3)::before {
+  content: "";
+  width: 3vw;
+  aspect-ratio: 1/1;
+  position: absolute;
+  left: 20%;
+  top: 15%;
+  background-image: url(/dist/assets/hero/trojkat_dolny.svg);
+  transform: rotate(30deg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1400px) {
+  .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(3)::before {
+    display: none;
+  }
+}
+.info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(3)::after {
+  content: "";
+  aspect-ratio: 1/1;
+  position: absolute;
+  width: 2vw;
+  right: 22.5%;
+  bottom: 50%;
+  background-image: url(/dist/assets/hero/kolo_lewe.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1200px) {
+  .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(3)::after {
+    width: 1vw;
+    right: 25%;
+    bottom: 50%;
+  }
+}
+@media (min-width: 1400px) {
+  .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(3)::after {
+    display: none;
+  }
+}
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(4) {
   align-self: start;
+}
+@media (max-width: 599px) {
+  .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(4) {
+    align-self: auto;
+  }
+}
+.info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(4)::before {
+  content: "";
+  width: 3vw;
+  aspect-ratio: 1/1;
+  position: absolute;
+  right: 25%;
+  top: 15%;
+  background-image: url(/dist/assets/info/prostokat.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1400px) {
+  .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(4)::before {
+    display: none;
+  }
+}
+.info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(4)::after {
+  content: "";
+  aspect-ratio: 1/1;
+  width: 1.5vw;
+  position: absolute;
+  left: 30%;
+  bottom: 47.5%;
+  background-image: url(/dist/assets/hero/trojkat_srodkowy.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1400px) {
+  .info-section .wrapper .info-container .icons-col .icons-container .info-icon:nth-child(4)::after {
+    display: none;
+  }
 }
 @media (min-width: 1400px) {
   .info-section .wrapper .info-container .icons-col .icons-container .info-icon {
@@ -1577,13 +1851,13 @@ ul {
   }
 }
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon-hospital {
-  height: 10vw;
+  aspect-ratio: 1;
   width: 10vw;
 }
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon-hospital::before {
   content: "";
   position: absolute;
-  height: 10vw;
+  aspect-ratio: 1;
   width: 10vw;
   background-color: white;
   border-radius: 50%;
@@ -1596,7 +1870,7 @@ ul {
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon-hospital::after {
   content: "";
   position: absolute;
-  height: 10vw;
+  aspect-ratio: 1;
   width: 10vw;
   background: url(/dist/assets/info/info-hospital-mobile.svg) center/contain no-repeat;
   border-radius: 50%;
@@ -1610,18 +1884,17 @@ ul {
 @media (min-width: 1400px) {
   .info-section .wrapper .info-container .icons-col .icons-container .info-icon-hospital {
     background: url(/dist/assets/info/info-hospital.svg) center/contain no-repeat;
-    height: 10vh;
     width: 10vh;
   }
 }
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon-tooth {
-  height: 10vw;
+  aspect-ratio: 1;
   width: 10vw;
 }
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon-tooth::before {
   content: "";
   position: absolute;
-  height: 10vw;
+  aspect-ratio: 1;
   width: 10vw;
   background-color: white;
   border-radius: 50%;
@@ -1634,7 +1907,7 @@ ul {
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon-tooth::after {
   content: "";
   position: absolute;
-  height: 10vw;
+  aspect-ratio: 1;
   width: 10vw;
   background: url(/dist/assets/info/info-tooth-mobile.svg) center/contain no-repeat;
   border-radius: 50%;
@@ -1648,18 +1921,17 @@ ul {
 @media (min-width: 1400px) {
   .info-section .wrapper .info-container .icons-col .icons-container .info-icon-tooth {
     background: url(/dist/assets/info/info-tooth.svg) center/contain no-repeat;
-    height: 10vh;
     width: 10vh;
   }
 }
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon-jaw {
-  height: 10vw;
+  aspect-ratio: 1;
   width: 10vw;
 }
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon-jaw::before {
   content: "";
   position: absolute;
-  height: 10vw;
+  aspect-ratio: 1;
   width: 10vw;
   background-color: white;
   border-radius: 50%;
@@ -1672,7 +1944,7 @@ ul {
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon-jaw::after {
   content: "";
   position: absolute;
-  height: 10vw;
+  aspect-ratio: 1;
   width: 10vw;
   background: url(/dist/assets/info/info-jaw-mobile.svg) center/contain no-repeat;
   border-radius: 50%;
@@ -1685,18 +1957,17 @@ ul {
 @media (min-width: 1400px) {
   .info-section .wrapper .info-container .icons-col .icons-container .info-icon-jaw {
     background: url(/dist/assets/info/info-jaw.svg) center/contain no-repeat;
-    height: 10vh;
     width: 10vh;
   }
 }
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon-tools {
-  height: 10vw;
+  aspect-ratio: 1;
   width: 10vw;
 }
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon-tools::before {
   content: "";
   position: absolute;
-  height: 10vw;
+  aspect-ratio: 1;
   width: 10vw;
   background-color: white;
   border-radius: 50%;
@@ -1709,7 +1980,7 @@ ul {
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon-tools::after {
   content: "";
   position: absolute;
-  height: 10vw;
+  aspect-ratio: 1;
   width: 10vw;
   background: url(/dist/assets/info/info-tools-mobile.svg) center/contain no-repeat;
   border-radius: 50%;
@@ -1723,7 +1994,6 @@ ul {
 @media (min-width: 1400px) {
   .info-section .wrapper .info-container .icons-col .icons-container .info-icon-tools {
     background: url(/dist/assets/info/info-tools.svg) center/contain no-repeat;
-    height: 10vh;
     width: 10vh;
   }
 }
