@@ -1,0 +1,151 @@
+@mixin shared-phone-portrait-styles-nav {
+  height: 120vh;
+  padding: 0 5vw 0 5vw;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  #phone-btn {
+    display: none;
+  }
+
+  .nav-tools {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .logo {
+      display: none;
+    }
+
+    #navbar-btn-expand {
+      display: flex;
+      align-items: center;
+      justify-self: center;
+      flex-direction: column;
+      width: 5vw;
+
+      div {
+        margin-bottom: 4px;
+        border-radius: 3px;
+        width: 100%;
+        height: 3px;
+        background-color: $primary-gradient;
+        transition: opacity 0.3s, transform 0.6s;
+      }
+    }
+
+    .expanded-btn {
+      :nth-child(1) {
+        transform: translate(0, 230%) rotate(-45deg);
+      }
+
+      :nth-child(2) {
+        opacity: 0;
+      }
+
+      :nth-child(3) {
+        transform: translate(0, -230%) rotate(45deg);
+      }
+    }
+  }
+
+  .nav-contents {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-top: 5vh;
+
+    .animate::after {
+      animation: expand 1s 0.7s ease backwards;
+    }
+
+    ul {
+      // animated separators
+      .animate::before {
+        animation: expand 0.5s ease backwards;
+      }
+
+      // separator specific styles
+      li {
+        overflow: hidden;
+        &::before {
+          content: '';
+          width: 100vw;
+          margin-left: -5vw;
+          position: absolute;
+          border-bottom: 1px solid $primary-gradient;
+          // clip-path: rect(100% 0% 0% 100%);
+        }
+
+        // delays
+        &:nth-of-type(1) {
+          &::before {
+            // animation-delay: 0.2s;
+            display: none;
+          }
+          .animate {
+            animation-delay: 0.2s;
+          }
+        }
+
+        &:nth-of-type(2) {
+          &::before {
+            animation-delay: 0.3s;
+          }
+          .animate {
+            animation-delay: 0.3s;
+          }
+        }
+
+        &:nth-of-type(3) {
+          &::before {
+            animation-delay: 0.4s;
+          }
+          .animate {
+            animation-delay: 0.4s;
+          }
+        }
+
+        &:nth-of-type(4) {
+          &::before {
+            animation-delay: 0.5s;
+          }
+          .animate {
+            animation-delay: 0.5s;
+          }
+        }
+
+        &:nth-of-type(5) {
+          &::before {
+            animation-delay: 0.7s;
+          }
+          .animate {
+            animation-delay: 0.7s;
+          }
+        }
+
+        // text animation
+        .animate {
+          // needs this property in order for the animation to work
+          display: inline-block;
+          animation: slide-in 0.7s ease backwards;
+        }
+      }
+      // last separator
+      &::after {
+        content: '';
+        width: 100vw;
+        margin-left: -5vw;
+        position: absolute;
+        border-bottom: 1px solid $primary-gradient;
+        clip-path: 0% 0% 100% 0%;
+      }
+    }
+  }
+
+  #navbar-btn-expand {
+    display: block;
+  }
+}

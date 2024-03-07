@@ -11,10 +11,9 @@ ToDos:
 - (aesthetics) do something about image in info section (the vase cannot be skewed it must be straight to match the flow of the website)
 - (scaling) bg in image section, pos absolute (?) makes it scale differently from the image itself
 - (aesthetics) right side of info text icons is not matching with margin (either increase margin in hero || write more text to reach the margin boundary)
-- (typography) change the slogan from "A Reason To Smile"
-- (effects/aesthetics) change elements on hero between layers - so that some of them move faster than other and image feels more alive
-- (!aesthetics) hero image should be within a wrapper boundaries (but doesn't need to the website flow can shrink down to a wrapper too)
 - (!calculations/parallax) keep in mind that current solution to locking mouth in place with .scrollTop has some fallacy (on parallax_wrapper element with perspective the scroll works weirdly) .scrollHeight is the real height.
    But even at the very bottom of the page it isn't the actual .scrollHeight value.
 - (ideas) think about adding smooth scrolling here is the example: https://www.poppr.be/en/work
-- (ideas) def more animations opacity (fading in with elements) - svg elements morphing & more movement below amenities 
+
+ToDos v2 (old are done or outdated):
+- (bug) chromium mobile menu animation isn't using clip-path properly thus animation is really chunky 

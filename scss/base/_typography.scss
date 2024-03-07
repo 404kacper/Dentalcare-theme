@@ -2,45 +2,122 @@
 
 // Navbar related fonts
 .navbar {
-  $min_width: 1000px;
-  $max_width: 1920px;
-
   &-btn-text {
-    a {
-      $min-font: 12px;
-      $max-font: 16px;
-      font-family: 'Playfair Display';
-      @include fluid-type($min-width, $max-width, $min-font, $max-font);
-      white-space: nowrap;
-      font-variant-numeric: lining-nums;
-      font-weight: 400;
-      text-align: center;
-      color: white;
+    @include tablet-landscape {
+      a {
+        font-family: 'Playfair Display';
+        font-size: clamp(12px, 1.4vw, 18px);
+        white-space: nowrap;
+        font-variant-numeric: lining-nums;
+        font-weight: 400;
+        text-align: center;
+        color: white;
+      }
+    }
+
+    @include desktop-hd {
+      a {
+        font-family: 'Playfair Display';
+        font-size: clamp(12px, 1.1vw, 20px);
+        white-space: nowrap;
+        font-variant-numeric: lining-nums;
+        font-weight: 400;
+        text-align: center;
+        color: white;
+      }
+    }
+
+    @include desktop-2k {
+      a {
+        font-family: 'Playfair Display';
+        font-size: clamp(12px, 1.1vw, 22px);
+        white-space: nowrap;
+        font-variant-numeric: lining-nums;
+        font-weight: 400;
+        text-align: center;
+        color: white;
+      }
     }
   }
 
   &-text {
-    a,
-    li {
-      $min-font: 12px;
-      $max-font: 16px;
-      font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
-      @include fluid-type($min-width, $max-width, $min-font, $max-font);
-      white-space: nowrap;
-      font-weight: 400;
-      text-align: left;
-      color: white;
+    @include phone {
+      a,
+      li {
+        font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+        font-size: clamp(24px, 5vw, 40px);
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: left;
+        line-height: 9vh;
+        font-weight: bold;
+        color: $primary-gradient;
+      }
+    }
+
+    @include tablet-portrait {
+      a,
+      li {
+        font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+        font-size: clamp(24px, 5vw, 40px);
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: left;
+        line-height: 9vh;
+        font-weight: bold;
+        color: $primary-gradient;
+      }
+    }
+
+    @include tablet-landscape {
+      a,
+      li {
+        font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+        font-size: clamp(12px, 1.2vw, 14px);
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: left;
+        color: white;
+      }
+    }
+
+    @include desktop-hd {
+      a,
+      li {
+        font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+        font-size: clamp(12px, 0.8vw, 18px);
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: left;
+        color: white;
+      }
+    }
+
+    @include desktop-2k {
+      a,
+      li {
+        font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+        font-size: clamp(12px, 0.7vw, 18px);
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: left;
+        color: white;
+      }
     }
 
     &-info {
-      $min-font: 6px;
-      $max-font: 14px;
-      font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
-      @include fluid-type($min-width, $max-width, $min-font, $max-font);
-      white-space: nowrap;
-      font-weight: 400;
-      text-align: left;
-      color: white;
+      @include tablet-landscape {
+        font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+        font-size: clamp(12px, 1.2vw, 12px);
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: left;
+        color: white;
+      }
+
+      @include laptop-small {
+        font-size: clamp(6px, 1vw, 14px);
+      }
 
       &-thin {
         opacity: 0.6;
@@ -49,311 +126,444 @@
   }
 }
 
-// Hero img related fonts
+// Hero related fonts
 .hero {
-  $min_width: 1000px;
-  $max_width: 1920px;
-
   &-lead {
-    $min-font: 32px;
-    $max-font: 90px;
-    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-    @include fluid-type($min-width, $max-width, $min-font, $max-font);
-    line-height: $max-font;
-    white-space: nowrap;
-    font-weight: 700;
-    text-align: left;
-    color: white;
+    @include phone {
+      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      font-size: clamp(50px, 15vw, 100px);
+      line-height: 120px;
+      white-space: nowrap;
+      font-weight: 700;
+      text-align: left;
+      color: white;
+    }
+
+    @include tablet-portrait {
+      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      font-size: clamp(50px, 8vw, 80px);
+      line-height: 100px;
+      white-space: nowrap;
+      font-weight: 700;
+      text-align: left;
+      color: white;
+    }
+
+    @include tablet-landscape {
+      line-height: 70px;
+      font-size: clamp(50px, 5vw, 100px);
+    }
+
+    @include laptop {
+      line-height: 90px;
+    }
+
+    @include desktop-hd {
+      line-height: 110px;
+      font-size: clamp(50px, 4vw, 100px);
+    }
+
+    @include desktop-2k {
+      line-height: 140px;
+      font-size: clamp(50px, 5vw, 120px);
+    }
 
     &-small {
-      $min-font: 32px;
-      $max-font: 54px;
-      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-      @include fluid-type($min-width, $max-width, $min-font, $max-font);
-      line-height: $max-font;
-      white-space: nowrap;
-      font-weight: 400;
-      text-align: left;
-      color: $primary-gradient;
+      @include phone {
+        font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+        line-height: 12px;
+        font-size: clamp(40px, 10vw, 54px);
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: left;
+        color: $primary-gradient;
+      }
+
+      @include tablet-portrait {
+        font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+        line-height: 24px;
+        font-size: clamp(32px, 5.5vw, 54px);
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: left;
+        color: $primary-gradient;
+      }
+
+      @include tablet-landscape {
+        line-height: 32px;
+        font-size: clamp(32px, 3.5vw, 54px);
+      }
+
+      @include desktop-hd {
+        font-size: clamp(32px, 3vw, 54px);
+      }
+
+      @include desktop-2k {
+        font-size: clamp(32px, 4vw, 70px);
+      }
     }
   }
 
   &-subtext {
-    $min-font: 9px;
-    $max-font: 18px;
+    @include phone {
+      font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+      font-size: clamp(10px, 2.8vw, 16px);
+      color: white;
+    }
 
-    font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
-    @include fluid-type($min-width, $max-width, $min-font, $max-font);
-    line-height: $max-font;
-    line-height: $max-font + 9px;
-    font-weight: 300;
-    text-align: left;
-    color: white;
+    @include tablet-portrait {
+      font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+      font-size: clamp(9px, 1.8vw, 16px);
+      line-height: 50px;
+      text-align: left;
+      color: white;
+    }
+
+    @include tablet-landscape {
+      font-size: clamp(9px, 1.2vw, 14px);
+    }
+
+    @include laptop {
+      font-size: clamp(9px, 1vw, 18px);
+    }
+
+    @include desktop-hd {
+      font-size: clamp(9px, 1.5vw, 18px);
+    }
+
+    @include desktop-2k {
+      font-size: clamp(9px, 2vw, 24px);
+    }
   }
 
   &-btn-text {
-    $min-font: 12px;
-    $max-font: 18px;
-    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-    @include fluid-type($min-width, $max-width, $min-font, $max-font);
-    // line-height: $max-font;
-    white-space: nowrap;
-    text-transform: none;
-    font-weight: 500;
+    @include phone {
+      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      font-size: clamp(13px, 1vw, 18px);
+      white-space: nowrap;
+      text-transform: none;
+      font-weight: 500;
+    }
+
+    @include tablet-portrait {
+      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      font-size: clamp(14px, 2vw, 18px);
+      white-space: nowrap;
+      text-transform: none;
+      font-weight: 500;
+    }
+
+    @include tablet-landscape {
+      font-size: clamp(14px, 1.5vw, 18px);
+    }
+
+    @include desktop-hd {
+      font-size: clamp(14px, 1vw, 18px);
+    }
+
+    @include desktop-2k {
+      font-size: clamp(14px, 2vw, 24px);
+    }
   }
 }
 
 // Info section related fonts
 .info {
-  $min_width: 1000px;
-  $max_width: 1920px;
-  $min_font: 16px;
-  $max_font: 24px;
-
-  &-btn-text {
-    $min-font: 12px;
-    $max-font: 20px;
-    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-    @include fluid-type($min-width, $max-width, $min-font, $max-font);
-    // line-height: $max-font;
-    white-space: nowrap;
-    text-transform: none;
-    font-weight: 400;
-  }
-
   &-title {
-    $min-font: 32px;
-    $max-font: 64px;
-    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-    @include fluid-type($min-width, $max-width, $min-font, $max-font);
-    white-space: nowrap;
-    text-align: center;
-    font-weight: 400;
-    color: $title-color;
-    line-height: 10vh;
-
-    &-sub {
-      $min-font: 6px;
-      $max-font: 20px;
-      font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
-      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    @include phone {
+      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      font-size: clamp(14px, 7vw, 28px);
       white-space: nowrap;
       text-align: center;
       font-weight: 400;
-      color: $title-sub-color;
+      color: $title-color;
+      line-height: clamp(12px, 11vw, 45px);
+      font-weight: 400;
+
+      &-highlight {
+        font-size: clamp(12px, 13vw, 50px);
+        font-weight: 500;
+      }
+    }
+
+    @include tablet-portrait {
+      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      font-size: clamp(30px, 5.5vw, 50px);
+      white-space: nowrap;
+      text-align: center;
+      font-weight: 400;
+      color: $title-color;
+      line-height: 10vh;
+    }
+
+    @include tablet-landscape {
+      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      font-size: clamp(32px, 4vw, 64px);
+      white-space: nowrap;
+      text-align: center;
+      font-weight: 400;
+      color: $title-color;
+      line-height: 10vh;
+    }
+
+    @include desktop-2k {
+      font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      font-size: clamp(32px, 4vw, 80px);
+      white-space: nowrap;
+      text-align: center;
+      font-weight: 400;
+      color: $title-color;
+      line-height: 10vh;
+    }
+
+    &-sub {
+      @include phone {
+        font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+        font-size: clamp(14px, 1.2vw, 22px);
+        text-align: center;
+        font-weight: 400;
+        color: $title-sub-color;
+      }
+
+      @include tablet-portrait {
+        font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+        font-size: clamp(18px, 1.7vw, 20px);
+        text-align: center;
+        font-weight: 400;
+        color: $title-sub-color;
+      }
+
+      @include tablet-landscape {
+        font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+        font-size: clamp(16px, 1.2vw, 22px);
+        white-space: nowrap;
+        text-align: center;
+        font-weight: 400;
+        color: $title-sub-color;
+      }
+
+      @include desktop-2k {
+        font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+        font-size: clamp(6px, 2vw, 26px);
+        white-space: nowrap;
+        text-align: center;
+        font-weight: 400;
+        color: $title-sub-color;
+      }
     }
   }
 
   &-icon {
-    $min-font: 8px;
-    $max-font: 18px;
     font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    font-size: clamp(8px, 1vw, 18px);
     text-align: left;
     font-weight: 400;
     color: black;
 
     &-link {
-      $min-font: 12px;
-      $max-font: 20px;
       color: $icon-link-color;
-      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+      font-size: clamp(12px, 1vw, 20px);
+
+      @include laptop {
+        font-size: clamp(12px, 0.9vw, 14px);
+      }
+
+      @include desktop-hd {
+        font-size: clamp(12px, 0.9vw, 16px);
+      }
+
+      @include desktop-2k {
+        font-size: clamp(12px, 0.9vw, 18px);
+        font-weight: 500;
+      }
     }
 
     &-description {
-      $min-font: 12px;
-      $max-font: 18px;
       font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
-      color: black;
-      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+      color: white;
+      font-size: clamp(12px, 1.5vw, 14px);
+      text-align: center;
+
+      @include laptop {
+        color: black;
+        text-align: left;
+        font-size: clamp(12px, 1.2vw, 16px);
+      }
+
+      @include desktop-hd {
+        font-size: clamp(12px, 0.9vw, 22px);
+      }
     }
 
     &-title {
-      $min-font: 12px;
-      $max-font: 24px;
-      color: $icon-title-color;
-      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+      color: white;
+      text-align: center;
+
+      @include phone {
+        font-size: clamp(12px, 6vw, 24px);
+      }
+
+      @include tablet-portrait {
+        font-size: clamp(12px, 2.3vw, 32px);
+      }
+
+      @include laptop {
+        color: $icon-title-color;
+        font-size: clamp(12px, 1.5vw, 24px);
+        text-align: left;
+      }
+
+      @include desktop-2k {
+        color: $icon-title-color;
+        font-size: clamp(12px, 1.4vw, 30px);
+        text-align: left;
+      }
     }
   }
 }
 
 // Amenities section related fonts
 .amenities {
-  $min_width: 1000px;
-  $max_width: 1920px;
-  $min_font: 24px;
-  $max_font: 32px;
-
   &-title {
-    $min-font: 12px;
-    $max-font: 64px;
     font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
     font-weight: 500;
     color: white;
-    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    font-size: clamp(12px, 4vw, 64px);
+
     &-sub {
-      $min-font: 12px;
-      $max-font: 32px;
       font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
       color: black;
       font-weight: 400;
       color: $primary-gradient;
-      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+      font-size: clamp(24px, 2vw, 32px);
     }
+
     &-review {
-      $min-font: 12px;
-      $max-font: 32px;
       color: $primary-gradient;
       font-weight: 500;
-      @include fluid-type($min-width, $max-width, $min-font, $max-font);
+      font-size: clamp(18px, 1vw, 32px);
     }
   }
 
   &-description {
-    $min-font: 12px;
-    $max-font: 18px;
     font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+    font-size: clamp(12px, 1vw, 18px);
     font-weight: 400;
     text-align: center;
     color: white;
-    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+  }
+
+  &-btn-text {
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+    text-transform: none;
+    font-weight: 400;
+
+    @include laptop-small {
+      font-size: clamp(12px, 3vw, 24px);
+    }
+
+    @include desktop-hd {
+      font-size: clamp(12px, 1.2vw, 24px);
+    }
   }
 }
 
 // Articles section related fonts
 .article {
-  $min_width: 1000px;
-  $max_width: 1920px;
-  $min_font: 24px;
-  $max_font: 32px;
-
   &-title {
-    $min-font: 12px;
-    $max-font: 28px;
     font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-size: clamp(12px, 1vw, 28px);
     font-weight: 400;
     color: black;
-    @include fluid-type($min-width, $max-width, $min-font, $max-font);
   }
 
   &-description {
-    $min-font: 12px;
-    $max-font: 16px;
     font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+    font-size: clamp(12px, 1vw, 16px);
     font-weight: 400;
     color: #222222;
-    @include fluid-type($min-width, $max-width, $min-font, $max-font);
   }
 
   &-title-main {
-    $min-font: 12px;
-    $max-font: 64px;
     font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-size: clamp(48px, 4vw, 64px);
     font-weight: 400;
     color: $primary-gradient;
-    @include fluid-type($min-width, $max-width, $min-font, $max-font);
   }
 
   &-info {
-    $min-font: 12px;
-    $max-font: 16px;
     font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+    font-size: clamp(12px, 1vw, 16px);
     font-weight: 400;
-    @include fluid-type($min-width, $max-width, $min-font, $max-font);
     color: black;
   }
 }
 
 .contact {
-  $min_width: 1000px;
-  $max_width: 1920px;
-  $min_font: 24px;
-  $max_font: 32px;
-
   &-title {
     &-lead {
-      $min-font: 12px;
-      $max-font: 64px;
       font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      font-size: clamp(48px, 4vw, 64px);
       font-weight: 400;
       color: $primary-gradient;
-      @include fluid-type($min-width, $max-width, $min-font, $max-font);
     }
 
     &-description {
-      $min-font: 12px;
-      $max-font: 22px;
       font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+      font-size: clamp(12px, 1vw, 22px);
       font-weight: 400;
       color: black;
-      @include fluid-type($min-width, $max-width, $min-font, $max-font);
     }
   }
 
   &-icon {
     &-lead {
-      $min-font: 12px;
-      $max-font: 32px;
       font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+      font-size: clamp(24px, 1.5vw, 32px);
       font-weight: 400;
       color: $primary-gradient;
-      @include fluid-type($min-width, $max-width, $min-font, $max-font);
 
       &-light {
-        $min-font: 12px;
-        $max-font: 32px;
         font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+        font-size: clamp(24px, 1.5vw, 32px);
         font-weight: 400;
         color: $primary-color;
-        @include fluid-type($min-width, $max-width, $min-font, $max-font);
       }
     }
 
     &-description {
-      $min-font: 12px;
-      $max-font: 22px;
       font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+      font-size: clamp(18px, 1vw, 22px);
       font-weight: 400;
       color: black;
-      @include fluid-type($min-width, $max-width, $min-font, $max-font);
     }
   }
 }
 
 .footer {
-  $min_width: 1000px;
-  $max_width: 1920px;
-  $min_font: 12px;
-  $max_font: 20px;
-
   &-lead {
-    $min-font: 12px;
-    $max-font: 32px;
     font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-size: clamp(18px, 1vw, 32px);
     font-weight: 400;
     text-align: center;
     color: white;
-    @include fluid-type($min-width, $max-width, $min-font, $max-font);
   }
 
   &-description {
-    $min-font: 12px;
-    $max-font: 18px;
-    line-height: 2.7vh;
     font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+    font-size: clamp(12px, 1vw, 18px);
     font-weight: 400;
+    line-height: 2.7vh;
     text-align: center;
     color: white;
-    @include fluid-type($min-width, $max-width, $min-font, $max-font);
 
     &-light {
-      $min-font: 12px;
-      $max-font: 18px;
       font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+      font-size: clamp(12px, 1vw, 18px);
       font-weight: 400;
       text-align: center;
       color: #cfcfcf;
-      @include fluid-type($min-width, $max-width, $min-font, $max-font);
     }
   }
 }

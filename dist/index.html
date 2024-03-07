@@ -40,6 +40,57 @@
   </head>
 
   <body>
+    <!-- Navbar -->
+    <!-- Needs to be outside the wrapper for fixed to work -->
+    <img
+      class="logo-mobile"
+      src="assets/navbar/logo_tekst_mobile.svg"
+      alt="Logo"
+    />
+    <header class="nav-container">
+      <div class="nav-info navbar-text-info">
+        <div class="info-container">
+          <img src="/dist/assets/navbar/clock.svg" class="time-icon" alt="" />
+          <div class="time">
+            Poniedziałek do Piątku
+            <span class="navbar-text-info-thin">8:00 - 15:00</span>
+          </div>
+          <img src="/dist/assets/navbar/pin.svg" class="location-icon" />
+          <div class="location">
+            Adres
+            <span class="navbar-text-info-thin">Metalowa 57, 22-100 Chełm</span>
+          </div>
+        </div>
+      </div>
+      <div class="nav">
+        <div class="nav-tools">
+          <img
+            class="logo"
+            src="assets/navbar/logo_tekst_mobile.svg"
+            alt="Logo"
+          />
+          <button id="navbar-btn-expand">
+            <div></div>
+            <div></div>
+            <div></div>
+          </button>
+        </div>
+        <nav class="nav-contents">
+          <ul class="nav-links navbar-text">
+            <li><a href="#">O nas</a></li>
+            <li><a href="#">Usługi</a></li>
+            <li><a href="#">Kadra</a></li>
+            <li><a href="#">Nowości</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </nav>
+        <button id="phone-btn" class="btn-grad navbar-btn-text">
+          <img class="phone" src="assets/navbar/phone.svg" alt="Logo" />
+          <a href="#">731-105-109</a>
+        </button>
+      </div>
+    </header>
+
     <!-- Parallax wrapper for whole page -->
     <div class="parallax_wrapper">
       <!-- Hero -->
@@ -58,15 +109,14 @@
           <div class="triangle-middle"></div>
         </div>
 
-        <!-- Should be separate component/svg from subject image -->
         <div class="parallax_layer mid_layer subject"></div>
 
-        <div class="parallax_layer mid_layer">
+        <div class="parallax_layer mid_layer text">
           <div class="hero">
-            <p class="hero-lead-small" id="proverb">A Reason</p>
-            <div class="hero-lead" id="proverb-sub">To Smile</div>
+            <p class="hero-lead-small" id="proverb">Każdy dzień</p>
+            <div class="hero-lead" id="proverb-sub">To Radość</div>
             <p class="hero-subtext" id="proverb-sub2">
-              Dbaj o swoje uśmiech i umów się na wizytę do najlepszego dentysty.
+              Zadbaj o swój uśmiech i umów się na wizytę do naszej przychodni.
             </p>
             <div id="hero-btn">
               <button class="btn-grad btn-hero">
@@ -77,47 +127,6 @@
               </button>
             </div>
           </div>
-          <!-- Navbar -->
-          <header>
-            <div class="nav-info navbar-text-info">
-              <div class="info-container">
-                <img
-                  src="/dist/assets/navbar/clock.svg"
-                  class="time-icon"
-                  alt=""
-                />
-                <div class="time">
-                  Poniedziałek do Piątku
-                  <span class="navbar-text-info-thin">8:00 - 15:00</span>
-                </div>
-                <img src="/dist/assets/navbar/pin.svg" class="location-icon" />
-                <div class="location">
-                  Adres
-                  <span class="navbar-text-info-thin"
-                    >Metalowa 57, 22-100 Chełm</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div id="nav">
-              <img class="logo" src="assets/navbar/logo_tekst.svg" alt="Logo" />
-              <nav>
-                <ul class="nav-links navbar-text">
-                  <li><a href="#">O nas</a></li>
-                  <li><a href="#">Usługi</a></li>
-                  <li><a href="#">Kadra</a></li>
-                  <li><a href="#">Nowości</a></li>
-                  <li><a href="#">FAQ</a></li>
-                </ul>
-              </nav>
-              <button class="btn-grad navbar-btn-text" id="navbar-btn">
-                <img class="phone" src="/dist/assets/navbar/phone.svg" /><a
-                  href=""
-                  >731-105-109</a
-                >
-              </button>
-            </div>
-          </header>
         </div>
       </section>
 
@@ -127,9 +136,13 @@
           <!-- The before here should also be a component (svg file) -->
           <div class="wrapper">
             <div class="info">
-              <p class="info-title">Twój Uśmiech Jest Dla Nas Ważny</p>
+              <p class="info-title">
+                <span class="info-title-highlight">Twój Uśmiech</span>
+                <br class="mobile-separator" />
+                Jest Dla Nas Ważny
+              </p>
               <p class="info-title-sub">
-                Z tego powodu jesteśmy gotowi zaoferować ci kompleksową pomoc w
+                Dlatego jesteśmy gotowi zaoferować ci kompleksową pomoc w
                 zakresie stomatologi o każdej porze dnia.
               </p>
             </div>
@@ -137,8 +150,9 @@
             <div class="info-container">
               <!-- Should be components -->
               <div class="image-col">
-                <div class="info-image-bg"></div>
-                <div class="info-image"></div>
+                <div class="info-image-container">
+                  <div class="info-image"></div>
+                </div>
               </div>
 
               <div class="icons-col">
@@ -177,7 +191,8 @@
                     <div class="info-text-container">
                       <p class="info-icon-title">Protetyka Dentystyczna</p>
                       <p class="info-icon-description">
-                        Kompleksowe usługi dotyczące protez ruchomych i stałych.
+                        Kompleksowe usługi w zakresie protez ruchomych i
+                        stałych.
                       </p>
                       <div class="info-icon-link">
                         Dowiedz się więcej
@@ -201,12 +216,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div class="info-button">
-              <button class="btn-flat btn-flat-primary">
-                <a href="#" class="info-btn-text">Sprawdź Usługi</a>
-              </button>
             </div>
           </div>
         </div>
@@ -277,33 +286,8 @@
             </div>
           </div>
           <button class="btn-flat btn-flat-primary">
-            <a href="#" class="info-btn-text">Oceń Swoją wizytę</a>
+            <a href="#" class="amenities-btn-text">Oceń Swoją Wizytę</a>
           </button>
-          <svg
-            version="1.1"
-            id="Layer_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 1442 194"
-            style="enable-background: new 0 0 1442 194"
-            xml:space="preserve"
-          >
-            <style type="text/css">
-              .st0 {
-                fill-rule: evenodd;
-                clip-rule: evenodd;
-                fill: #ffffff;
-              }
-            </style>
-            <path
-              class="st0"
-              d="M0,0c16.2,6.9,39.6,16.8,68,28.4c54.6,22.2,109.2,42.9,140,54c127.7,46.1,253.8,65.4,271,68
-         c90.7,13.5,162.1,14.2,242.5,15c58.9,0.6,137.8-2.9,241.5-15c17.8-2.1,183.7-34.7,271.6-68.2C1306,55,1313,52,1374,28.4
-         c41.9-16.2,68-28.4,68-28.4c0,64.7,0,129.3,0,194c-480.7,0-961.3,0-1442,0C0,129.3,0,64.7,0,0z"
-            />
-          </svg>
         </div>
       </section>
 

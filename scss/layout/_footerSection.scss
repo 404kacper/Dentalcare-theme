@@ -7,10 +7,11 @@
   footer::before {
     content: '';
     width: 100vw;
-    height: 40vh;
-    top: -38vh;
+    top: 1vh;
+    transform: translateY(-100%);
+    aspect-ratio: 5.34226/1;
     position: absolute;
-    background: center/contain no-repeat
+    background: center/cover no-repeat
       url('/dist/assets/footer/footer-bg-shape.svg');
   }
 
@@ -21,7 +22,8 @@
     right: 5vw;
     z-index: -1;
     position: absolute;
-    background: center/contain no-repeat url('/dist/assets/footer/footer-triangle.svg');
+    background: center/contain no-repeat
+      url('/dist/assets/footer/footer-triangle.svg');
   }
 
   .footer-circle {
@@ -31,7 +33,8 @@
     right: 35vw;
     z-index: -1;
     position: absolute;
-    background: center/contain no-repeat url('/dist/assets/footer/footer-circle.svg');
+    background: center/contain no-repeat
+      url('/dist/assets/footer/footer-circle.svg');
   }
 
   footer .wrapper {
@@ -82,7 +85,7 @@
       li {
         cursor: pointer;
       }
-      
+
       li:hover {
         color: $primary-gradient;
       }
@@ -112,7 +115,7 @@
       .facebook-icon {
         width: 3vh;
         height: 3vh;
-        background: center/contain url("/dist/assets/footer/facebook-logo.svg");
+        background: center/contain url('/dist/assets/footer/facebook-logo.svg');
         transition: filter 0.3s ease;
       }
 

@@ -6,10 +6,3 @@
   $result: math.div($result, $parallaxPerspective);
   @return $result;
 }
-
-
-@function scale-hero($dim, $scaleFactor) {
-  $result: 0;
-  $result: math.div($dim,$scaleFactor);
-  @return $result
-}

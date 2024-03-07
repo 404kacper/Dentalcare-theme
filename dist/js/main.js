@@ -1,11 +1,4 @@
-// Elements to grab
-const navbar = document.querySelector('header');
-const galleryContainer = document.querySelector('.gallery-container');
-// Declaration like this otherwise gives error
-var nav_links = [];
-nav_links = document.querySelector('.nav-links').querySelectorAll('li');
 const scrollingElement = document.querySelector('.parallax_wrapper');
-var whyUsText = document.querySelector('#whyUsText');
 var scrollpos = scrollingElement.scrollTop;
 
 // Animation related variables
@@ -29,8 +22,11 @@ scrollingElement.addEventListener('scroll', (event) => {
       .querySelector('.amenitiesSection .deep_mid_layer')
       .classList.add('deep_mid_layer_active');
 
-      scrollingElement
-      .querySelectorAll('.amenitiesSection .deep_mid_layer_front').forEach(element => {element.classList.add('deep_mid_layer_front_active');})
+    scrollingElement
+      .querySelectorAll('.amenitiesSection .deep_mid_layer_front')
+      .forEach((element) => {
+        element.classList.add('deep_mid_layer_front_active');
+      });
   } else {
     scrollingElement
       .querySelector('.amenitiesSection .front_layer')
@@ -39,64 +35,45 @@ scrollingElement.addEventListener('scroll', (event) => {
     scrollingElement
       .querySelector('.amenitiesSection .deep_mid_layer')
       .classList.remove('deep_mid_layer_active');
-      
-      scrollingElement
-      .querySelectorAll('.amenitiesSection .deep_mid_layer_front').forEach(element => {element.classList.remove('deep_mid_layer_front_active');})
+
+    scrollingElement
+      .querySelectorAll('.amenitiesSection .deep_mid_layer_front')
+      .forEach((element) => {
+        element.classList.remove('deep_mid_layer_front_active');
+      });
   }
 
   // console.log(lastKnownScrollPosition);
 });
 
-// Navbar animation
-// function addTransparentBg() {
-//   navbar.classList.add('navbar-transform-bg');
-//   nav_links.forEach((link) => {
-//     link.querySelector('a').classList.add('navbar-transform-text');
-//   });
-// }
+const navButton = document.querySelector('#navbar-btn-expand');
+const header = document.querySelector('.nav-container');
+const nav = document.querySelector('.nav');
 
-// function removeTransparentBg() {
-//   navbar.classList.remove('navbar-transform-bg');
-//   nav_links.forEach((link) => {
-//     link.querySelector('a').classList.remove('navbar-transform-text');
-//   });
-// }
-
-// function animateIcons(delay) {
-//   var icons = galleryContainer.querySelectorAll('.icon');
-//   var textContainers = galleryContainer.querySelectorAll('.text-container');
-//   var i = 0;
-
-//   function delayedLoop() {
-//     setTimeout(function () {
-//       icons[i].classList.add('icon-animate');
-//       textContainers[i].classList.add('text-container-animate');
-//       i++;
-//       // Icons length will always be equal the textContainers length
-//       if (i < icons.length) {
-//         delayedLoop();
-//       }
-//     }, delay);
-//   }
-
-//   delayedLoop();
-// }
-
-// var iconsFired = false;
-// var whyusFired = false;
-// // Scrollbar listener
-// scrollingElement.addEventListener('scroll', () => {
-//   scrollpos = scrollingElement.scrollTop;
-//   // console.log(scrollpos);
-//   // Navbar
-//   // scrollpos >= 100 ? addTransparentBg() : removeTransparentBg();
-//   // Icons in info section
-//   if (scrollpos >= 200 && iconsFired === false) {
-//     animateIcons(iconRevealDelay);
-//     iconsFired = true;
-//   }
-//   if (scrollpos >= 1090 && whyusFired === false) {
-//     animateWhyUs();
-//     whyusFired = true;
-//   }
-// });
+navButton.addEventListener('click', () => {
+  // modify the header/nav-container to hide extra contents based on clip-path
+  if (!header.classList.contains('expanded')) {
+    header.classList.add('expanded');
+    navButton.classList.add('expanded-btn');
+    // adding animate class to li elements
+    nav.querySelectorAll('li').forEach((item) => {
+      item.classList.add('animate');
+      // adding animate class to each a element for text animation
+      item.querySelectorAll('a').forEach((item) => {
+        item.classList.add('animate');
+      });
+    });
+    // adding animate class to ul element
+    nav.querySelector('ul').classList.add('animate');
+  } else {
+    header.classList.remove('expanded');
+    navButton.classList.remove('expanded-btn');
+    nav.querySelectorAll('li').forEach((item) => {
+      item.classList.remove('animate');
+      item.querySelectorAll('a').forEach((item) => {
+        item.classList.remove('animate');
+      });
+    });
+    nav.querySelector('ul').classList.remove('animate');
+  }
+});

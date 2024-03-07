@@ -1,84 +1,247 @@
-#nav {
-  height: 10vh;
-  width: 100vw;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 15vw 0 15vw;
-  background-color: $navbar-bg;
-  transition: all 0.3s ease 0s;
+// for portrait mode logo is outside of the navbar
 
-  .logo {
-    cursor: pointer;
-    margin-right: auto;
-    max-height: 70%;
+.logo-mobile {
+  position: absolute;
+  top: 4vh;
+  left: 4.5vw;
+  z-index: 1002;
+
+  @include phone {
+    display: block;
+    top: 3.5vh;
+    min-height: 2vw;
+    max-height: 10vw;
   }
 
-  .nav-links li {
-    display: inline-block;
-    padding: 0px 20px;
+  @include tablet-portrait {
+    display: block;
+    min-height: 4vw;
+    max-height: 6vw;
   }
 
-  .nav-links li a {
-    transition: all 0.3s ease 0s;
-  }
-
-  .nav-links li a:hover {
-    color: $primary-gradient;
-  }
-
-  button {
-    border-radius: 50px;
-    transition: all 0.3s ease 0s;
+  @include tablet-landscape {
+    display: none;
   }
 }
 
-.nav-info {
-  padding: 0.5vh 15vw 0.5vh 15vw;
+.nav-container {
+  position: fixed;
+  z-index: 1001;
+  transition: clip-path 0.5s ease-in-out;
 
-  .info-container {
+  @include phone {
+    background-color: white;
+    clip-path: circle(4% at 87.5% 4.25%);
+  }
+
+  @include tablet-portrait {
+    background-color: white;
+    // rectangular clip path placed at the button - responsive
+    clip-path: circle(4% at 92.5% 4.25%);
+  }
+
+  @include tablet-landscape {
+    background-color: transparent;
+    clip-path: inset(0);
+  }
+
+  .nav-info {
+    @include phone {
+      display: none;
+    }
+
+    @include tablet-portrait {
+      display: none;
+    }
+
+    @include tablet-landscape {
+      display: block;
+      padding: $mobile-padding-nav-info;
+    }
+
+    @include laptop {
+      padding: $desktop-padding-nav-info;
+    }
+
+    @include desktop-hd {
+      padding: $desktop-padding-nav-info;
+    }
+
+    .info-container {
+      display: flex;
+      padding: 0.2vh 0.2vw 1vh 0.2vw;
+      background: linear-gradient(
+          to right,
+          transparent 45%,
+          white 60%,
+          white 95%,
+          transparent 100%
+        )
+        left bottom transparent no-repeat;
+      background-size: 100% 1px;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .time {
+      max-width: 20vw;
+    }
+
+    .time-icon {
+      max-width: 0.8vw;
+      margin: 0 0.4vw 0 0;
+    }
+
+    .location-icon {
+      max-width: 0.9vw;
+      margin: 0 0.3vw 0 1vw;
+    }
+
+    .location {
+      max-width: 20vw;
+    }
+  }
+
+  #phone-btn {
     display: flex;
-    padding: 0.2vh 0.2vw 1vh 0.2vw;
-    background: linear-gradient(
-        to right,
-        transparent 45%,
-        white 60%,
-        white 95%,
-        transparent 100%
-      )
-      left bottom transparent no-repeat;
-    background-size: 100% 1px;
+    align-items: center;
+
+    .phone {
+      padding-right: 0.5vw;
+      width: 2vw;
+      height: 2vh;
+    }
+  }
+
+  .nav {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
 
-  .time {
-    max-width: 20vw;
-  }
+    @include phone {
+      @include shared-phone-portrait-styles-nav;
+      padding-right: 10vw;
+    }
 
-  .time-icon {
-    max-width: 0.8vw;
-    margin: 0 0.4vw 0 0;
-  }
+    @include tablet-portrait {
+      @include shared-phone-portrait-styles-nav;
+    }
 
-  .location-icon {
-    max-width: 0.9vw;
-    margin: 0 0.3vw 0 1vw;
-  }
+    @include tablet-landscape {
+      height: 10vh;
+      padding: $mobile-padding;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
 
-  .location {
-    max-width: 20vw;
+      #phone-btn {
+        display: flex;
+      }
+
+      .nav-tools {
+        justify-content: flex-start;
+
+        #navbar-btn-expand {
+          display: none;
+        }
+
+        .logo {
+          display: block;
+        }
+      }
+
+      .nav-contents {
+        width: 100%;
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-self: center;
+
+        ul {
+          li {
+            display: inline-block;
+
+            @include tablet-landscape {
+              padding: 0px 15px;
+            }
+
+            @include laptop-small {
+              padding: 0px 20px;
+            }
+
+            &::before {
+              display: none;
+            }
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      #phone-btn {
+        padding: 9px 15px;
+      }
+
+      #navbar-btn-expand {
+        display: none;
+      }
+    }
+
+    @include laptop-small {
+      #phone-btn {
+        padding: 9px 25px;
+      }
+    }
+
+    @include laptop {
+      padding: $desktop-padding;
+    }
+
+    .logo {
+      @include tablet-landscape {
+        max-height: 50%;
+      }
+
+      @include laptop {
+        max-height: 60%;
+      }
+
+      @include desktop-hd {
+        max-height: 65%;
+      }
+    }
+
+    .nav-links li a:hover {
+      color: $primary-gradient;
+    }
   }
 }
 
-#navbar-btn {
-  display: flex;
-  align-items: center;
-  justify-self: center;
-  padding-left: 15px;
+.expanded {
+  clip-path: circle(90% at 60% 0%);
+}
 
-  .phone {
-    width: 2vw;
-    height: 2vh;
+@keyframes expand {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(100px);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }

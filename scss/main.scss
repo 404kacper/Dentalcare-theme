@@ -1,10 +1,10 @@
 // // Modules and variables
 // @import 'modules/all';
 
-// // Partials 
+// // Partials
 // @import 'partials/reset';
 
-// // Partials - layout 
+// // Partials - layout
 // @import 'partials/navbar';
 // @import 'partials/hero';
 // @import 'partials/infoSection';
@@ -16,6 +16,8 @@
 @import 'abstracts/variables';
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
+@import 'abstracts/nav_mixin';
+
 
 // Vendors
 // @import 'vendors/bootstrap';
@@ -39,6 +41,7 @@
 @import 'modules/separators';
 @import 'modules/parallax';
 @import 'modules/animationClasses';
+@import 'modules/wrappers'
 
 // Themes
 // @import 'themes/theme';
