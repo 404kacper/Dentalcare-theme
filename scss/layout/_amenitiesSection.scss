@@ -199,12 +199,17 @@
         }
       }
     }
-  }
 
-  button {
-    z-index: 2;
-    bottom: 1vh;
-    left: 45%;
-    position: absolute;
+    button {
+      z-index: 2;
+      bottom: 0.5vh;
+      left: 42.5%;
+      position: absolute;
+      padding: 0.5vw 1.5vw;
+
+      @include desktop-2k {
+        left: 44%;
+      }
+    }
   }
 }

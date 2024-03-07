@@ -7,6 +7,10 @@
     height: 450vw;
   }
 
+  @include tablet-portrait {
+    height: 120vh;
+  }
+
   @include laptop-small {
     height: 170vh;
   }
@@ -35,10 +39,22 @@
 
     @include phone {
       margin-top: 15vh;
+
+      .mobile-separator {
+        display: inline-block;
+      }
+
+      .info-title {
+        margin-bottom: 9vw;
+      }
     }
 
     @include tablet-portrait {
       margin-top: 8vh;
+
+      .mobile-separator {
+        display: none;
+      }
     }
 
     @include laptop-small {
@@ -46,10 +62,21 @@
     }
 
     .info-button {
-      margin-bottom: 20vh;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @include laptop {
+        margin-bottom: 10vh;
+      }
+
+      @include desktop-hd {
+        margin-bottom: 20vh;
+
+        .btn-flat {
+          padding: 1vw 3vw;
+        }
+      }
     }
 
     .info-container {
@@ -62,17 +89,9 @@
         align-items: flex-start;
         justify-content: center;
 
-        --img-size: 50vh;
-
-        @include laptop-small {
-          --img-size: 70vh;
-        }
+        --img-size: 85vh;
 
         @include laptop {
-          --img-size: 75vh;
-        }
-
-        @include desktop-hd {
           --img-size: 80vh;
         }
 
@@ -171,7 +190,9 @@
           @include laptop {
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(4, 1fr);
-            margin-top: 5vh;
+            padding-top: 5vh;
+            height: 100%;
+            gap: 0;
 
             & > * {
               &:nth-child(1) {
@@ -203,43 +224,16 @@
               width: 90%;
             }
 
+            @include tablet-portrait {
+              width: 100%;
+              height: auto;
+            }
+
             &:nth-child(1) {
               align-self: end;
 
               @include phone {
                 align-self: auto;
-              }
-
-              &::before {
-                content: '';
-                width: 1vw;
-                aspect-ratio: 1/1;
-                position: absolute;
-                left: 30%;
-                bottom: 50%;
-                background-image: url(/dist/assets/hero/kolo_lewe.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-
-                @include laptop {
-                  display: none;
-                }
-              }
-
-              &::after {
-                content: '';
-                aspect-ratio: 1/1;
-                width: 2vw;
-                position: absolute;
-                right: 20%;
-                top: 15%;
-                background-image: url(/dist/assets/hero/kolo_srodkowe.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-
-                @include laptop {
-                  display: none;
-                }
               }
             }
 
@@ -254,39 +248,6 @@
               @include laptop {
                 background-color: transparent;
               }
-
-              &::before {
-                content: '';
-                width: 1.5vw;
-                aspect-ratio: 1/1;
-                position: absolute;
-                left: 30%;
-                top: 15%;
-                background-image: url(/dist/assets/hero/trojkat_srodkowy.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-
-                @include laptop {
-                  display: none;
-                }
-              }
-
-              &::after {
-                content: '';
-                aspect-ratio: 1/1;
-                width: 3vw;
-                position: absolute;
-                right: 25%;
-                bottom: 50%;
-                transform: rotate(60deg);
-                background-image: url(/dist/assets/hero/trojkat_dolny.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-
-                @include laptop {
-                  display: none;
-                }
-              }
             }
 
             &:nth-child(3) {
@@ -295,49 +256,11 @@
 
               @include phone {
                 align-self: auto;
+                order: 4;
               }
 
               @include laptop {
                 background-color: transparent;
-              }
-
-              &::before {
-                content: '';
-                width: 3vw;
-                aspect-ratio: 1/1;
-                position: absolute;
-                left: 20%;
-                top: 15%;
-                background-image: url(/dist/assets/hero/trojkat_dolny.svg);
-                transform: rotate(30deg);
-                background-size: contain;
-                background-repeat: no-repeat;
-
-                @include laptop {
-                  display: none;
-                }
-              }
-
-              &::after {
-                content: '';
-                aspect-ratio: 1/1;
-                position: absolute;
-                width: 2vw;
-                right: 22.5%;
-                bottom: 50%;
-                background-image: url(/dist/assets/hero/kolo_lewe.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-
-                @include laptop-small {
-                  width: 1vw;
-                  right: 25%;
-                  bottom: 50%;
-                }
-
-                @include laptop {
-                  display: none;
-                }
               }
             }
 
@@ -346,38 +269,6 @@
 
               @include phone {
                 align-self: auto;
-              }
-
-              &::before {
-                content: '';
-                width: 3vw;
-                aspect-ratio: 1/1;
-                position: absolute;
-                right: 25%;
-                top: 15%;
-                background-image: url(/dist/assets/info/prostokat.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-
-                @include laptop {
-                  display: none;
-                }
-              }
-
-              &::after {
-                content: '';
-                aspect-ratio: 1/1;
-                width: 1.5vw;
-                position: absolute;
-                left: 30%;
-                bottom: 47.5%;
-                background-image: url(/dist/assets/hero/trojkat_srodkowy.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-
-                @include laptop {
-                  display: none;
-                }
               }
             }
 
@@ -412,10 +303,15 @@
             // dimensions for all icons
             $icon-aspect-ratio: 1/1;
             $icon-width: 10vw;
+            $mobile-icon-width: 20vw;
 
             &-hospital {
               aspect-ratio: $icon-aspect-ratio;
               width: $icon-width;
+
+              @include phone {
+                width: $mobile-icon-width;
+              }
 
               &::before {
                 content: '';
@@ -424,6 +320,10 @@
                 width: $icon-width;
                 background-color: white;
                 border-radius: 50%;
+
+                @include phone {
+                  width: $mobile-icon-width;
+                }
 
                 @include laptop {
                   display: none;
@@ -439,6 +339,10 @@
                   center/contain no-repeat;
                 border-radius: 50%;
                 scale: 0.95;
+
+                @include phone {
+                  width: $mobile-icon-width;
+                }
 
                 @include laptop {
                   display: none;
@@ -456,6 +360,10 @@
               aspect-ratio: $icon-aspect-ratio;
               width: $icon-width;
 
+              @include phone {
+                width: $mobile-icon-width;
+              }
+
               &::before {
                 content: '';
                 position: absolute;
@@ -463,6 +371,10 @@
                 width: $icon-width;
                 background-color: white;
                 border-radius: 50%;
+
+                @include phone {
+                  width: $mobile-icon-width;
+                }
 
                 @include laptop {
                   display: none;
@@ -478,6 +390,10 @@
                   center/contain no-repeat;
                 border-radius: 50%;
                 scale: 0.95;
+
+                @include phone {
+                  width: $mobile-icon-width;
+                }
 
                 @include laptop {
                   display: none;
@@ -495,6 +411,10 @@
               aspect-ratio: $icon-aspect-ratio;
               width: $icon-width;
 
+              @include phone {
+                width: $mobile-icon-width;
+              }
+
               &::before {
                 content: '';
                 position: absolute;
@@ -502,6 +422,10 @@
                 width: $icon-width;
                 background-color: white;
                 border-radius: 50%;
+
+                @include phone {
+                  width: $mobile-icon-width;
+                }
 
                 @include laptop {
                   display: none;
@@ -516,6 +440,10 @@
                 background: url(/dist/assets/info/info-jaw-mobile.svg)
                   center/contain no-repeat;
                 border-radius: 50%;
+
+                @include phone {
+                  width: $mobile-icon-width;
+                }
 
                 @include laptop {
                   display: none;
@@ -533,6 +461,10 @@
               aspect-ratio: $icon-aspect-ratio;
               width: $icon-width;
 
+              @include phone {
+                width: $mobile-icon-width;
+              }
+
               &::before {
                 content: '';
                 position: absolute;
@@ -540,6 +472,10 @@
                 width: $icon-width;
                 background-color: white;
                 border-radius: 50%;
+
+                @include phone {
+                  width: $mobile-icon-width;
+                }
 
                 @include laptop {
                   display: none;
@@ -555,6 +491,10 @@
                   center/contain no-repeat;
                 border-radius: 50%;
                 scale: 0.95;
+
+                @include phone {
+                  width: $mobile-icon-width;
+                }
 
                 @include laptop {
                   display: none;
@@ -593,7 +533,7 @@
               margin-left: 0;
 
               @include laptop {
-                margin-left: 4vw;
+                margin-left: 2vw;
               }
 
               .info-icon-link:hover {
@@ -603,6 +543,10 @@
 
               .info-icon-title {
                 margin-bottom: 2vw;
+
+                @include phone {
+                  margin-bottom: 4vw;
+                }
 
                 @include laptop {
                   margin-bottom: 0;

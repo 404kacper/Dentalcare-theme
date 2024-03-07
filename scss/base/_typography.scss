@@ -269,23 +269,21 @@
 
 // Info section related fonts
 .info {
-  &-btn-text {
-    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-    font-size: clamp(12px, 1vw, 20px);
-    white-space: nowrap;
-    text-transform: none;
-    font-weight: 400;
-  }
-
   &-title {
     @include phone {
       font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-      font-size: clamp(14px, 6vw, 32px);
+      font-size: clamp(14px, 7vw, 28px);
       white-space: nowrap;
       text-align: center;
       font-weight: 400;
       color: $title-color;
-      line-height: 10vh;
+      line-height: clamp(12px, 11vw, 45px);
+      font-weight: 400;
+
+      &-highlight {
+        font-size: clamp(12px, 13vw, 50px);
+        font-weight: 500;
+      }
     }
 
     @include tablet-portrait {
@@ -365,6 +363,19 @@
     &-link {
       color: $icon-link-color;
       font-size: clamp(12px, 1vw, 20px);
+
+      @include laptop {
+        font-size: clamp(12px, 0.9vw, 14px);
+      }
+
+      @include desktop-hd {
+        font-size: clamp(12px, 0.9vw, 16px);
+      }
+
+      @include desktop-2k {
+        font-size: clamp(12px, 0.9vw, 18px);
+        font-weight: 500;
+      }
     }
 
     &-description {
@@ -375,18 +386,36 @@
 
       @include laptop {
         color: black;
-        font-size: clamp(12px, 1vw, 18px);
+        text-align: left;
+        font-size: clamp(12px, 1.2vw, 16px);
+      }
+
+      @include desktop-hd {
+        font-size: clamp(12px, 0.9vw, 22px);
       }
     }
 
     &-title {
       color: white;
-      font-size: clamp(12px, 2.3vw, 32px);
       text-align: center;
+
+      @include phone {
+        font-size: clamp(12px, 6vw, 24px);
+      }
+
+      @include tablet-portrait {
+        font-size: clamp(12px, 2.3vw, 32px);
+      }
 
       @include laptop {
         color: $icon-title-color;
-        font-size: clamp(12px, 1vw, 24px);
+        font-size: clamp(12px, 1.5vw, 24px);
+        text-align: left;
+      }
+
+      @include desktop-2k {
+        color: $icon-title-color;
+        font-size: clamp(12px, 1.4vw, 30px);
         text-align: left;
       }
     }
@@ -422,6 +451,21 @@
     font-weight: 400;
     text-align: center;
     color: white;
+  }
+
+  &-btn-text {
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+    text-transform: none;
+    font-weight: 400;
+
+    @include laptop-small {
+      font-size: clamp(12px, 3vw, 24px);
+    }
+
+    @include desktop-hd {
+      font-size: clamp(12px, 1.2vw, 24px);
+    }
   }
 }
 
