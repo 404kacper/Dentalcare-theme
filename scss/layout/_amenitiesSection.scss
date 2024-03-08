@@ -1,6 +1,14 @@
 .amenitiesSection {
-  height: 160vh;
+  height: 170vh;
   width: 100vw;
+
+  @include desktop-hd {
+    height: 180vh;
+  }
+
+  @include desktop-2k {
+    height: 190vh;
+  }
 
   .deepest_layer {
     background-color: $primary-color;
@@ -11,42 +19,130 @@
 
     .wrapper {
       width: 70vw;
-      height: 100vh;
+      display: flex;
+      padding-top: 40vh;
+
+      @include phone {
+        padding-top: 50vh;
+        justify-content: center;
+        width: 100vw;
+        margin-left: 0;
+      }
+
+      @include tablet-portrait {
+        justify-content: flex-end;
+        width: 87.5vw;
+        padding-top: 35vh;
+      }
+
+      @include tablet-landscape {
+        justify-content: flex-end;
+        width: 90vw;
+        padding-top: 45vh;
+      }
+
+      @include laptop {
+        justify-content: flex-end;
+        width: 85vw;
+        padding-top: 40vh;
+      }
+
+      @include desktop-hd {
+        justify-content: flex-end;
+        width: 80vw;
+      }
+
       .mouth {
-        height: 60vh;
-        margin-top: 25vh;
-        // Neat trick if you don't want to position with left edge
-        // transform: translateX(
-        //   -50%
-        // ); /* Center element horizontally (shift 50% left of it's own width) that way you're moving centre of the element and not it's left edge */
+        aspect-ratio: 1/1;
         background-image: url(/dist/assets/amenities/amenities-mouth.jpg);
         mask-image: url(/dist/assets/amenities/amenities-mouth.svg);
         mask-repeat: no-repeat;
-        mask-size: contain;
-        mask-position: right;
+        mask-size: cover;
+        mask-position: center;
         background-repeat: no-repeat;
-        background-position: right;
-        background-size: contain;
+        background-position: center;
+        background-size: cover;
+
+        @include phone {
+          height: 70vw;
+        }
+
+        @include tablet-portrait {
+          height: 50vw;
+        }
+
+        @include tablet-landscape {
+          height: 40vw;
+        }
+
+        @include desktop-hd {
+          height: 35vw;
+        }
       }
+
       .mouth-shape {
-        position: absolute;
-        right: 17.5vw;
-        top: 25vh;
-        width: 10vh;
-        height: 10vh;
+        aspect-ratio: 1/1;
         background-image: url(/dist/assets/amenities/amenities-mouth-shape.svg);
         background-size: contain;
         background-repeat: no-repeat;
+
+        @include phone {
+          top: 28%;
+          transform: translateX(20vw);
+          position: absolute;
+          width: 10vh;
+        }
+
+        @include tablet-portrait {
+          width: 15vw;
+          position: absolute;
+        }
+
+        @include tablet-landscape {
+          display: none;
+        }
+
+        @include laptop {
+          width: 13vh;
+          display: block;
+        }
+
+        @include desktop-hd {
+          width: 15vh;
+          display: block;
+        }
       }
+
       .mouth-ball {
-        position: absolute;
-        right: 15vw;
-        top: 35vh;
         width: 1vh;
-        height: 1vh;
+        aspect-ratio: 1/1;
         background-image: url(/dist/assets/amenities/amenities-mouth-ball.svg);
         background-size: contain;
         background-repeat: no-repeat;
+
+        @include phone {
+          top: 27%;
+          transform: translateX(28vw);
+          position: absolute;
+        }
+
+        @include tablet-portrait {
+          width: 1.25vw;
+          transform: translateX(-45vw) translateY(45vw);
+          position: absolute;
+        }
+
+        @include tablet-landscape {
+          width: 1vw;
+          transform: translateX(-37vw) translateY(37vw);
+          position: absolute;
+        }
+
+        @include desktop-hd {
+          width: 0.8vw;
+          transform: translateX(-32vw) translateY(32vw);
+          position: absolute;
+        }
       }
     }
   }
@@ -63,13 +159,13 @@
     z-index: -1;
 
     .wrapper {
-      margin-left: 0;
       height: 100%;
       padding-top: 10vh;
+
       .bg-shape {
         margin-left: auto;
         width: 75vw;
-        height: 90vh;
+        aspect-ratio: 1.57/1;
         background-image: url(/dist//assets/amenities/amenities-bg-shape.svg);
         background-size: contain;
         background-repeat: no-repeat;
@@ -86,8 +182,8 @@
         margin-left: auto;
         margin-right: 38%;
         padding-top: 125vh;
+        aspect-ratio: 1/1;
         width: 6vh;
-        height: 6vh;
         background-image: url(/dist/assets/amenities/amenities-bg-ball-dashed.svg);
         background-size: contain;
         background-repeat: no-repeat;
@@ -97,8 +193,8 @@
         margin-left: auto;
         margin-right: 20vw;
         padding-top: 175vh;
+        aspect-ratio: 1/1;
         width: 6vh;
-        height: 6vh;
         background-image: url(/dist/assets/amenities/amenities-bg-ball.svg);
         background-size: contain;
         background-repeat: no-repeat;
@@ -129,34 +225,136 @@
 
   .mid_layer {
     .wrapper {
-      padding-top: 40vh;
       display: flex;
       flex-direction: column;
 
-      .amenitiesText {
-        margin-left: 14vw;
+      @include phone {
+        padding-top: 30vh;
       }
 
-      .reviews-container {
+      @include tablet-portrait {
+        padding-top: 20vh;
+      }
+
+      @include tablet-landscape {
+        padding-top: 30vh;
+      }
+
+      @include desktop-hd {
+        padding-top: 40vh;
+      }
+
+      .amenitiesText {
+        @include tablet-portrait {
+          margin-left: 5vw;
+        }
+
+        @include laptop {
+          margin-left: 7.5vw;
+        }
+
+        @include desktop-hd {
+          margin-left: 5vw;
+        }
+
+        @include desktop-2k {
+          margin-left: 10vw;
+        }
+      }
+    }
+
+    .reviews-container {
+      padding: 2vw;
+      display: flex;
+      user-select: none;
+
+      @include phone {
+        animation: marquee-phone 20s linear infinite;
+        margin-top: 55vh;
+      }
+
+      @include tablet-portrait {
+        animation: marquee-tablet-portrait 20s linear infinite;
+        margin-top: 50vh;
+      }
+
+      @include tablet-landscape {
+        animation: marquee-tablet-landscape 20s linear infinite;
+        margin-top: 65vh;
+      }
+
+      @include laptop {
+        margin-top: 65vh;
+      }
+
+      @include desktop-hd {
         margin-top: 60vh;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        z-index: 5;
-        display: flex;
-        justify-content: space-between;
+        animation: marquee-desktop-hd 20s linear infinite;
+      }
+
+      @include desktop-2k {
+        margin-top: 70vh;
+      }
+
+      &:hover {
+        animation-play-state: paused;
+      }
+
+      &-marquee {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+
+        @include phone {
+          min-width: 200vw;
+          gap: 10vw;
+          margin-right: 10vw;
+        }
+
+        @include tablet-portrait {
+          min-width: 180vw;
+          gap: 15vw;
+          margin-right: 15vw;
+        }
+
+        @include tablet-landscape {
+          min-width: 100vw;
+          gap: 10vw;
+          margin-right: 20vw;
+        }
+
+        @include desktop-hd {
+          min-width: 110vw;
+          gap: 10vw;
+          margin-right: 10vw;
+        }
 
         .review {
-          width: 15vw;
-          height: 30vh;
           display: flex;
           flex-direction: column;
           align-items: center;
 
+          // every new width adjustment on review needs to be accounted for
+          // with new animation & spacing above (gap & min width & margin)
+          @include phone {
+            width: 25vw;
+          }
+
+          @include tablet-portrait {
+            width: 15vw;
+          }
+
+          @include tablet-landscape {
+            width: 10vw;
+          }
+
+          @include desktop-hd {
+            width: 9vw;
+          }
+
           &-1 {
             margin-bottom: 1vh;
-            width: 15vh;
-            height: 15vh;
+            aspect-ratio: 1/1;
+            width: 100%;
             background-image: url(/dist/assets/amenities/amenities-review1.jpg);
             background-size: cover;
             background-repeat: no-repeat;
@@ -166,8 +364,8 @@
 
           &-2 {
             margin-bottom: 1vh;
-            width: 15vh;
-            height: 15vh;
+            aspect-ratio: 1/1;
+            width: 100%;
             background-image: url(/dist/assets/amenities/amenities-review2.jpg);
             background-size: cover;
             background-repeat: no-repeat;
@@ -177,8 +375,8 @@
 
           &-3 {
             margin-bottom: 1vh;
-            width: 15vh;
-            height: 15vh;
+            aspect-ratio: 1/1;
+            width: 100%;
             background-image: url(/dist/assets/amenities/amenities-review3.jpg);
             background-size: cover;
             background-repeat: no-repeat;
@@ -190,11 +388,12 @@
             margin-top: 1vh;
             margin-bottom: 1vh;
             width: 15vh;
-            height: 2vh;
+            aspect-ratio: 6.77/1;
             background-image: url(/dist/assets/amenities/amenities-rating.svg);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
+            width: 100%;
           }
         }
       }
@@ -206,10 +405,42 @@
       left: 42.5%;
       position: absolute;
       padding: 0.5vw 1.5vw;
-
-      @include desktop-2k {
-        left: 44%;
-      }
     }
+  }
+}
+
+@keyframes marquee-phone {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200vw - 10vw));
+  }
+}
+
+@keyframes marquee-tablet-portrait {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-180vw - 15vw));
+  }
+}
+
+@keyframes marquee-tablet-landscape {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100vw - 20vw));
+  }
+}
+
+@keyframes marquee-desktop-hd {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-110vw - 10vw));
   }
 }

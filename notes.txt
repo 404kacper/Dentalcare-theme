@@ -15,5 +15,8 @@ ToDos:
    But even at the very bottom of the page it isn't the actual .scrollHeight value.
 - (ideas) think about adding smooth scrolling here is the example: https://www.poppr.be/en/work
 
-ToDos v2 (old are done or outdated):
-- (bug) chromium mobile menu animation isn't using clip-path properly thus animation is really chunky 
+For future:
+- (General design): try to design section heights so that it's independant of screen orientation
+- solution to above might be to just define them with vws, although i didn't give it much thought
+- seems okayish since u'd be scaling down or up either way so you only need to limit the sizing to one dimension
+- (Typography general): use rems instead of px for clamping border cases

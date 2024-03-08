@@ -11,7 +11,7 @@
     height: 120vh;
   }
 
-  @include laptop-small {
+  @include tablet-landscape {
     height: 170vh;
   }
 
@@ -301,7 +301,7 @@
             }
 
             // dimensions for all icons
-            $icon-aspect-ratio: 1/1;
+            $icon-aspect-ratio: 1;
             $icon-width: 10vw;
             $mobile-icon-width: 20vw;
 
