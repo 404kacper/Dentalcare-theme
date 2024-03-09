@@ -1,4 +1,5 @@
 const scrollingElement = document.querySelector('.parallax_wrapper');
+const viewportWidth = document.querySelector(':root').clientWidth;
 var scrollpos = scrollingElement.scrollTop;
 
 // Animation related variables
@@ -7,15 +8,15 @@ var iconRevealDelay = 350;
 
 var ticking = false;
 
+console.log(viewportWidth);
+
 scrollingElement.addEventListener('scroll', (event) => {
   maxScroll = scrollingElement.scrollHeight;
   lastKnownScrollPosition = scrollingElement.scrollTop;
   // The smaller this value the later animations will appear
   let viewportDivisor = 2.5;
 
-  // testing
-  // if (lastKnownScrollPosition >= maxScroll / viewportDivisor) {
-  if (true) {
+  if (lastKnownScrollPosition >= maxScroll / viewportDivisor) {
     scrollingElement
       .querySelector('.amenitiesSection .front_layer')
       .classList.add('front_layer_active');
@@ -44,8 +45,6 @@ scrollingElement.addEventListener('scroll', (event) => {
         element.classList.remove('deep_mid_layer_front_active');
       });
   }
-
-  // console.log(lastKnownScrollPosition);
 });
 
 const navButton = document.querySelector('#navbar-btn-expand');
