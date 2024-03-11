@@ -569,13 +569,77 @@
     font-size: clamp(12px, 1vw, 28px);
     font-weight: 400;
     color: black;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @include phone {
+      font-size: clamp(16px, 2.3vw, 20px);
+      -webkit-line-clamp: 3;
+    }
+
+    @include tablet-portrait {
+      font-size: clamp(16px, 2.3vw, 20px);
+    }
+
+    @include tablet-landscape {
+      font-size: clamp(16px, 1.6vw, 18px);
+    }
+
+    @include laptop-small {
+      font-size: clamp(16px, 1.55vw, 20px);
+    }
+
+    @include laptop {
+      font-size: clamp(20px, 1.5vw, 22px);
+    }
+
+    @include desktop-hd {
+      font-size: clamp(18px, 1.2vw, 24px);
+    }
+
+    @include desktop-2k {
+      font-size: clamp(18px, 1vw, 28px);
+    }
   }
 
   &-description {
     font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
-    font-size: clamp(12px, 1vw, 16px);
     font-weight: 400;
     color: #222222;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 7;
+
+    @include phone {
+      -webkit-line-clamp: 6;
+      font-size: clamp(12px, 4vw, 14px);
+    }
+
+    @include tablet-portrait {
+      font-size: clamp(12px, 2vw, 14px);
+    }
+
+    @include tablet-landscape {
+      font-size: clamp(12px, 1vw, 14px);
+    }
+
+    @include laptop-small {
+      font-size: clamp(12px, 1vw, 14px);
+    }
+
+    @include laptop {
+      font-size: clamp(14px, 1vw, 16px);
+    }
+
+    @include desktop-hd {
+      font-size: clamp(14px, 0.8vw, 16px);
+    }
+
+    @include desktop-2k {
+      font-size: clamp(12px, 1vw, 18px);
+    }
   }
 
   &-title-main {
@@ -590,6 +654,13 @@
     font-size: clamp(12px, 1vw, 16px);
     font-weight: 400;
     color: black;
+
+    @include phone {
+      font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+      font-size: clamp(10px, 2vw, 16px);
+      font-weight: 400;
+      color: black;
+    }
   }
 }
 

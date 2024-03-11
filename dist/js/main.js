@@ -8,8 +8,6 @@ var iconRevealDelay = 350;
 
 var ticking = false;
 
-console.log(viewportWidth);
-
 scrollingElement.addEventListener('scroll', (event) => {
   maxScroll = scrollingElement.scrollHeight;
   lastKnownScrollPosition = scrollingElement.scrollTop;
@@ -78,3 +76,63 @@ navButton.addEventListener('click', () => {
     nav.querySelector('ul').classList.remove('animate');
   }
 });
+
+// articles carousel to prevent from vertical snapping to the top of container
+document.addEventListener('DOMContentLoaded', function () {
+  const arrowButtons = document.querySelectorAll('.articlesSection .arrow-btn');
+
+  arrowButtons.forEach((button) => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault(); // Stop the default anchor link behavior
+
+      const container = document.querySelector(
+        '.articlesSection .articles-container'
+      );
+      const targetGroup = document.querySelector(this.getAttribute('href'));
+
+      if (targetGroup) {
+        const targetScrollPosition =
+          targetGroup.offsetLeft - container.offsetLeft;
+        container.scrollTo({
+          left: targetScrollPosition,
+          behavior: 'smooth',
+        });
+      }
+    });
+  });
+});
+
+// script for adjusting scroll speed
+// makes parallax effect more pronounced but can get annoying for some people
+// so it's commented out for now
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   const parallaxWrapper = document.querySelector('.parallax_wrapper');
+//   if (!parallaxWrapper) return;
+
+//   let targetScrollY = parallaxWrapper.scrollTop;
+//   let currentScrollY = targetScrollY;
+//   let isScrolling = false;
+
+//   const smoothScroll = () => {
+//     // Easing formula: simple linear interpolation
+//     currentScrollY += (targetScrollY - currentScrollY) * 0.7;
+
+//     if (Math.abs(targetScrollY - currentScrollY) > 0.5) {
+//       parallaxWrapper.scrollTop = currentScrollY;
+//       requestAnimationFrame(smoothScroll);
+//     } else {
+//       parallaxWrapper.scrollTop = targetScrollY;
+//       isScrolling = false;
+//     }
+//   };
+
+//   parallaxWrapper.addEventListener('scroll', function () {
+//     targetScrollY = parallaxWrapper.scrollTop;
+
+//     if (!isScrolling) {
+//       isScrolling = true;
+//       requestAnimationFrame(smoothScroll);
+//     }
+//   });
+// });
