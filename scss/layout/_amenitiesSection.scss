@@ -64,8 +64,8 @@
 
       .mouth {
         aspect-ratio: 1/1;
-        background-image: url(/dist/assets/amenities/amenities-mouth.jpg);
-        mask-image: url(/dist/assets/amenities/amenities-mouth.svg);
+        background-image: url(assets/amenities/amenities-mouth.jpg);
+        mask-image: url(assets/amenities/amenities-mouth.svg);
         mask-repeat: no-repeat;
         mask-size: cover;
         mask-position: center;
@@ -92,7 +92,7 @@
 
       .mouth-shape {
         aspect-ratio: 1/1;
-        background-image: url(/dist/assets/amenities/amenities-mouth-shape.svg);
+        background-image: url(assets/amenities/amenities-mouth-shape.svg);
         background-size: contain;
         background-repeat: no-repeat;
 
@@ -126,7 +126,7 @@
       .mouth-ball {
         width: 1vh;
         aspect-ratio: 1/1;
-        background-image: url(/dist/assets/amenities/amenities-mouth-ball.svg);
+        background-image: url(assets/amenities/amenities-mouth-ball.svg);
         background-size: contain;
         background-repeat: no-repeat;
 
@@ -175,7 +175,7 @@
       .bg-shape {
         margin-left: auto;
         aspect-ratio: 1.57/1;
-        background-image: url(/dist//assets/amenities/amenities-bg-shape.svg);
+        background-image: url(/dist//assetss/amenities/amenities-bg-shape.svg);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -218,7 +218,7 @@
       .bg-circle-dashed {
         margin-left: auto;
         aspect-ratio: 1/1;
-        background-image: url(/dist/assets/amenities/amenities-bg-ball-dashed.svg);
+        background-image: url(assets/amenities/amenities-bg-ball-dashed.svg);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -268,7 +268,7 @@
       .bg-circle {
         margin-left: auto;
         aspect-ratio: 1/1;
-        background-image: url(/dist/assets/amenities/amenities-bg-ball.svg);
+        background-image: url(assets/amenities/amenities-bg-ball.svg);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -334,12 +334,12 @@
     z-index: -1;
     position: absolute;
     background: center/cover no-repeat
-      url('/dist/assets/amenities/amenities-shape-bottom.svg');
+      url('assets/amenities/amenities-shape-bottom.svg');
 
     @include phone {
       aspect-ratio: 2/1;
       background: center/cover no-repeat
-        url('/dist/assets/amenities/amenities-shape-bottom-mobile.svg');
+        url('assets/amenities/amenities-shape-bottom-mobile.svg');
     }
   }
 
@@ -475,7 +475,7 @@
             margin-bottom: 1vh;
             aspect-ratio: 1/1;
             width: 100%;
-            background-image: url(/dist/assets/amenities/amenities-review1.jpg);
+            background-image: url(assets/amenities/amenities-review1.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -486,7 +486,7 @@
             margin-bottom: 1vh;
             aspect-ratio: 1/1;
             width: 100%;
-            background-image: url(/dist/assets/amenities/amenities-review2.jpg);
+            background-image: url(assets/amenities/amenities-review2.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -497,7 +497,7 @@
             margin-bottom: 1vh;
             aspect-ratio: 1/1;
             width: 100%;
-            background-image: url(/dist/assets/amenities/amenities-review3.jpg);
+            background-image: url(assets/amenities/amenities-review3.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -509,7 +509,7 @@
             margin-bottom: 1vh;
             width: 15vh;
             aspect-ratio: 6.77/1;
-            background-image: url(/dist/assets/amenities/amenities-rating.svg);
+            background-image: url(assets/amenities/amenities-rating.svg);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;

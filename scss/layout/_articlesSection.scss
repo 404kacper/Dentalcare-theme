@@ -144,7 +144,7 @@
           width: 15vh;
           border-radius: 50%;
           background: center / cover no-repeat
-            url(/dist/assets/articles/articles-dentist.jpg);
+            url(assets/articles/articles-dentist.jpg);
           margin-right: 1vw;
 
           @include phone {
@@ -170,7 +170,7 @@
           width: 2vh;
           margin-right: 0.4vw;
           background: center / contain no-repeat
-            url(/dist/assets/articles/articles-clock.svg);
+            url(assets/articles/articles-clock.svg);
         }
       }
 
@@ -184,7 +184,7 @@
           width: 2vh;
           margin-right: 0.4vw;
           background: center / contain no-repeat
-            url(/dist/assets/articles/articles-comment.svg);
+            url(assets/articles/articles-comment.svg);
         }
       }
 

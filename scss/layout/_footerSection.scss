@@ -12,7 +12,7 @@
     aspect-ratio: 5.34226/1;
     position: absolute;
     background: center/cover no-repeat
-      url('/dist/assets/footer/footer-bg-shape.svg');
+      url('assets/footer/footer-bg-shape.svg');
   }
 
   .footer-triangle {
@@ -23,7 +23,7 @@
     z-index: -1;
     position: absolute;
     background: center/contain no-repeat
-      url('/dist/assets/footer/footer-triangle.svg');
+      url('assets/footer/footer-triangle.svg');
   }
 
   .footer-circle {
@@ -34,7 +34,7 @@
     z-index: -1;
     position: absolute;
     background: center/contain no-repeat
-      url('/dist/assets/footer/footer-circle.svg');
+      url('assets/footer/footer-circle.svg');
   }
 
   footer .wrapper {
@@ -68,7 +68,7 @@
       height: 12vw;
       display: block;
       background: center/contain no-repeat
-        url('/dist/assets/footer/footer-logo-text-below.svg');
+        url('assets/footer/footer-logo-text-below.svg');
     }
 
     .links {
@@ -115,7 +115,7 @@
       .facebook-icon {
         width: 3vh;
         height: 3vh;
-        background: center/contain url('/dist/assets/footer/facebook-logo.svg');
+        background: center/contain url('assets/footer/facebook-logo.svg');
         transition: filter 0.3s ease;
       }
 

@@ -26,7 +26,7 @@
     transform: translateY(100%);
     width: 100vw;
     aspect-ratio: 10.4492/1;
-    background-image: url(/dist/assets/info/info-bg-bottom.svg);
+    background-image: url(/assets/info/info-bg-bottom.svg);
     background-position: top;
     background-size: cover;
   }
@@ -99,8 +99,8 @@
           margin-top: 5vh;
           height: var(--img-size);
           aspect-ratio: 0.69/1;
-          background-image: url(/dist/assets/info/info-image.png);
-          mask-image: url(/dist/assets/info/info-image-bg.svg);
+          background-image: url(/assets/info/info-image.png);
+          mask-image: url(/assets/info/info-image-bg.svg);
           mask-repeat: no-repeat;
           mask-position: left;
           background-repeat: no-repeat;
@@ -116,7 +116,7 @@
           height: var(--img-size);
           aspect-ratio: 0.69/1;
           top: 0;
-          background-image: url(/dist/assets/info/info-image-bg.svg);
+          background-image: url(/assets/info/info-image-bg.svg);
           background-position: left;
           background-size: contain;
           background-repeat: no-repeat;
@@ -335,7 +335,7 @@
                 position: absolute;
                 aspect-ratio: $icon-aspect-ratio;
                 width: $icon-width;
-                background: url(/dist/assets/info/info-hospital-mobile.svg)
+                background: url(/assets/info/info-hospital-mobile.svg)
                   center/contain no-repeat;
                 border-radius: 50%;
                 scale: 0.95;
@@ -350,7 +350,7 @@
               }
 
               @include laptop {
-                background: url(/dist/assets/info/info-hospital.svg)
+                background: url(/assets/info/info-hospital.svg)
                   center/contain no-repeat;
                 width: 10vh;
               }
@@ -386,7 +386,7 @@
                 position: absolute;
                 aspect-ratio: $icon-aspect-ratio;
                 width: $icon-width;
-                background: url(/dist/assets/info/info-tooth-mobile.svg)
+                background: url(/assets/info/info-tooth-mobile.svg)
                   center/contain no-repeat;
                 border-radius: 50%;
                 scale: 0.95;
@@ -401,7 +401,7 @@
               }
 
               @include laptop {
-                background: url(/dist/assets/info/info-tooth.svg) center/contain
+                background: url(/assets/info/info-tooth.svg) center/contain
                   no-repeat;
                 width: 10vh;
               }
@@ -437,7 +437,7 @@
                 position: absolute;
                 aspect-ratio: $icon-aspect-ratio;
                 width: $icon-width;
-                background: url(/dist/assets/info/info-jaw-mobile.svg)
+                background: url(/assets/info/info-jaw-mobile.svg)
                   center/contain no-repeat;
                 border-radius: 50%;
 
@@ -451,7 +451,7 @@
               }
 
               @include laptop {
-                background: url(/dist/assets/info/info-jaw.svg) center/contain
+                background: url(/assets/info/info-jaw.svg) center/contain
                   no-repeat;
                 width: 10vh;
               }
@@ -487,7 +487,7 @@
                 position: absolute;
                 aspect-ratio: $icon-aspect-ratio;
                 width: $icon-width;
-                background: url(/dist/assets/info/info-tools-mobile.svg)
+                background: url(/assets/info/info-tools-mobile.svg)
                   center/contain no-repeat;
                 border-radius: 50%;
                 scale: 0.95;
@@ -502,7 +502,7 @@
               }
 
               @include laptop {
-                background: url(/dist/assets/info/info-tools.svg) center/contain
+                background: url(/assets/info/info-tools.svg) center/contain
                   no-repeat;
                 width: 10vh;
               }
@@ -521,7 +521,7 @@
                 height: 100%;
                 margin-top: 0.15vh;
                 margin-left: 0.2vw;
-                background: url(/dist/assets/info/arrow-right.svg)
+                background: url(/assets/info/arrow-right.svg)
                   center/contain no-repeat;
               }
             }
