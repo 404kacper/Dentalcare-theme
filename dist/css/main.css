@@ -3236,7 +3236,7 @@ ul {
   transform: translateY(-100%);
   aspect-ratio: 5.34226/1;
   position: absolute;
-  background: center/cover no-repeat url("assets/footer/footer-bg-shape.svg");
+  background: center/cover no-repeat url("/assets/footer/footer-bg-shape.svg");
 }
 .footerSection .footer-triangle {
   width: 3vh;
@@ -3245,7 +3245,7 @@ ul {
   right: 5vw;
   z-index: -1;
   position: absolute;
-  background: center/contain no-repeat url("assets/footer/footer-triangle.svg");
+  background: center/contain no-repeat url("/assets/footer/footer-triangle.svg");
 }
 .footerSection .footer-circle {
   width: 13vh;
@@ -3254,7 +3254,7 @@ ul {
   right: 35vw;
   z-index: -1;
   position: absolute;
-  background: center/contain no-repeat url("assets/footer/footer-circle.svg");
+  background: center/contain no-repeat url("/assets/footer/footer-circle.svg");
 }
 .footerSection footer .wrapper {
   height: 100%;
@@ -3282,7 +3282,7 @@ ul {
   width: 9vw;
   height: 12vw;
   display: block;
-  background: center/contain no-repeat url("assets/footer/footer-logo-text-below.svg");
+  background: center/contain no-repeat url("/assets/footer/footer-logo-text-below.svg");
 }
 .footerSection footer .wrapper .links {
   grid-area: links;
@@ -3323,7 +3323,7 @@ ul {
 .footerSection footer .wrapper .socials .facebook-icon {
   width: 3vh;
   height: 3vh;
-  background: center/contain url("assets/footer/facebook-logo.svg");
+  background: center/contain url("/assets/footer/facebook-logo.svg");
   transition: filter 0.3s ease;
 }
 .footerSection footer .wrapper .socials .facebook-icon:hover {
