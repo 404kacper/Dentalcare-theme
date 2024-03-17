@@ -18,8 +18,8 @@
         width: 100%;
         z-index: 1;
         margin-top: 25vh;
-        background-image: url(assets/contact/location.png);
-        mask-image: url(assets/contact/contact-image.svg);
+        background-image: url(/assets/contact/location.png);
+        mask-image: url(/assets/contact/contact-image.svg);
         mask-repeat: no-repeat;
         mask-size: contain;
         mask-position: left top;
@@ -33,7 +33,7 @@
           height: 68.5vh;
           width: 35vw;
           top: 30vh;
-          background-image: url(assets/contact/contact-image-bg.svg);
+          background-image: url(/assets/contact/contact-image-bg.svg);
           background-repeat: no-repeat;
           background-position: left;
           background-size: contain;
@@ -44,7 +44,7 @@
             width: 5vw;
             left: 23vw;
             top: 105vh;
-            background-image: url(assets/contact/contact-image-bg-addition.svg);
+            background-image: url(/assets/contact/contact-image-bg-addition.svg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -56,7 +56,7 @@
             width: 3vw;
             left: 45vw;
             top: 98vh;
-            background-image: url(assets/contact/contact-image-bg-circle-outline.svg);
+            background-image: url(/assets/contact/contact-image-bg-circle-outline.svg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -68,7 +68,7 @@
             width: 2vw;
             left: 28vw;
             top: 18vh;
-            background-image: url(assets/contact/contact-image-bg-circle-fill.svg);
+            background-image: url(/assets/contact/contact-image-bg-circle-fill.svg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -83,7 +83,7 @@
           width: 4vw;
           left: 23.2vw;
           top: 71.8vh;
-          background-image: url(assets/contact/location-pin.svg);
+          background-image: url(/assets/contact/location-pin.svg);
           background-repeat: no-repeat;
           background-position: center;
           background-size: contain;
@@ -124,7 +124,7 @@
                   content: '';
                   width: 60%;
                   height: 60%;
-                  background: center/contain no-repeat url("assets/contact/contact-emergency.svg");
+                  background: center/contain no-repeat url("/assets/contact/contact-emergency.svg");
                 }
 
                 &-address {
@@ -138,7 +138,7 @@
                   content: '';
                   width: 60%;
                   height: 60%;
-                  background: center/contain no-repeat url("assets/contact/contact-address.svg");
+                  background: center/contain no-repeat url("/assets/contact/contact-address.svg");
                 }
 
                 &-chat {
@@ -152,7 +152,7 @@
                   content: '';
                   width: 50%;
                   height: 50%;
-                  background: center/contain no-repeat url("assets/contact/contact-chat.svg");
+                  background: center/contain no-repeat url("/assets/contact/contact-chat.svg");
                 }
 
                 &-text {
