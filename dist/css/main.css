@@ -1294,7 +1294,7 @@ ul {
 .hero-section .deep_layer::before {
   content: "";
   position: absolute;
-  background-image: url(/dist/assets/hero/tlo.png);
+  background-image: url(/assets/hero/tlo.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1321,7 +1321,7 @@ ul {
 }
 .hero-section .back_layer .bg-extra {
   position: absolute;
-  background-image: url(/dist/assets/hero/tlo_extra.png);
+  background-image: url(/assets/hero/tlo_extra.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1365,7 +1365,7 @@ ul {
   aspect-ratio: 1/1;
   top: 30vh;
   position: absolute;
-  background-image: url(/dist/assets/hero/kolo_lewe.svg);
+  background-image: url(/assets/hero/kolo_lewe.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1402,7 +1402,7 @@ ul {
   position: absolute;
   top: 30vh;
   right: 9vw;
-  background-image: url(/dist/assets/hero/kolo_prawe.svg);
+  background-image: url(/assets/hero/kolo_prawe.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1431,7 +1431,7 @@ ul {
   position: absolute;
   top: 18vh;
   right: 37vw;
-  background-image: url(/dist/assets/hero/kolo_srodkowe.svg);
+  background-image: url(/assets/hero/kolo_srodkowe.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1458,7 +1458,7 @@ ul {
 .hero-section .back_layer .rectangle-right {
   aspect-ratio: 1/1;
   position: absolute;
-  background-image: url(/dist/assets/hero/prostokat_prawy.svg);
+  background-image: url(/assets/hero/prostokat_prawy.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1493,7 +1493,7 @@ ul {
   position: absolute;
   bottom: 15vh;
   left: 20vw;
-  background-image: url(/dist/assets/hero/trojkat_dolny.svg);
+  background-image: url(/assets/hero/trojkat_dolny.svg);
   background-size: contain;
   background-repeat: no-repeat;
   transform: rotate(30deg);
@@ -1527,7 +1527,7 @@ ul {
   position: absolute;
   top: 25vh;
   left: 35vw;
-  background-image: url(/dist/assets/hero/trojkat_srodkowy.svg);
+  background-image: url(/assets/hero/trojkat_srodkowy.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1556,7 +1556,7 @@ ul {
   position: absolute;
   width: 100vw;
   bottom: -1vh;
-  background-image: url(/dist/assets/hero/teeth_bottom.png);
+  background-image: url(/assets/hero/teeth_bottom.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1725,7 +1725,7 @@ ul {
   transform: translateY(100%);
   width: 100vw;
   aspect-ratio: 10.4492/1;
-  background-image: url(/dist/assets/info/info-bg-bottom.svg);
+  background-image: url(/assets/info/info-bg-bottom.svg);
   background-position: top;
   background-size: cover;
 }
@@ -1797,8 +1797,8 @@ ul {
   margin-top: 5vh;
   height: var(--img-size);
   aspect-ratio: 0.69/1;
-  background-image: url(/dist/assets/info/info-image.png);
-  mask-image: url(/dist/assets/info/info-image-bg.svg);
+  background-image: url(/assets/info/info-image.png);
+  mask-image: url(/assets/info/info-image-bg.svg);
   mask-repeat: no-repeat;
   mask-position: left;
   background-repeat: no-repeat;
@@ -1813,7 +1813,7 @@ ul {
   height: var(--img-size);
   aspect-ratio: 0.69/1;
   top: 0;
-  background-image: url(/dist/assets/info/info-image-bg.svg);
+  background-image: url(/assets/info/info-image-bg.svg);
   background-position: left;
   background-size: contain;
   background-repeat: no-repeat;
@@ -2021,7 +2021,7 @@ ul {
   position: absolute;
   aspect-ratio: 1;
   width: 10vw;
-  background: url(/dist/assets/info/info-hospital-mobile.svg) center/contain no-repeat;
+  background: url(/assets/info/info-hospital-mobile.svg) center/contain no-repeat;
   border-radius: 50%;
   scale: 0.95;
 }
@@ -2037,7 +2037,7 @@ ul {
 }
 @media (min-width: 1400px) {
   .info-section .wrapper .info-container .icons-col .icons-container .info-icon-hospital {
-    background: url(/dist/assets/info/info-hospital.svg) center/contain no-repeat;
+    background: url(/assets/info/info-hospital.svg) center/contain no-repeat;
     width: 10vh;
   }
 }
@@ -2073,7 +2073,7 @@ ul {
   position: absolute;
   aspect-ratio: 1;
   width: 10vw;
-  background: url(/dist/assets/info/info-tooth-mobile.svg) center/contain no-repeat;
+  background: url(/assets/info/info-tooth-mobile.svg) center/contain no-repeat;
   border-radius: 50%;
   scale: 0.95;
 }
@@ -2089,7 +2089,7 @@ ul {
 }
 @media (min-width: 1400px) {
   .info-section .wrapper .info-container .icons-col .icons-container .info-icon-tooth {
-    background: url(/dist/assets/info/info-tooth.svg) center/contain no-repeat;
+    background: url(/assets/info/info-tooth.svg) center/contain no-repeat;
     width: 10vh;
   }
 }
@@ -2125,7 +2125,7 @@ ul {
   position: absolute;
   aspect-ratio: 1;
   width: 10vw;
-  background: url(/dist/assets/info/info-jaw-mobile.svg) center/contain no-repeat;
+  background: url(/assets/info/info-jaw-mobile.svg) center/contain no-repeat;
   border-radius: 50%;
 }
 @media (max-width: 599px) {
@@ -2140,7 +2140,7 @@ ul {
 }
 @media (min-width: 1400px) {
   .info-section .wrapper .info-container .icons-col .icons-container .info-icon-jaw {
-    background: url(/dist/assets/info/info-jaw.svg) center/contain no-repeat;
+    background: url(/assets/info/info-jaw.svg) center/contain no-repeat;
     width: 10vh;
   }
 }
@@ -2176,7 +2176,7 @@ ul {
   position: absolute;
   aspect-ratio: 1;
   width: 10vw;
-  background: url(/dist/assets/info/info-tools-mobile.svg) center/contain no-repeat;
+  background: url(/assets/info/info-tools-mobile.svg) center/contain no-repeat;
   border-radius: 50%;
   scale: 0.95;
 }
@@ -2192,7 +2192,7 @@ ul {
 }
 @media (min-width: 1400px) {
   .info-section .wrapper .info-container .icons-col .icons-container .info-icon-tools {
-    background: url(/dist/assets/info/info-tools.svg) center/contain no-repeat;
+    background: url(/assets/info/info-tools.svg) center/contain no-repeat;
     width: 10vh;
   }
 }
@@ -2210,7 +2210,7 @@ ul {
   height: 100%;
   margin-top: 0.15vh;
   margin-left: 0.2vw;
-  background: url(/dist/assets/info/arrow-right.svg) center/contain no-repeat;
+  background: url(/assets/info/arrow-right.svg) center/contain no-repeat;
 }
 .info-section .wrapper .info-container .icons-col .icons-container .info-icon .info-text-container {
   display: flex;
@@ -2324,8 +2324,8 @@ ul {
 }
 .amenitiesSection .front_layer .wrapper .mouth {
   aspect-ratio: 1/1;
-  background-image: url(/dist/assets/amenities/amenities-mouth.jpg);
-  mask-image: url(/dist/assets/amenities/amenities-mouth.svg);
+  background-image: url(assets/amenities/amenities-mouth.jpg);
+  mask-image: url(assets/amenities/amenities-mouth.svg);
   mask-repeat: no-repeat;
   mask-size: cover;
   mask-position: center;
@@ -2355,7 +2355,7 @@ ul {
 }
 .amenitiesSection .front_layer .wrapper .mouth-shape {
   aspect-ratio: 1/1;
-  background-image: url(/dist/assets/amenities/amenities-mouth-shape.svg);
+  background-image: url(assets/amenities/amenities-mouth-shape.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -2393,7 +2393,7 @@ ul {
 .amenitiesSection .front_layer .wrapper .mouth-ball {
   width: 1vh;
   aspect-ratio: 1/1;
-  background-image: url(/dist/assets/amenities/amenities-mouth-ball.svg);
+  background-image: url(assets/amenities/amenities-mouth-ball.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -2442,7 +2442,7 @@ ul {
 .amenitiesSection .deep_mid_layer .wrapper .bg-shape {
   margin-left: auto;
   aspect-ratio: 1.57/1;
-  background-image: url(/dist//assets/amenities/amenities-bg-shape.svg);
+  background-image: url(/dist//assetss/amenities/amenities-bg-shape.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -2491,7 +2491,7 @@ ul {
 .amenitiesSection .deep_mid_layer_front .wrapper .bg-circle-dashed {
   margin-left: auto;
   aspect-ratio: 1/1;
-  background-image: url(/dist/assets/amenities/amenities-bg-ball-dashed.svg);
+  background-image: url(assets/amenities/amenities-bg-ball-dashed.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -2547,7 +2547,7 @@ ul {
 .amenitiesSection .deep_mid_layer_front .wrapper .bg-circle {
   margin-left: auto;
   aspect-ratio: 1/1;
-  background-image: url(/dist/assets/amenities/amenities-bg-ball.svg);
+  background-image: url(assets/amenities/amenities-bg-ball.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -2614,12 +2614,12 @@ ul {
   aspect-ratio: 7.4329/1;
   z-index: -1;
   position: absolute;
-  background: center/cover no-repeat url("/dist/assets/amenities/amenities-shape-bottom.svg");
+  background: center/cover no-repeat url("assets/amenities/amenities-shape-bottom.svg");
 }
 @media (max-width: 599px) {
   .amenitiesSection .mid_layer::after {
     aspect-ratio: 2/1;
-    background: center/cover no-repeat url("/dist/assets/amenities/amenities-shape-bottom-mobile.svg");
+    background: center/cover no-repeat url("assets/amenities/amenities-shape-bottom-mobile.svg");
   }
 }
 .amenitiesSection .mid_layer .wrapper {
@@ -2769,7 +2769,7 @@ ul {
   margin-bottom: 1vh;
   aspect-ratio: 1/1;
   width: 100%;
-  background-image: url(/dist/assets/amenities/amenities-review1.jpg);
+  background-image: url(assets/amenities/amenities-review1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2779,7 +2779,7 @@ ul {
   margin-bottom: 1vh;
   aspect-ratio: 1/1;
   width: 100%;
-  background-image: url(/dist/assets/amenities/amenities-review2.jpg);
+  background-image: url(assets/amenities/amenities-review2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2789,7 +2789,7 @@ ul {
   margin-bottom: 1vh;
   aspect-ratio: 1/1;
   width: 100%;
-  background-image: url(/dist/assets/amenities/amenities-review3.jpg);
+  background-image: url(assets/amenities/amenities-review3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2800,7 +2800,7 @@ ul {
   margin-bottom: 1vh;
   width: 15vh;
   aspect-ratio: 6.77/1;
-  background-image: url(/dist/assets/amenities/amenities-rating.svg);
+  background-image: url(assets/amenities/amenities-rating.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -3026,7 +3026,7 @@ ul {
   height: 15vh;
   width: 15vh;
   border-radius: 50%;
-  background: center/cover no-repeat url(/dist/assets/articles/articles-dentist.jpg);
+  background: center/cover no-repeat url(assets/articles/articles-dentist.jpg);
   margin-right: 1vw;
 }
 @media (max-width: 599px) {
@@ -3049,7 +3049,7 @@ ul {
   height: 1.5vh;
   width: 2vh;
   margin-right: 0.4vw;
-  background: center/contain no-repeat url(/dist/assets/articles/articles-clock.svg);
+  background: center/contain no-repeat url(assets/articles/articles-clock.svg);
 }
 .articlesSection .articles-container .article-comments {
   display: flex;
@@ -3060,7 +3060,7 @@ ul {
   height: 1.5vh;
   width: 2vh;
   margin-right: 0.4vw;
-  background: center/contain no-repeat url(/dist/assets/articles/articles-comment.svg);
+  background: center/contain no-repeat url(assets/articles/articles-comment.svg);
 }
 .articlesSection .articles-container .article-text {
   grid-area: bottom;
@@ -3100,8 +3100,8 @@ ul {
   width: 100%;
   z-index: 1;
   margin-top: 25vh;
-  background-image: url(/dist/assets/contact/location.png);
-  mask-image: url(/dist/assets/contact/contact-image.svg);
+  background-image: url(assets/contact/location.png);
+  mask-image: url(assets/contact/contact-image.svg);
   mask-repeat: no-repeat;
   mask-size: contain;
   mask-position: left top;
@@ -3115,7 +3115,7 @@ ul {
   height: 68.5vh;
   width: 35vw;
   top: 30vh;
-  background-image: url(/dist/assets/contact/contact-image-bg.svg);
+  background-image: url(assets/contact/contact-image-bg.svg);
   background-repeat: no-repeat;
   background-position: left;
   background-size: contain;
@@ -3126,7 +3126,7 @@ ul {
   width: 5vw;
   left: 23vw;
   top: 105vh;
-  background-image: url(/dist/assets/contact/contact-image-bg-addition.svg);
+  background-image: url(assets/contact/contact-image-bg-addition.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -3137,7 +3137,7 @@ ul {
   width: 3vw;
   left: 45vw;
   top: 98vh;
-  background-image: url(/dist/assets/contact/contact-image-bg-circle-outline.svg);
+  background-image: url(assets/contact/contact-image-bg-circle-outline.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -3148,7 +3148,7 @@ ul {
   width: 2vw;
   left: 28vw;
   top: 18vh;
-  background-image: url(/dist/assets/contact/contact-image-bg-circle-fill.svg);
+  background-image: url(assets/contact/contact-image-bg-circle-fill.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -3160,7 +3160,7 @@ ul {
   width: 4vw;
   left: 23.2vw;
   top: 71.8vh;
-  background-image: url(/dist/assets/contact/location-pin.svg);
+  background-image: url(assets/contact/location-pin.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -3193,7 +3193,7 @@ ul {
   content: "";
   width: 60%;
   height: 60%;
-  background: center/contain no-repeat url("/dist/assets/contact/contact-emergency.svg");
+  background: center/contain no-repeat url("assets/contact/contact-emergency.svg");
 }
 .contactSection .wrapper .info-wrapper .info-icons .icon-container .icon-address {
   width: 7.5vh;
@@ -3205,7 +3205,7 @@ ul {
   content: "";
   width: 60%;
   height: 60%;
-  background: center/contain no-repeat url("/dist/assets/contact/contact-address.svg");
+  background: center/contain no-repeat url("assets/contact/contact-address.svg");
 }
 .contactSection .wrapper .info-wrapper .info-icons .icon-container .icon-chat {
   width: 7.5vh;
@@ -3217,7 +3217,7 @@ ul {
   content: "";
   width: 50%;
   height: 50%;
-  background: center/contain no-repeat url("/dist/assets/contact/contact-chat.svg");
+  background: center/contain no-repeat url("assets/contact/contact-chat.svg");
 }
 .contactSection .wrapper .info-wrapper .info-icons .icon-container .icon-text {
   margin-left: 2vw;
@@ -3236,7 +3236,7 @@ ul {
   transform: translateY(-100%);
   aspect-ratio: 5.34226/1;
   position: absolute;
-  background: center/cover no-repeat url("/dist/assets/footer/footer-bg-shape.svg");
+  background: center/cover no-repeat url("assets/footer/footer-bg-shape.svg");
 }
 .footerSection .footer-triangle {
   width: 3vh;
@@ -3245,7 +3245,7 @@ ul {
   right: 5vw;
   z-index: -1;
   position: absolute;
-  background: center/contain no-repeat url("/dist/assets/footer/footer-triangle.svg");
+  background: center/contain no-repeat url("assets/footer/footer-triangle.svg");
 }
 .footerSection .footer-circle {
   width: 13vh;
@@ -3254,7 +3254,7 @@ ul {
   right: 35vw;
   z-index: -1;
   position: absolute;
-  background: center/contain no-repeat url("/dist/assets/footer/footer-circle.svg");
+  background: center/contain no-repeat url("assets/footer/footer-circle.svg");
 }
 .footerSection footer .wrapper {
   height: 100%;
@@ -3282,7 +3282,7 @@ ul {
   width: 9vw;
   height: 12vw;
   display: block;
-  background: center/contain no-repeat url("/dist/assets/footer/footer-logo-text-below.svg");
+  background: center/contain no-repeat url("assets/footer/footer-logo-text-below.svg");
 }
 .footerSection footer .wrapper .links {
   grid-area: links;
@@ -3323,7 +3323,7 @@ ul {
 .footerSection footer .wrapper .socials .facebook-icon {
   width: 3vh;
   height: 3vh;
-  background: center/contain url("/dist/assets/footer/facebook-logo.svg");
+  background: center/contain url("assets/footer/facebook-logo.svg");
   transition: filter 0.3s ease;
 }
 .footerSection footer .wrapper .socials .facebook-icon:hover {
